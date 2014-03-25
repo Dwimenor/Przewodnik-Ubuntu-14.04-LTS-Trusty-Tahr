@@ -1,0 +1,76 @@
+%------------------
+%	PRZEWODNIK PO UBUNTU 14.04 LTS TRUSTY THAR
+%	
+%
+%	Autorzy:
+%		1. Piotr "Dwimenor Vali" Sochocki, dwimeron@gmail.com
+%
+%	Licencja:
+%		Creative Commons
+%		Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
+%		CC BY-NC-SA 3.0 PL
+%		http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
+%------------------
+
+
+%------------------
+%	PREAMBUŁA
+%------------------
+
+% klasa mwart autorstwa Marcina Wolińskiego
+% http://marcinwolinski.pl/mwcls.html
+% pakiet: texlive-lang-polish
+\documentclass[a4paper, 11pt,oneside]{mwart}
+
+% orientacja pozioma
+\usepackage[landscape]{geometry} 
+
+% interlinia (1.6 = półtora linni odstępu wg. nomenklatury Worda/Writera)
+\linespread{1.6}
+
+%Odległosć między akapitami
+\setlength{\parskip}{0.2cm}
+
+% Język polski, polfonty
+\usepackage[OT4]{polski}
+\usepackage[utf8]{inputenc}
+
+% dzielenie wierszy
+\brokenpenalty=1000
+\clubpenalty=1000
+\widowpenalty=1000
+
+% Obrazki
+\usepackage{graphicx}
+
+% linki, URL
+\usepackage[urlcolor=blue, colorlinks=true]{hyperref} 
+
+% Jako, że nie bawimy się w rozdziały, sekcja i podsekcja są podstawowymi jednostmaki podziału dokumentu.
+% Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
+\renewcommand*\thesection{\arabic{section}}
+
+% Gwizadka zamiast myślnika jak znak kolejnego punktu listy.
+\renewcommand{\labelitemi}{$\star$}
+
+% Oficjalne kolory Ubuntu
+% http://design.ubuntu.com/brand/colour-palette
+\usepackage{xcolor}
+\definecolor{ubuntu_orange}{RGB}{221,72,20}
+
+
+%------------------
+%	STRUKTURA DOKUMENTU
+%------------------
+
+\begin{document}
+
+\input{strona_tytulowa}
+\input{spis_tresci}
+\section{Wstęp}
+	\subsection{Wprowadzenie}
+		\input{wprowadzenie}
+	\subsection{Dlaczego warto zmienić system na Ubuntu?}
+		\input{dlaczego_zmienic}
+		
+\end{document}
