@@ -20,10 +20,10 @@
 % klasa mwart autorstwa Marcina Wolińskiego
 % http://marcinwolinski.pl/mwcls.html
 % pakiet: texlive-lang-polish
-\documentclass[a4paper, 11pt,oneside]{mwart}
+\documentclass[a4paper,11pt,oneside]{mwart}
 
-% orientacja pozioma
-\usepackage[landscape]{geometry} 
+% orientacja pozioma, marginesy
+\usepackage[landscape, margin=0.5in]{geometry}
 
 % interlinia (1.6 = półtora linni odstępu wg. nomenklatury Worda/Writera)
 \linespread{1.6}
@@ -42,6 +42,7 @@
 
 % Obrazki
 \usepackage{graphicx}
+\usepackage{wrapfig}
 
 % linki, URL
 \usepackage[urlcolor=blue, colorlinks=true]{hyperref} 
@@ -60,6 +61,7 @@
 % http://design.ubuntu.com/brand/colour-palette
 \usepackage{xcolor}
 \definecolor{ubuntu_orange}{RGB}{221,72,20}
+
 %------------------
 %	STRUKTURA DOKUMENTU
 %------------------
@@ -74,5 +76,9 @@
 		\input{o_ubuntu}
 	\subsection{Dlaczego warto zmienić system na Ubuntu?}
 		\input{dlaczego_zmienic}
-		
+\section{Instalacja}
+	\subsection{Pobieranie obrazu systemu}
+		\input{instalacja_pobieranie_obrazu}
+	\subsection{Nagrywanie pobranego obrazu}
+		\input{instalacja_nagrywanie_obrazu}
 \end{document}

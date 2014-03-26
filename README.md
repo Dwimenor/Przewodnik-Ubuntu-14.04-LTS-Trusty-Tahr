@@ -18,3 +18,8 @@ Dla ludzi nie znających LaTeXa:
 http://zelmanov.ptep-online.com/ctan/lshort_polish.pdf
 
 Lub po prostu przesyłać tekst/poprawki na maila lub poprzez forum.ubuntu.pl
+
+
+OBRAZKI
+wszystkie obrazki do katalogu images/
+plików .svg uzywamy jako plików do edycji (pliki źródłowe). Przed wklejeniem eksportujemy do png. /svg można wstawić do latexa, ale na tym etapie nie chce mi się bawić. Może potem, jak będzie się kończyć cały dokument
