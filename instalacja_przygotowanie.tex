@@ -1,0 +1,27 @@
+\subsubsection{Przygotowanie do instalacji - Windows - wskazówki ogólne}
+\label{sec:przygotowanie_windows}
+Instalując inny system operacyjny na dysku twardym swojego komputera zawsze istnieje ryzyko utraty danych. Wiele rzeczy może się zdażyć. Utrata zasilania w czasie partycjonowania dysku twardego najczęściej prowadzi do utraty jesgo zawartości. Przez zwykłą nieuwagę można nadpisać jede system drugim i w ten sposób utracić dane. Dlatego nim przystąpisz do instalacji systemu ubuntu upewnij się iż wszystkie wazne dane zostały zabezpieczone na zewnętrznych nośnikach danych. Innymi słowy: zrób kopię zapasową.
+
+Warto też wyeksportować dane z programów takich jak przeglądarka internetowa(zakładki), klient pocztowy(konta, kalendarze i kontakty) i komunikator internetowy(konta, historia rozmów, znajomi). Nie zapomniej zrobić kopi zapasowej dokumentów czy swojej kolekcji muzyki. Jeżeli zainstalujesz Ubuntu obok Windowsa, to będziesz mieć dostęp do swoich plików. Niestety, w drugą stronę to nie działa i na systemach Windows nie ma możliwości podglądu plików na partycjach systemów Linuksowych\footnote{To jest możliwe, ale dosyć skomplikowane i wykracza poza zakres tego przewodnika}.
+
+Ważnym krokiem jest ustalenie czy twoja płyta główna obsługiwana jest przez UEFI i jeżeli tak to jakie opcje są włączone. W konsoli systemu Windows (Start $\rightarrow$ Uruchom $\rightarrow$ cmd) wpisz \textit{Confirm-SecureBootUEFI}. System może zwrócić jedną z trzech informacji:
+\begin{itemize}
+\item \textit{Cmdlet not supported on this platform} lub \textit{Polecenia nie znaleziono} - Ten komputer nie korzysta z SecureBoot. Nie potrzebujesz nic więcej robić, wystarczy włożyć przygotowany nośnik instalacyjny i zainstalowac Ubuntu.
+\item \textit{False} - Ten komputer na UEFI, ale nie korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
+\item \textit{True} - Ten komputer na UEFI, ale korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
+\end{itemize}
+\subsubsection{Przygotowanie do instalacji - Windows 8}
+\label{sec:przygotowanie_windows8}
+Windows 8 wymusił na producentach sprzetu stosowanie technologi UEFI (zamiast BIOSu) oraz SecureBoot(Zabezpieczenie komputera przed zmianami systemu operacyjnego), co znacznie utrudniło instalację innych systemów operacyjnych. Ubuntu jest przygotowane do współpracy z Windowsem 8, ale Windows nie jest przygotowany do współdzielenia komputera z innymi systemami operacyjnymi. Pamiętaj, że jeżeli posiadasz UEFI (a używanie Windows 8 na to wskazuje) to potrzebujesz Ubuntu w wersji 64 bitowej. Systemy 32 bitowe nie są obsługiwane przez technologię UEFI\footnote{A przynajmniej nie bez dużej ilości kombinowania}.
+
+W tym momencie warto przygotować wolną przestrzeń na dysku pod instalację Ubuntu. Ten punkt można wykonać zarówno teraz jak i podczas instalacji Ubuntu, jednak jeżeli używasz Windows 8 lepiej zrobić to teraz. Wciśnij kombinację klawiszy super + r i uruchom program compmgmt.msc. W uruchomionym programie utwórz partycję dla Ubuntu. Absolutne minimum dla tej partycji to 8 gigabajtów. Ubuntu potrzebuje około 4 gigabajtów na podstawową instalację, pozostałe miejsce będzie można przeznaczyć na instalację oprogramowania oraz pliki uzytkownika. Zalecamy jednak stworzneie przynajmniej 20 gigabajtowej partycji.
+
+Windows 8 korzysta z opcji Szybkiego Uruchamiania (Fast Boot), która to uniemożliwia dostęp do plików Windowsa przez system Ubuntu. Jedynym sposobem na obejście tego jest wyłączenie opcji Szybkiego uruchamiania. Wejdź w Panel Sterowania, następnie Opcje Zasilania a potem Wybierz co ma robić przycisk zasilania. Odhacz opcję "Włącz Szybkie uruchamiania (zalecane)".
+
+\subsubsection{Przygotowanie do instalacji - Linux}
+\label{sec:przygotowanie_linux}
+Instalacja jednego systemu Linux obok drugiego nie powoduje zadnych problemów, jednak powinieneś wiedzieć o paru sprawa. W Linuksach pliki użytkownika są przechowywane w katalogu /home. Dobrą praktyką jest wydzielenie osobnej partycji dla tego katalogu, aby przy reinstalacji systemu nie tracić swoich ustawień. Jeżeli instalujesz jednego Linuksa obok drugiego to kuszącym może być wykorzystanie jednej partycji domowej dla obu systemów. 
+To jest możliwe, ale weź pod uwagę iż różne systemy mogą korzystać z różnych plików - nie wszystkie ustawienia będą widoczne na obu systemach (szczególnie jeżeli korzystasz z różnych środowisk graficznych). Przy takiej konfiguracji ważne jest też aby nazwa użytkownika oraz jego grupy były taka sama na obu systemach.
+Jeżeli systemy, które instalujesz obok siebie bardzo się różnią, to lepiej nie korzystać ze wspólnego katalogu domowego, a ze wspólnych dokumentów, filmów czy muzyki korzystać za pomocą wspólnego katalogu.
+
+Potrzebujesz tylko jednej partycji wymiany (swap) niezależnie od tego ile systemów instalujesz.

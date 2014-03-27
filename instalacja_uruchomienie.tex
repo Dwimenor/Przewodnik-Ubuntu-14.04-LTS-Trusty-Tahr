@@ -1,0 +1,16 @@
+\subsubsection{Ponowne uruchomienie komputera}
+Mając przygotowany nośnik instalacyjny nie pozostaje nic innego jak uruchomić instalator i zainstalować system na dysku twardym komputera. Jeżeli korzystasz z tego przewodnika w trybie online, to dobrym pomysłem jest wydrukowanie kilku kolejnych stron. Możliwe, że w czasie instalacji nie będziesz mieć dostępu do internetu i zostaniesz odcięty od zawartych tutaj informacji.
+
+Przed przystąpieniem do instalacji koniecznie też zapoznaj się z sekcjami:
+\begin{itemize}
+\item \ref{sec:przygotowanie_windows} \textit{Przygotowanie do instalacji - Windows - wskazówki ogólne}: ta sekcja zawiera przydatne informacje dla osób migrujących z systemów Windows.
+\item \ref{sec:przygotowanie_windows8} \textit{Przygotowanie do instalacji - Windows 8}: specyficzne porady dla systemu Windows 8. Koniecznie to przeczytaj, jeżeli instalujesz Ubuntu obok Windows 8 lub próbujesz zainstalować Ubuntu zamiast Windows 8.
+\item \ref{sec:przygotowanie_linux} \textit{Przygotowanie do instalacji - Linux}: ogólne wskazówki dla osób instalujących Ubuntu obok innych dystrybucji Linuksa.
+\end{itemize}
+Zrestartuj swój komputer i uruchom go z przygotowanego nośnika instalacyjnego. W większości przypadków wiąże się to z ręcznym wskazaniem odpowiedniego napędu podczas uruchamiania komputera. Nowsze komputery, wyposarzone w system UEFI zamiast BIOS mają tą procedurę znacznie bardziej skomplikowaną. 
+\subsubsection{Zmiana kolejności bootowania}
+Podczas rozruchu komputera, zanim załaduje się system operacyjny, musisz powiadomić komputer iż tym razem ma wykorzystać przygotowany przez nas instalator zamiast dotychczasowego systemu operacyjnego. Każdy producent płyt głównych podchodzi do tego zagadnienia w nieco odmienny sposób, jednak najczęściej procedura wygląda na jeden z następujących sposobów:
+\begin{itemize}
+\item Niektóre komputery podczas rozruchu pokazują napis \textbf{Press F12 to select boot device}. "Boot Device", "Boot order" lub podobne są tu słowami kluczowymi. Wciśnij wskazany klawisz (w tym przypadku F12, ale to może się różnić) i z wyświetlonego menu wybierz nośnik instalacyjny. Niektóre komputery wykrywają pendrivy jako dyski twarde i musisz wskazać właśnie taki dysk twardy a nie port USB. Jeżeli na liście nie ma naszego instalatora to zresetuj komputer i spróbuj ponowanie
+\item Jeżeli masz napis \textbf{Press ESC to enter setup} lub podobnym to twoim słowem kluczowym jest "setup". Wciśniecie wskazanego klawisza (ESC, delete lub któryś z klawiszy funkcyjnych) spowoduje uruchomienie programu konfiguracyjnego płyty głównej. W tym programie przejdź do sekcji "Advanced BIOS Features" a następnie "First Boot Device". Wskaż napęd CD-ROM lub napęd USB (lub drugi dysk twardy, jeżeli pendrive jest rozpoznawany jako dysk twardy). Wróć do menu głównego (klawisz ESC cofa o jedno menu) i zapisz zmainy (najczęściej F10, czasem ESC i potwierdzenie przy pomocy klawisza Y). W tym momencie komputer samoczynnie się zrestartuje.
+\end{itemize}
