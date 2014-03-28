@@ -1,0 +1,29 @@
+Niezależnie od tego czy posiadasz płytę główną z BIOSem czy z UEFI, w poprzednim punkcie powinieneś wybrać "Zainstaluj Ubuntu". Ta metoda jest szybsza od "Wypróbuj Ubuntu bez instalowania" gdyż nie wymaga załadowania całego systemu. Jeżeli mimo wszystko uruchomiłeś cały system, to na jego pulpicie znajdziesz ikonę "Zainstaluj Ubuntu" (lub "Install Ubuntu", jeżeli nie zmienięłś języka). Od tego momentu instalacja przebiega w identyczny sposób.
+\subsubsection{Wybór języka}
+Pierwszy ekran instalatora pozwala wybrać język. Jeżeli wcześniej nie zmieniłeś języka na Polski to teraz masz ku temu okazję. Język wybrany podczas instalacji będzie także domyślnym językiem zainstalowanym w systemie.
+\subsubsection{Sprawdzenie kompatybilności sprzętu, wybór dodatkowych komponentów}
+Na tym etapie instalator sprawdzi, czy na dysku twardym jest wystarczająco miejsca aby zainstalować Ubuntu. Połączenie z internetem nie jest wymagane aby zainstalować system. Połączenie z internetem jest niezbędne aby zainstalować spolszczenie systemu, aktualizacje oraz dodatkowe wtyczki.
+\begin{description}
+\item[Pobieranie aktualizacji podczas instalacji] - Instalator pobierze i zainstaluje wszystkie aktualizacje, które zostały wydane od dnia premiery systemu.
+\item[Instalacja licencjonowanego oprogramowania] - Instalator pobierze i zainstaluje kodeki audio/video oraz plugin flash do przeglądarki internetowej. Jeżeli posiadasz kartę graficzną firm Nvidia lub AMD to zostaną też zainstalowane dodatkowe sterowniki dostarczane przez tych producentów.
+\end{description}
+\subsubsection{Partycjonowanie dysku twardego}
+Jest to najważniejszy etap instalacji. W tym miejscu można dokonać cudów jak i zniszczyć cały dysk twardy. Jako, że prawidłowe partycjonowanie dysku twardego to bardzo szeroki temat to poświęciliśmy mu cały osobny rozdział. Kiedy go przeczytasz i podzielisz swój dysk twardy, wróć do tego miejsca.
+\subsubsection{Wybór strefy czasowej}
+Na tym etapie należy wybrać lokalizację tego komputera, tak aby system mógł wyświetlać prawidłowy czas i automatycznie dostosowywać się do zmian pomiędzy czasem letnim i zimowym. Jeżeli w trakcie instalacji masz połączenie z internetem to odpowiednia lokalzacja zostanie sama wybrana. Jeżeli nie masz dostępu do internetu w pole wpisz "Warsaw". Stolica naszego kraju okresla też nasza strefę czasową.
+\subsubsection{Wybór ukłądu klawiatury}
+Ten ekran pozwala wybrać układ klawiatury. Jeżeli wybrałeś wcześniej język Polski, to standardowa polska klawiatura zostanie tutaj automatycznie wybrana. W polu możesz wpisać kilka znaków aby sprawdzić czy zaznaczony układ odpowiada rzeczywistości. Pierwsza opcja ("Polski") to standardowa klawiatura 101 klawiszy, zwana potocznie ukłądem programisty.
+\subsubsection{Dane użytkownika}
+To już ostatni etap instalacji. Te pola należy uzupełnić aby system mógł cię prawidłowo zidentyfikować.
+\begin{description}
+\item[Imię i nazwisko użytkownika] - Pole nieobowiązkowe, ale jeżeli uzupełnisz te dane to system będzie się do ciebie zwracał z imienia i nazwiska zamiast używać loginu (np. Jan Kowalski).
+\item[Nazwa komputera] - Określa jak będzie się nazywał twój komputer (np. laptop).
+\item[Nazwa użytkownika] - Twój login do systemu (np. jan\_kowalski albo twój pseudonim). Login nie może zawierać dużych liter, spacji ani znaków specjalnych.
+\item[Hasło] - Hasło do komputera. Hasło zabezpiecza system przed nieuprawnionym dostępem. Uwaga: Ustawienie hasła uniemożliwia innym zalogowanie się do twojego konta, jednak nie zabezpiecza innych przed podglądem twoich dany o ile ich nie zaszyfrujesz. 
+\item[Potwierdzenie hasła] - Wpisz ponownie to samo hasło co w polu powyżej.
+\item[Automatyczne logowanie] - Jeżeli zaznaczysz to pole, to system automatycznie zaloguje tego użytkownika po uruchomieniu. Nie będzie potrzebne podawanie hasła aby uzyskać dostęp do komputera.
+\item[Wymaganie hasła do zalogowania] - Po uruchomieniu komputera będziesz musiał podać hasło aby uzyskać dostęp do swojego konta.
+\item[Szyfrowanie dysku twardego] - Jeżeli zaznaczysz tą opcję to zawartość dysku twardego zostanie zaszyfrowana. Nikt nie znający hasła nie będzie mógł uzyskać dostępu do twoich plików. Jeżeli zapomnisz hasła to równie dobrze możesz sformatować dysk twardy i zainstalować system na nowo.
+\end{description}
+\subsubsection{Instalacja}
+Teraz system dokona instalacji na dysku twardym i ewentualnie pobierze i zainstaluje paczki językowe, aktualizacje i dodatkowe oprogramowanie. Proces ten może potrwać od kilku do kilkunastu minut w zależności od klasy komputera, ilości zadań do wykonania oraz szybkości łącza internetowego.
