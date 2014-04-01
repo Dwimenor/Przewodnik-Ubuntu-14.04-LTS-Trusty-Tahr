@@ -1,6 +1,16 @@
 \label{subsec:partycjonowanie}
 Patrycjonowanie to proces zmiany układu partycji na dysku twardym. Jest to najważniejszy etap instalacji systemu gdyż to od niego w dużej mierze zależy jak system będzie działał. Pamiętaj, że na tym etapie pracujesz na danych zapisanych na dysku twardym. Chwila nieuwagi może spowodować utratę jego zawartości.
+\subsubsection{Ile miejsca przeznaczyć na Ubuntu}
+\label{subsubsec:ile_miejsca}
+Wirtualny dysk twardy użyty w tym przewodniku ma tylko 26.8 gigabajta pojemności. Twój dysk twardy będzie miał zapewne kilkaset gigabatów (jeżeli nie kilka terabajtów) pojemności. Dlatego też liczby jkimi się tu posługujemy będą miały niewielkie przełożenie na sytuację na twoim komputerze. W tym miejscu powinieneś się jednak zastanowić ile miejscach chcesz przeznaczyć na Ubuntu.
 
+Ogólnie rzecz ujmując sprawa wygląda następująco
+\begin{description}
+\item[Partycja główna, root, /] - 6,2 Gigabajta to apsolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużej partycji głównej, gdyż wolna przestrzeń będzie niewykorzystana. 15-20 gigabajtów w zupełności wystarczy.
+\item[Partycja wymiany, swap] - na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAMu kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji to wielkość partycji swap powinna być conajmniej taka jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAMu. W takim wypadku nawet jeżeli nie korzystasz z hibernacji to dobrze jest stworzyć niewielką (300 - 400 megabajtów) partycję swap.
+\item[Partycha domowa, /home] - W katalogu /home przechowywane są prywatne pliki użytkownika: zawartość pulpitu, dokumenty, filmy, muzyka i ustawienia programów. Katalog domowy może znajdować się na głównej partycji (/, root) lub można go wydzieć. Dobrą praktyką jest wydzielenie takiej partycji, gdyż w razie reinstalacji systemu nie trzeba będzie jej kasować. Nadpisana pozostanie tylko partycja główna, zaś wszystkie prywatne dane pozostaną niezmienione. Wielkość tej partycji zależy tylko i wyłącznie od tego jak wiele miejsca chcesz na nią przeznaczyć i jak wiele rzeczy zamierzasz na niej trzymać. 
+\end{description}
+\clearpage
 \subsubsection{Czysty dysk - wykorzystanie całego dostępnego miejsca}
 \begin{center}
 	\includegraphics[scale=0.5]{images/instalator_partycjonowanie_proste.png}
@@ -86,17 +96,7 @@ Do GParted warto zajrzeć jeszcze z jednego powodu. Podział partycji stosowany 
 Kliknij na przycisk \textbf{Naprzód} aby przejść dalej.
 \end{flushright}
 \clearpage
-\subsubsection{Ile miejsca przeznaczyć na Ubuntu}
-\label{subsubsec:ile_miejsca}
-Wirtualny dysk twardy użyty w tym przewodniku ma tylko 26.8 gigabajta pojemności. Twój dysk twardy będzie miał zapewne kilkaset gigabatów (jeżeli nie kilka terabajtów) pojemności. Dlatego też liczby jkimi się tu posługujemy będą miały niewielkie przełożenie na sytuację na twoim komputerze. W tym miejscu powinieneś się jednak zastanowić ile miejscach chcesz przeznaczyć na Ubuntu.
 
-Ogólnie rzecz ujmując sprawa wygląda następująco
-\begin{description}
-\item[Partycja główna, root, /] - 6,2 Gigabajta to apsolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużej partycji głównej, gdyż wolna przestrzeń będzie niewykorzystana. 15-20 gigabajtów w zupełności wystarczy.
-\item[Partycja wymiany, swap] - na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAMu kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji to wielkość partycji swap powinna być conajmniej taka jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAMu. W takim wypadku nawet jeżeli nie korzystasz z hibernacji to dobrze jest stworzyć niewielką (300 - 400 megabajtów) partycję swap.
-\item[Partycha domowa, /home] - W katalogu /home przechowywane są prywatne pliki użytkownika: zawartość pulpitu, dokumenty, filmy, muzyka i ustawienia programów. Katalog domowy może znajdować się na głównej partycji (/, root) lub można go wydzieć. Dobrą praktyką jest wydzielenie takiej partycji, gdyż w razie reinstalacji systemu nie trzeba będzie jej kasować. Nadpisana pozostanie tylko partycja główna, zaś wszystkie prywatne dane pozostaną niezmienione. Wielkość tej partycji zależy tylko i wyłącznie od tego jak wiele miejsca chcesz na nią przeznaczyć i jak wiele rzeczy zamierzasz na niej trzymać. 
-\end{description}
-\clearpage
 \subsubsection{Główne okno programu GParted}
 \begin{center}
 	\includegraphics[scale=0.5]{images/instalator_partycjonowanie_gparted2.png}
@@ -161,7 +161,7 @@ Po pierwsze musimy stworzyć partycję podstawową dla Ubuntu. O ilości miejsca
 \item[Rodzaj nowej partycji] - jako, że system Windows korzysta z tablicy partycji ms-dos to jesteśmy ograniczeni do 4 partycji podstawowych. Aby nie było problemu, dla Ubuntu utworzymy partycje logiczne.
 \item[Lokalizacja dla nowej partycji] - Czy partycja zostanie wyrównana do poczatku wolnej przestrzeni czy do jej końca. Nie ma to znaczenia dla działania systemu.
 \item[Użyj jako] - jaki system plików ma być użyty do sformatowania tej partycji. Do wyboru jest wiele, ale w ramach tego przewodnika korzystamy z systemu ext4 z księgowaniem\footnote{Tematyka różnych systemów plików jest bardzo rozległa i z łatwością wypełniłaby kolejny Przewodnik.}
-\item[Punkt montowania] - to nasza główna partycja, więc musi się znaleźdź na początku\footnote{W systemach Windows drzewo katalogów "zaczyna się" na "C:\\\\". W systemach Linuksowych zaczyna się na "/"}.
+\item[Punkt montowania] - to nasza główna partycja, więc musi się znaleźdź na początku\footnote{W systemach Windows drzewo katalogów "zaczyna się" na "C:\textbackslash\textbackslash". W systemach Linuksowych zaczyna się na "/"}.
 \end{description}
 Kliknij na przycisk \textbf{OK} aby utworzyć nową partycję.
 \clearpage
@@ -181,3 +181,4 @@ Na koniec pozostało utworzenie partycji domowej. Więcej o tej partycji przeczy
 \end{center}
 Ekran programu GParted wygląda teraz mniej więcej tak jak na rysunku powyżej. Masz dwie partycje systemu Windows (ntfs), partycję wymiany systemu Linux (swap) oraz dwie partycje dla systemu Ubuntu (ext4). Upewnij się, że partycje ntfs \textbf{nie} są zaznaczone do sformatowania, zaś partycje ext4 tak. Kliknij na przycisk \textbf{Naprzód} aby wprowadzić zmiany na partycjach. Teraz możesz powrócić do lektury procesu instalacji w miejscu gdzie go przerwałeś.\\
 Powrót do \ref{subsub:instalator_strefa_czasowa}: Wybór sterfy czasowej.
+\clearpage
