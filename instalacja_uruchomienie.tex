@@ -1,48 +1,46 @@
 \subsubsection{Ponowne uruchomienie komputera}
 Jeżeli dysponujesz już  nośnikiem instalacyjnym, nie pozostaje nic innego, jak uruchomić instalator i zainstalować system na dysku twardym komputera. Jeśli korzystasz z tego przewodnika w trybie online, dobrym pomysłem będzie wydrukowanie kilku kolejnych stron. Może się zdarzyć, że w czasie instalacji stracisz dostęp do internetu i zostaniesz tym samym odcięty od zawartych tutaj informacji.
-
 Przed przystąpieniem do instalacji koniecznie zapoznaj się także z następującymi sekcjami:
 \begin{itemize}
 \item \ref{sec:przygotowanie_windows} \textit{Przygotowanie do instalacji - Windows - wskazówki ogólne}: ta sekcja zawiera przydatne informacje dla osób migrujących z systemów Windows.
-\item \ref{sec:przygotowanie_windows8} \textit{Przygotowanie do instalacji - Windows 8}: pecyficzne porady dla systemu Windows 8. Koniecznie ten fragment przewodnika, jeżeli instalujesz Ubuntu obok Windows 8 lub próbujesz zainstalować Ubuntu zamiast Windows 8.
+\item \ref{sec:przygotowanie_windows8} \textit{Przygotowanie do instalacji - Windows 8}: specyficzne porady dla systemu Windows 8. Koniecznie ten fragment przewodnika, jeżeli instalujesz Ubuntu obok Windows 8 lub próbujesz zainstalować Ubuntu zamiast Windows 8.
+%TODO http://askubuntu.com/questions/221835/installing-ubuntu-on-a-pre-installed-windows-8-64-bit-system-uefi-supported
 \item \ref{sec:przygotowanie_linux} \textit{Przygotowanie do instalacji - Linux}: ogólne wskazówki dla osób instalujących Ubuntu obok innych dystrybucji Linuksa.
 \end{itemize}
 Zrestartuj swój komputer i uruchom go z przygotowanego nośnika instalacyjnego. W większości przypadków wiąże się to z ręcznym wskazaniem odpowiedniego napędu podczas uruchamiania komputera. Jeśli twój komputer wyposażony jest w system UEFI, cała ta procedura będzie znacznie bardziej skomplikowana.
-
 \subsubsection{Zmiana kolejności bootowania}
 Kiedy rozpocznie się rozruch komputera, jeszcze przed załadowaniem się systemu operacyjnego musisz poinformować maszynę, że tym razem  zamiast systemu zainstalowanego na twardym dysku ma ona wykorzystać przygotowany przez nas instalator. Każdy producent płyt głównych podchodzi do tej kwestii w nieco odmienny sposób, jednak najczęściej procedura będzie się pokrywać z jednym z opisanych poniżej scenariuszy:
 \begin{itemize}
-\item Niektóre komputery podczas rozruchu pokazują napis Press F12 to select boot device. Kluczowymi słowami są tutaj ”Boot Device”, ”Boot order” lub podobne . Wciśnij wskazany klawisz (w tym konkretnym przypadku F12, ale nie jest to reguła) i z wyświetlonego menu wybierz nośnik instalacyjny. Niektóre komputery wykrywają pendrive'y jako dyski twarde i musisz wskazać właśnie taki dysk twardy a nie port USB. Jeżeli na liście nie ma naszego instalatora, zresetuj komputer i spróbuj ponowanie.
-\item Jeżeli zobaczysz napis \textbf{Press ESC to enter setup} lub coś podobnego, twoim słowem kluczowym będzie ”setup”. Wciśnięcie odpowiedniego klawisza (ESC, delete lub któryś z klawiszy funkcyjnych) spowoduje uruchomienie programu konfiguracyjnego płyty głównej. W tym programie przejdź do sekcji ”Advanced BIOS Features” a następnie ”First Boot Device”. Wskaż napęd CD-ROM lub napęd USB (względnie drugi dysk twardy, jeżeli pendrive jest rozpoznawany jako dysk twardy). Wróć do menu głównego (klawisz ESC cofa o jedno menu) i zapisz zmainy (najczęściej F10, czasem ESC i potwierdzenie przy pomocy klawisza Y). W tym momencie komputer samoczynnie się zrestartuje.
+\item Niektóre komputery podczas rozruchu pokazują napis Press F12 to select boot device. Kluczowymi słowami są tutaj ”Boot Device”, ”Boot order” lub podobne . Wciśnij wskazany klawisz (w tym konkretnym przypadku F12, ale nie jest to reguła) i z wyświetlonego menu wybierz nośnik instalacyjny. Niektóre komputery wykrywają pendrive'y jako dyski twarde i musisz wskazać właśnie taki dysk twardy a nie port USB. Jeżeli na liście nie ma naszego instalatora, zresetuj komputer i spróbuj ponownie.
+\item Jeżeli zobaczysz napis \textbf{Press ESC to enter setup} lub coś podobnego, twoim słowem kluczowym będzie ”setup”. Wciśnięcie odpowiedniego klawisza (ESC, delete lub któryś z klawiszy funkcyjnych) spowoduje uruchomienie programu konfiguracyjnego płyty głównej. W tym programie przejdź do sekcji ”Advanced BIOS Features” a następnie ”First Boot Device”. Wskaż napęd CD-ROM lub napęd USB (względnie drugi dysk twardy, jeżeli pendrive jest rozpoznawany jako dysk twardy). Wróć do menu głównego (klawisz ESC cofa o jedno menu) i zapisz zmiany (najczęściej F10, czasem ESC i potwierdzenie przy pomocy klawisza Y). W tym momencie komputer samoczynnie się zrestartuje.
 \end{itemize}
 \subsubsection{Uruchomienie instalatora UEFI}
 Po wybraniu urządzenia z nośnikiem instalacyjnym komputer rozpocznie proces jego uruchamiania. Może to potrwać od kilku do kilkunastu sekund. W tym czasie ekran komputera będzie czarny bądź będą się przez niego przewijały napisy.\\
 Jeżeli twoja maszyna pracuje pod kontrolą UEFI, to pierwszy ekran instalatora będzie wyglądał jak na poniższym rysunku:
 \begin{center}
-	\includegraphics[width=\linewidth]{images/instalacja_UEFI_boot.png}
+        \includegraphics[width=\linewidth]{images/instalacja_UEFI_boot.png}
 \end{center}
 Do wyboru masz następujące opcje:
 \begin{description}
-\item[Try Ubuntu without installing](Wypróbuj Ubuntu bez instalowania) - Uruchomi system Ubuntu bez instalacji go na dysku twardym. W ten sposób możesz przetestować Ubuntu i zobaczyć jak działa w praktyce. Wszystkie zmiany jakie wprowadzisz w systemie zostaną odrzucone po wyłączeniu komputera. Należy pamiętać, że w tym trybie Ubuntu działa bardzo wolno, gdyż musi korzystać z powolnego nośnika (płyta DVD lub pendriva). Po normalniej instalacji ubuntu będzie działać z pełną wydajnością. Skrót do instalatora systemu znajduje się na Pulpicie.
+\item[Try Ubuntu without installing](Wypróbuj Ubuntu bez instalowania) - Uruchomi system Ubuntu bez instalacji go na dysku twardym. W ten sposób możesz przetestować Ubuntu i zobaczyć jak działa w praktyce. Wszystkie zmiany jakie wprowadzisz w systemie zostaną odrzucone po wyłączeniu komputera. Należy pamiętać, że w tym trybie Ubuntu działa bardzo wolno, gdyż musi korzystać z powolnego nośnika (płyta DVD lub pendriv). Po normalniej instalacji Ubuntu będzie działać z pełną wydajnością. Skrót do instalatora systemu znajduje się na Pulpicie.
 \item[Install Ubuntu](Zainstaluj Ubuntu) - Ta opcja bezpośrednio uruchomi instalator Ubuntu bez wczytywania całego systemu.
 \item[OEM Install](Instalacja dla producentów sprzętu) - Ta opcja pozwala zainstalować podstawowy system bez tworzenia użytkownika. Przy pierwszym uruchomieniu zostaniesz poproszony o stworzenie nowego użytkownika.
 \item[Check disk for defects](Sprawdź płytę pod kontem błędów odczytu) - Ta opcja sprawdzi czy używany nośnik został prawidłowo utworzony.\\
-Przed przystąpieniem do instalacji systemu warto wykonać sprawdzenie nośnika instalacyjnego. Potrwa to góra kilka minut a pozwoli zaoszczędzić czas w przyszłości. Podczas przeprowadzania testów komputer może wyświetlać tylko czarny ekran. Jeżeli nie znajdzie żadnych błędów, otrzymasz komunikat "Check Finished: No errors found. Press any key to reboot your system" (Zakończono sprawdzanie: Nie znaleziono błędów.Wciśnij dowolny klawisz aby zresetować komputer). Po ponownym uruchomieniu komputera możesz przystąpić do instalacji. Jeżeli znaleziono jakiekolwiek błędy to należy ponownie przygotować nośnik instalacyjny. Uzycie wadliwego instalatora doprowadzi do uszkodzenia systemu. 
+Przed przystąpieniem do instalacji systemu warto wykonać sprawdzenie nośnika instalacyjnego. Potrwa to góra kilka minut a pozwoli zaoszczędzić czas w przyszłości. Podczas przeprowadzania testów komputer może wyświetlać tylko czarny ekran. Jeżeli nie znajdzie żadnych błędów, otrzymasz komunikat "Check Finished: No errors found. Press any key to reboot your system" (Zakończono sprawdzanie: Nie znaleziono błędów. Wciśnij dowolny klawisz aby zresetować komputer). Po ponownym uruchomieniu komputera możesz przystąpić do instalacji. Jeżeli znaleziono jakiekolwiek błędy to należy ponownie przygotować nośnik instalacyjny. Użycie wadliwego instalatora doprowadzi do uszkodzenia systemu. 
 \end{description}
-
 \subsubsection{Uruchomienie instalatora BIOS}
 \label{instalacja_uruchomienie}
 \begin{wrapfigure}{L}{0.4\textwidth}
-		\includegraphics[scale=0.5]{images/instalacja_BIOS_boot.png}
+                \includegraphics[scale=0.5]{images/instalacja_BIOS_boot.png}
 \end{wrapfigure}
-Po wybraniu urządzenia z nośnikiem instalacyjnym komputer rozpocznie proces jego uruchamiania. Może to potrwać od kilku do kilkunastu sekund. W tym czasie ekran komputera będzie czarny bądź będą się przez niego przewijały napisy. Kiedy ekran komputera zmieni kolor z czarnego na fioletowy wciśnij dowolny klawisz aby wejść do ustawień instalatora. Jeżeli tego nie zrobisz, komputer uruchomi instalator z domyślnymi opcjami.Na początek wybierz język w jakim system bedzie się z toba komunikował. Przy pomocy klawiszy kursora przejdź do trzeciej kolumny. Język Polski  znajduje się mniej więcej w połowie tej kolumny. Wciśnij enter aby zatwierdzić.
+Po wybraniu urządzenia z nośnikiem instalacyjnym komputer rozpocznie proces jego uruchamiania. Może to potrwać od kilku do kilkunastu sekund. W tym czasie ekran komputera będzie czarny bądź będą się przez niego przewijały napisy. Kiedy ekran komputera zmieni kolor z czarnego na fioletowy wciśnij dowolny klawisz aby wejść do ustawień instalatora. Jeżeli tego nie zrobisz, komputer uruchomi instalator z domyślnymi opcjami. Na początek wybierz język w jakim system będzie się z tobą komunikował. Przy pomocy klawiszy kursora przejdź do trzeciej kolumny. Język Polski  znajduje się mniej więcej w połowie tej kolumny. Wciśnij enter aby zatwierdzić.
 \clearpage
 \begin{description}
-\item[Wypróbuj Ubuntu bez instalowania] - Uruchomi system Ubuntu bez instalacji go na dysku twardym. W ten sposób możesz przetestować Ubuntu i zobaczyć jak działa w praktyce. Wszystkie zmiany jakie wprowadzisz w systemie zostaną odrzucone po wyłączeniu komputera. Należy pamiętać, że w tym trybie Ubuntu działa bardzo wolno, gdyż musi korzystać z powolnego nośnika (płyta DVD lub pendriva). Po normalniej instalacji ubuntu będzie działać z pełną wydajnością. Skrót do instalatora systemu znajduje się na Pulpicie.
+\item[Wypróbuj Ubuntu bez instalowania] - Uruchomi system Ubuntu bez instalacji go na dysku twardym. W ten sposób możesz przetestować Ubuntu i zobaczyć jak działa w praktyce. Wszystkie zmiany jakie wprowadzisz w systemie zostaną odrzucone po wyłączeniu komputera. Należy pamiętać, że w tym trybie Ubuntu działa bardzo wolno, gdyż musi korzystać z powolnego nośnika (płyta DVD lub pendriva). Po normalniej instalacji Ubuntu będzie działać z pełną wydajnością. Skrót do instalatora systemu znajduje się na Pulpicie.
 \item[Zainstaluj Ubuntu] - Ta opcja bezpośrednio uruchomi instalator Ubuntu bez wczytywania całego systemu.
 \item[Sprawdź płytę pod kontem błędów odczytu] - Ta opcja sprawdzi czy używany nośnik został prawidłowo utworzony.\\
-Przed przystąpieniem do instalacji systemu warto wykonać sprawdzenie nośnika instalacyjnego. Potrwa to góra kilka minut a pozwoli zaoszczędzić czas w przyszłości. Podczas przeprowadzania testów komputer może wyświetlać tylko czarny ekran. Jeżeli nie znajdzie żadnych błędów, otrzymasz komunikat "Check Finished: No errors found. Press any key to reboot your system" (Zakończono sprawdzanie: Nie znaleziono błędów.Wciśnij dowolny klawisz aby zresetować komputer). Po ponownym uruchomieniu komputera możesz przystąpić do instalacji. Jeżeli znaleziono jakiekolwiek błędy to należy ponownie przygotować nośnik instalacyjny. Uzycie wadliwego instalatora doprowadzi do uszkodzenia systemu. 
-\item[Sprawdź pamięć] - Ta opcja uruchomi program memtest, który wykona test pamięci operacyjnej komputera (RAM). Uszkodzona pamięć jest jedną z częstrzych przyczyn błędów instalatora jak i wpływa negatywnie na pracę zainstalowanego systemu.
+Przed przystąpieniem do instalacji systemu warto wykonać sprawdzenie nośnika instalacyjnego. Potrwa to góra kilka minut a pozwoli zaoszczędzić czas w przyszłości. Podczas przeprowadzania testów komputer może wyświetlać tylko czarny ekran. Jeżeli nie znajdzie żadnych błędów, otrzymasz komunikat "Check Finished: No errors found. Press any key to reboot your system" (Zakończono sprawdzanie: Nie znaleziono błędów. Wciśnij dowolny klawisz aby zresetować komputer). Po ponownym uruchomieniu komputera możesz przystąpić do instalacji. Jeżeli znaleziono jakiekolwiek błędy to należy ponownie przygotować nośnik instalacyjny. Użycie wadliwego instalatora doprowadzi do uszkodzenia systemu. 
+\item[Sprawdź pamięć] - Ta opcja uruchomi program memtest, który wykona test pamięci operacyjnej komputera (RAM). Uszkodzona pamięć jest jedną z częstszych przyczyn błędów instalatora jak i wpływa negatywnie na pracę zainstalowanego systemu.
 \item[Uruchom system z pierwszego dysku twardego] - Ta opcja kończy pracę instalatora i uruchamia podstawowy system operacyjny komputera.
 \end{description}
 Dodatkowe opcje widoczne na dolnym pasku uruchamia się wciskając odpowiedni klawisz funkcyjny:
@@ -51,13 +49,12 @@ Dodatkowe opcje widoczne na dolnym pasku uruchamia się wciskając odpowiedni kl
 \item[F2] - Zmiana języka instalatora.
 \item[F3] - Zmiana układu klawiatury.
 \item[F4] - Zmiana trybu pracy instalatora.
-	\begin{description}
-	\item[Zwykły] - Tryb podstawowy, teraz się w nim znajdujesz
-	\item[Użycie nośnika aktualizującego sterowniki] - ??
-	\item[Instalacja OEM(dla producentów sprzętu)] - Ta opcja pozwala zainstalować podstawowy system bez tworzenia użytkownika. Przy pierwszym uruchomieniu zostaniesz poproszony o stworzenie nowego użytkownika.
-	\end{description}
-\item[F5] - Pozwala włączyć/wyłączyć dodatkowe opcje ułatwiające instalacje osobom niepełnosprawny (Klawiatura ekranowa, lupa, wyski kontrast, czytnik ekranu, klawiatura Braille'a)
-\item[F6] - Dodatkowe parametry rozruchu, pomocne w przypadku napotkania problemów ze sprzetem.
+        \begin{description}
+        \item[Zwykły] - Tryb podstawowy, teraz się w nim znajdujesz
+        \item[Użycie nośnika aktualizującego sterowniki] - ??
+        \item[Instalacja OEM(dla producentów sprzętu)] - Ta opcja pozwala zainstalować podstawowy system bez tworzenia użytkownika. Przy pierwszym uruchomieniu zostaniesz poproszony o stworzenie nowego użytkownika.
+        \end{description}
+\item[F5] - Pozwala włączyć/wyłączyć dodatkowe opcje ułatwiające instalacje osobom niepełnosprawny (Klawiatura ekranowa, lupa, wysoki kontrast, czytnik ekranu, klawiatura Braille'a)
+\item[F6] - Dodatkowe parametry rozruchu, pomocne w przypadku napotkania problemów ze sprzętem.
 \end{description}
 \clearpage
-

@@ -1,145 +1,131 @@
 %------------------
-%	PRZEWODNIK PO UBUNTU 14.04 LTS TRUSTY THAR
-%	
+%       PRZEWODNIK PO UBUNTU 14.04 LTS TRUSTY THAR
+%       
 %
-%	Autorzy:
-%		1. Piotr "Dwimenor Vali" Sochocki, dwimeron@gmail.com
+%       Autorzy:
+%               1. Piotr "Dwimenor Vali" Sochocki, dwimeron@gmail.com
+%               2. K2cl
+%               3. bear_7
 %
-%	Licencja:
-%		Creative Commons
-%		Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
-%		CC BY-NC-SA 3.0 PL
-%		http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
+%       Licencja:
+%               Creative Commons
+%               Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
+%               CC BY-NC-SA 3.0 PL
+%               http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
 %------------------
-
-
 %------------------
-%	PREAMBUŁA
+%       PREAMBUŁA
 %------------------
 %TODO użyj paczki menukeys wszędzie tam, gdzie każe się coś wcisnąć na klawiaturze.
-
 % klasa mwart autorstwa Marcina Wolińskiego
 % http://marcinwolinski.pl/mwcls.html
 % pakiet: texlive-lang-polish
 \documentclass[a4paper,11pt,oneside]{mwart}
-
 % orientacja pozioma, marginesy
 \usepackage[landscape, margin=0.5in]{geometry}
-
-% interlinia (1.6 = półtora linni odstępu wg. nomenklatury Worda/Writera)
+% interlinia (1.6 = półtora linii odstępu wg. nomenklatury Worda/Writera)
 \linespread{1.6}
-
 % Odległosć między akapitami
 \setlength{\parskip}{0.2cm}
-
 % Język polski, polfonty
 \usepackage[OT4]{polski}
 \usepackage[utf8]{inputenc}
-
 % dzielenie wierszy
 \brokenpenalty=1000
 \clubpenalty=1000
 \widowpenalty=1000
-
 % Obrazki
 \usepackage{graphicx}
 \usepackage{wrapfig}
-
 % linki, URL
 \usepackage[urlcolor=blue, colorlinks=true]{hyperref} 
-
 % Dwie kolumny w spisie treści
 \usepackage[toc]{multitoc}
-
 % Jako, że nie bawimy się w rozdziały, sekcja i podsekcja są podstawowymi jednostmaki podziału dokumentu.
 % Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
 \renewcommand*\thesection{\arabic{section}}
-
 % Gwizadka zamiast myślnika jak znak kolejnego punktu listy.
 \renewcommand{\labelitemi}{$\star$}
-
 % Oficjalne kolory Ubuntu
 % http://design.ubuntu.com/brand/colour-palette
 \usepackage{xcolor}
 \definecolor{ubuntu_orange}{RGB}{221,72,20}
-
 %------------------
-%	STRUKTURA DOKUMENTU
+%       STRUKTURA DOKUMENTU
 %------------------
 \begin{document}
-
 \input{strona_tytulowa}
 \input{spis_tresci}
 \section{Wstęp}
-	\input{wstep_wprowadzenie}
-	\subsection{O Ubuntu}
-		\input{wstep_o_ubuntu}
-	\subsection{Dlaczego warto zmienić system na Ubuntu?}
-		\input{wstep_dlaczego_zmienic}
+        \input{wstep_wprowadzenie}
+        \subsection{O Ubuntu}
+                \input{wstep_o_ubuntu}
+        \subsection{Dlaczego warto zmienić system na Ubuntu?}
+                \input{wstep_dlaczego_zmienic}
 \section{Instalacja}
-	\subsection{Pobieranie obrazu systemu}
-		\input{instalacja_pobieranie_obrazu}
-	\subsection{Nagrywanie pobranego obrazu}
-		\input{instalacja_nagrywanie_obrazu_windows}
-		\input{instalacja_nagrywanie_obrazu_linux}
-	\subsection{Przygotowanie do instalacji}
-		\input{instalacja_przygotowanie}
-	\subsection{Uruchomienie instalatora}
-		\input{instalacja_uruchomienie}
-	\subsection{Graficzny instalator Ubuntu}
-		\input{instalacja_graficzny_instalator}
-	\subsection{Partycjonowanie dysku twardego}
-		\input{instalacja_partycjonowanie}
-	\subsection{Rozwiązywanie problemów z instalacją}
-		\input{instalacja_rozwiazywanie_problemow}
-	\subsection{Instalacja na maszynie wirtualnej}
-		\input{instalacja_virtualbox}		
+        \subsection{Pobieranie obrazu systemu}
+                \input{instalacja_pobieranie_obrazu}
+        \subsection{Nagrywanie pobranego obrazu}
+                \input{instalacja_nagrywanie_obrazu_windows}
+                \input{instalacja_nagrywanie_obrazu_linux}
+        \subsection{Przygotowanie do instalacji}
+                \input{instalacja_przygotowanie}
+        \subsection{Uruchomienie instalatora}
+                \input{instalacja_uruchomienie}
+        \subsection{Graficzny instalator Ubuntu}
+                \input{instalacja_graficzny_instalator}
+        \subsection{Partycjonowanie dysku twardego}
+                \input{instalacja_partycjonowanie}
+        \subsection{Rozwiązywanie problemów z instalacją}
+                \input{instalacja_rozwiazywanie_problemow}
+        \subsection{Instalacja na maszynie wirtualnej}
+                \input{instalacja_virtualbox}           
 \section{Pierwsze uruchomienie systemu}
-	\label{sec:pierwsze_uruchomienie}
-	\subsection{Uruchomienie systemu Ubuntu}
-		\input{pierwsze_uruchomienie_boot}
-	\subsection{Ekran logowania}
-		\input{pierwsze_uruchomienie_greater}
-	\subsection{Rzut oka na pulpit Ubuntu}
-		\input{pierwsze_uruchomienie_pulpit}
-	\subsection{Rzeczy do zrobienia po instalacji Ubuntu}
-		\label{sec:rzeczy_do_zrobienia_po_instalacji}
-		\input{pierwsze_uruchomienie_aktualizacja_instalacja}
+        \label{sec:pierwsze_uruchomienie}
+        \subsection{Uruchomienie systemu Ubuntu}
+                \input{pierwsze_uruchomienie_boot}
+        \subsection{Ekran logowania}
+                \input{pierwsze_uruchomienie_greater}
+        \subsection{Rzut oka na pulpit Ubuntu}
+                \input{pierwsze_uruchomienie_pulpit}
+        \subsection{Rzeczy do zrobienia po instalacji Ubuntu}
+                \label{sec:rzeczy_do_zrobienia_po_instalacji}
+                \input{pierwsze_uruchomienie_aktualizacja_instalacja}
 \section{Pulpit Ubuntu Unity}
-	\label{pulpit_unity}
-	\subsection{Pulpit}
-		%Pulpit, zmiana tapety tworzenie wyzwalaczy, wirtualne pulpity
-	\subsection{Zarządzanie oknami}
-	\subsection{Panel Menu}
-		%Global menu, wskaźniki, notufikacje
-	\subsection{Launcher}
-		%Modyfikowanie i tworzenie nowych
-	\subsection{Dash}
-	\subsection{HUD}
-	\subsection{Nautilus}
-	\subsection{Shotwell}
-	\subsection{Totem}
-	\subsection{Rhythmbox}
-	\subsection{Firefox}
-	\subsection{Evolution}
-	\subsection{LibreOffice}
-	\subsection{Konta online}
-	\subsection{Ubuntu One}
-	\subsection{Centrum Oprogramowania}
-	\subsection{DejaVu}
+        \label{pulpit_unity}
+        \subsection{Pulpit}
+                %Pulpit, zmiana tapety tworzenie wyzwalaczy, wirtualne pulpity
+        \subsection{Zarządzanie oknami}
+        \subsection{Panel Menu}
+                %Global menu, wskaźniki, notyfikacje
+        \subsection{Launcher}
+                %Modyfikowanie i tworzenie nowych
+        \subsection{Dash}
+        \subsection{HUD}
+        \subsection{Nautilus}
+        \subsection{Shotwell}
+        \subsection{Totem}
+        \subsection{Rhythmbox}
+        \subsection{Firefox}
+        \subsection{Evolution}
+        \subsection{LibreOffice}
+        \subsection{Konta online}
+        \subsection{Ubuntu One}
+        \subsection{Centrum Oprogramowania}
+        \subsection{DejaVu}
 \section{Sztuczki z systemem Ubuntu}
-	\subsection{Prywatność}
-	\subsection{Zmiana położenie elementów sterujących okna}
-	\subsection{Click to minimize}
-	\subsection{Wyłączenie global menu}
-	\subsection{Instalacja nowych motywów graficznych}
-	\subsection{Folder domowy na pulpicie}
-	\subsection{Odtwarzanie szyfrowanych płyt DVD}
-	%https://help.ubuntu.com/community/RestrictedFormats/PlayingDVDs
-	\subsection{preload, prelink, ulatencyd}
-	%http://www.webupd8.org/2014/04/get-better-linux-desktop-performance.html
-	\subsection{Sterowniki}
-	\label{sterowniki}
+        \subsection{Prywatność}
+        \subsection{Zmiana położenie elementów sterujących okna}
+        \subsection{Click to minimize}
+        \subsection{Wyłączenie global menu}
+        \subsection{Instalacja nowych motywów graficznych}
+        \subsection{Folder domowy na pulpicie}
+        \subsection{Odtwarzanie szyfrowanych płyt DVD}
+        %https://help.ubuntu.com/community/RestrictedFormats/PlayingDVDs
+        \subsection{preload, prelink, ulatencyd}
+        %http://www.webupd8.org/2014/04/get-better-linux-desktop-performance.html
+        \subsection{Sterowniki}
+        \label{sterowniki}
 \section{Aktualizacja z poprzedniego wydania}
 \section{Rozwiązywanie problemów z Ubuntu}
 \end{document}
