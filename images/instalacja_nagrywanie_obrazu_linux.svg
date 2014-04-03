@@ -25,15 +25,15 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1280"
-     inkscape:window-height="971"
+     inkscape:window-width="1231"
+     inkscape:window-height="1000"
      id="namedview31"
      showgrid="false"
      inkscape:zoom="1.2164948"
-     inkscape:cx="369.43318"
-     inkscape:cy="91.648516"
-     inkscape:window-x="0"
-     inkscape:window-y="0"
+     inkscape:cx="371.07725"
+     inkscape:cy="223.17394"
+     inkscape:window-x="49"
+     inkscape:window-y="24"
      inkscape:window-maximized="1"
      inkscape:current-layer="svg3053"
      fit-margin-top="0"
@@ -125,7 +125,7 @@
      sodipodi:linespacing="125%"><tspan
        x="35.320946"
        y="228.14542"
-       id="tspan3865-7">1</tspan></text>
+       id="tspan3865-7">3</tspan></text>
   <path
      d="m 194.05308,212.90678 a 24.714102,24.714102 0 1 1 -49.4282,0 24.714102,24.714102 0 1 1 49.4282,0 z"
      id="path3049-3"
@@ -140,7 +140,7 @@
      sodipodi:linespacing="125%"><tspan
        x="156.98196"
        y="227.32338"
-       id="tspan3865-1">2</tspan></text>
+       id="tspan3865-1">4</tspan></text>
   <path
      d="m 400.38359,211.26272 a 24.714102,24.714102 0 1 1 -49.4282,0 24.714102,24.714102 0 1 1 49.4282,0 z"
      id="path3049-6"
@@ -155,7 +155,7 @@
      sodipodi:linespacing="125%"><tspan
        x="363.31247"
        y="225.67932"
-       id="tspan3865-3">3</tspan></text>
+       id="tspan3865-3">5</tspan></text>
   <path
      d="m 109.38359,442.25424 a 24.714102,24.714102 0 1 1 -49.4282,0 24.714102,24.714102 0 1 1 49.4282,0 z"
      id="path3049-0"
@@ -170,7 +170,7 @@
      sodipodi:linespacing="125%"><tspan
        x="72.312469"
        y="456.67084"
-       id="tspan3865-6">4</tspan></text>
+       id="tspan3865-6">6</tspan></text>
   <path
      d="m 278.72257,443.89831 a 24.714102,24.714102 0 1 1 -49.4282,0 24.714102,24.714102 0 1 1 49.4282,0 z"
      id="path3049-9"
@@ -185,7 +185,7 @@
      sodipodi:linespacing="125%"><tspan
        x="241.65146"
        y="458.31491"
-       id="tspan3865-67">5</tspan></text>
+       id="tspan3865-67">7</tspan></text>
   <path
      d="m 172.11532,237.46667 5.8931,52.13132"
      id="path3907-7"

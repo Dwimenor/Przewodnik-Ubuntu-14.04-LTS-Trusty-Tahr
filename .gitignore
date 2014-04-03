@@ -1,9 +1,10 @@
+dwim.tex
 build*
 build\*
 *.html
 *(busy)
 *.css
-Thar.tex
+Tahr.tex
 *~
 *.acn
 *.acr

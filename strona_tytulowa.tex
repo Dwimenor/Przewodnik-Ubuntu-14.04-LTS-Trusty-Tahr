@@ -1,31 +1,25 @@
-\thispagestyle{empty}
+\begin{titlepage}
 
-%-----------------
-%	TYTUŁ
-%-----------------
-
-\colorbox{ubuntu_orange}{
-	\parbox[t]{1.0\linewidth}{
-		\centering \fontsize{40pt}{70pt}\selectfont
-		\vspace*{0.7cm}
-		
-		\hfill Przewodnik po\\
-		\hfill Ubuntu 14.04 LTS\\
-		\hfill Trusty Thar\par
-		
-		\vspace*{0.7cm}
-	}
-}
-
+% Kolor tła strony
+\pagecolor{ubuntu_orange}
+% Logo ubuntu circle of friends
+\noindent
+\includegraphics[width=2cm]{images/ubuntu_circle_of_friends.png}\\[-1em]
+% Biała linia
+\color{white}
+\makebox[0pt][l]{\rule{1.3\textwidth}{1pt}}
+\par
+%Autorzy
+\noindent
+\textsf{Zespół} {\href{http://www.ubuntu.pl}{Ubuntu.pl}
 \vfill
-
-%-----------------
-%	AUTOR
-%-----------------
-
-{
-	\centering
-	\large 
-	\hfill Zespół \href{http://www.ubuntu.pl}{Ubuntu.pl} \\
-}
-\clearpage
+% Tytuł
+\noindent
+\huge \textsf{Przewodnik po Ubuntu 14.04 LTS Trusty Tahr}}
+\vskip\baselineskip
+% Wersja, data
+\noindent
+\textsf{wersja 0.5 \\
+\today}
+\end{titlepage}
+\nopagecolor
