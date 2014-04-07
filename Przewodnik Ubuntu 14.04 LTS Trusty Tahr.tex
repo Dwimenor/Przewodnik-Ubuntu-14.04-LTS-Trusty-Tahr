@@ -16,7 +16,7 @@
 %------------------
 %       PREAMBUŁA
 %------------------
-%TODO użyj paczki menukeys wszędzie tam, gdzie każe się coś wcisnąć na klawiaturze.
+
 % klasa mwart autorstwa Marcina Wolińskiego
 % http://marcinwolinski.pl/mwcls.html
 % pakiet: texlive-lang-polish
@@ -38,6 +38,8 @@
 \widowpenalty=1000
 
 % Obrazki
+%TODO nie ładuj plików png z nałożonymi grafikami. Uzyj TIKZ:
+% http://tex.stackexchange.com/questions/30427/simplest-way-to-overlay-a-text-rectangle-label-an-image
 \usepackage{graphicx}
 \usepackage{wrapfig}
 
@@ -61,13 +63,17 @@
 \pagestyle{fancy}
 
 % Logo Ubuntu jako "punkt" listy
-\renewcommand{\labelitemi}{\includegraphics[scale=0.05]{images/ubuntu-logo32.png}}
+\newcommand{\imageUbuntuCircleOfFriends}{%
+\input{images/circle_of_friends}
+}%
+
+\renewcommand{\labelitemi}{\imageUbuntuCircleOfFriends}
 
 % Listy numerowane - styl taki jak na obrazkach.
 \usepackage{enumitem}
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz{
-            \node[shape=circle,fill=white,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}  
+            \node[shape=circle,fill=white,line width=2pt,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}  
             
 % Przyciski klawiatury jako tekst, przechodzenie przez różne menusy
 \usepackage{menukeys}
