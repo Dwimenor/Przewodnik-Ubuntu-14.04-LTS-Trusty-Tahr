@@ -1,3 +1,5 @@
+*.pdf
+*.odt
 dwim.tex
 build*
 build\*
