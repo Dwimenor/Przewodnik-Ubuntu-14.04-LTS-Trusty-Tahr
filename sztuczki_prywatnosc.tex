@@ -1,0 +1,25 @@
+Jednym z zastrzeżeń wobec środowiska Unity są kwestie prywatności użytkowników. Kiedy wpisujesz cokolwiek w Dashu to twój tekst trafia także na serwery producenta ubuntu - firmy Canonical. W odpowiedzi dostajesz dodatkowe wyniki wyszukiwania, np. ze sklepu Amazon. Nie wszystkim musi się podobać takie częściowe szpiegowanie poczynań użytkownika, chociaż CAnonical zapewnia iż wszystkie dane przekazywane są anonimowo.
+
+Wyszukiwanie w źródłach sieciowych można wyłączyć. Warto to zrobić nie tylko ze względu na ochronę prywatności, ale także aby przyspieszyć wyszukiwanie w dashu i zwiększyć czytelność wyników.
+
+\noindent \menu{{Ustawienia systemu}>{Prywatność i bezpieczeństwo}>{Wyszukaj}>{Panel wyszukiwania}>{Zawarcie wyników wyszukiwania online}}. Przestaw przełącznik z pocyji włączony (podświetlony) na wyłączony (szary).
+
+Wersja rozszerzona. W terminalu wykonaj następujące polecenie:
+\begin{lstlisting}[language=bash]
+wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
+\end{lstlisting}
+\begin{itemize}
+\item \textcolor{ubuntu_orange}{wget} - program do pobierania plików s internetu.
+\item \textcolor{ubuntu_orange}{-q} - flaga "cicha praca" (quiet) informująca wget, że ma nie wyświetlać żadnych informacji na ekranie.
+\item \textcolor{ubuntu_orange}{-O} - flaga "wyjście" (output) informująca wget gdzie ma zapisać pobrany plik.
+\item \textcolor{ubuntu_orange}{-} - myślnik po wladze wyjście informuje, że plik ma zostać wyświetlony na ekranie
+\item \textcolor{ubuntu_orange}{|} - "rura", "pipe" przekierowanie wyjścia z jednego programu na wejście drugiego programu. W tym wypadku wyjściem z wgeta jest pobrany z internetu skrypt. Zostanie on przekazany do programu bash.
+\item \textcolor{ubuntu_orange}{bash} - interpreter poleceń. Na swpwejściu dostał pobrany plik i teraz wykona zawarte w nim polecenia.
+\end{itemize}
+Pobrany i wykonany zostanie skrypt, który bardzo restrykcyjnie ustawi opcje prywatności w systemie:
+\begin{itemize}
+\item Wyłącza wyszukiwanie w źródłach online (tak jak powyższa graficzna metoda).
+\item Wyłącza wtyczki wyszukiwania w amazonie, populartracks, skimlinks, ebay, sklepie z gadżetami Ubuntu.
+\item Blokuje połączenia z adresem productsearch.ubuntu.com we wszystkich programach zainstalowanych w systemie.
+\end{itemize}
+%TODO wrzucić skrypt do załączników i dac instrukcję jak go wykorzystać w przypadku gdyby strona padła)

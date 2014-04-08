@@ -77,6 +77,9 @@
             
 % Przyciski klawiatury jako tekst, przechodzenie przez różne menusy
 \usepackage{menukeys}
+
+% Dla wyświetlania ładnie złożonych poleceń powłoki
+\usepackage{listings}
 %------------------
 %       STRUKTURA DOKUMENTU
 %------------------
@@ -117,7 +120,6 @@
         \subsection{Rzeczy do zrobienia po instalacji Ubuntu}
                 \input{pierwsze_uruchomienie_aktualizacja_instalacja}
 \section{Pulpit Ubuntu Unity}
-		\input{unity}
         \label{pulpit_unity}
         \subsection{Pulpit}
         		\input{unity_pulpit}       
@@ -146,20 +148,34 @@
         \subsection{Centrum Oprogramowania}
         \subsection{DejaVu}
 \section{Sztuczki z systemem Ubuntu}
-        \subsection{Prywatność}
-        \subsection{Zmiana położenie elementów sterujących okna}
-        \subsection{Click to minimize}
-        \subsection{Wyłączenie global menu}
+		\input{sztuczki}
+		\subsection{Wybór szybszych repozytoriów}
+			\input{sztuczki_serwer_lustrzany}
+		\subsection{Wyłączenie global menu}
+			\input{sztuczki_global_menu}
+		\subsection{Minimalizacja aplikacji poprzez kliknięcie na jej ikonę w Launcherze}
+			\input{sztuczki_laucher_minimalizacjia}
+		\subsection{Prywatność}
+			\input{sztuczki_prywatnosc}
         \subsection{Instalacja Unity Tweak Tool}
+        		\input{sztuczki_unitytweaktool}
         \subsection{Instalacja nowych motywów graficznych}
-        \subsection{Instalacja motywów ikon}
+        		\input{sztuczki_instalacja_motywu}
+        \subsection{Instalacja zestawu ikon}
+        		\input{sztuczki_instalacja_ikon}
+        	\subsection{Instalacja Quicklist Editor}
+        		\input{sztuczki_qle}
         \subsection{Folder domowy na pulpicie}
-        \subsection{Quicklist Editor}
+        		\input{sztuczki_home_na_pulpicie}        
         \subsection{Odtwarzanie szyfrowanych płyt DVD}
+        		\input{sztuczki_libdvdcss2}
         %https://help.ubuntu.com/community/RestrictedFormats/PlayingDVDs
         \subsection{preload, prelink}
-        \subsection{Sterowniki}
-        \label{sterowniki}
+        \subsection{Sterowniki} %/usr/lib/nux/unity_support_test -p
+        %\subsectionboot rapier? grub customizer?
+        %\subsection GUFW
+        %\subsection clamav clamtk
+        %\subsection czyszczenie systemu: bleachbit apt-get clean autoclean autoremove, deborphan
 \section{Aktualizacja z poprzedniego wydania}
 \section{Rozwiązywanie problemów z Ubuntu}
 \end{document}
