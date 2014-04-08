@@ -11,7 +11,7 @@ Czego potrzeba do kompilacji:
 2. texlive-lang-polish
 
 Dokument nie wykorzystuje NieWiadomoCzego, szybka kompilacja z texmakera działa. pdflatex też
-Cały tekst przesówamy do osobnych plików, tak aby tekst jak najmniej mieszał się z poleceniami składu tekstu
+Cały tekst przesuwamy do osobnych plików, tak aby tekst jak najmniej mieszał się z poleceniami składu tekstu
 
 
 Dla ludzi nie znających LaTeXa:
