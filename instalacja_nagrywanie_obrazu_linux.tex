@@ -1,9 +1,12 @@
 \subsubsection{System Linux, nagrywanie na pendriva}
-\begin{wrapfigure}[14]{r}{0.5\textwidth}
-              \includegraphics[width=\linewidth]{images/instalacja_nagrywanie_obrazu_linux.png}
+\begin{wrapfigure}{r}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/instalacja_nagrywanie_obrazu_linux.png}
 \end{wrapfigure}
 
-W systemach operacyjnych Linux do nagrywania obrazu na pendrive'a najlepiej posłużyć się programem \textcolor{ubuntu_orange}{UNetbootin}, dostępnym w każdej dystrybucji. Podłącz do komputera klucz USB, z którego chcesz potem instalować Ubuntu.
+W systemach operacyjnych Linux do nagrywania obrazu na pendrive'a najlepiej posłużyć się programem \textcolor{ubuntu_orange}{UNetbootin}, dostępnym w większości popularnych dystrybucji. UNetbootin rozpakuje pobrany obraz instalatora (plik .iso) bezpośrednio na pendriva a następnie zainstaluje na nim program rozruchowy.
+
+Sposób uruchomienia instalatora (opisywany w dalszej części tego przewodnika) nieco się różni, jeżeli użyłes programu UNetbootin. Po uruchomieniu komputera z tak przygotowanego pendriva pokazany zostanie niebieski ekran z opcjami instalacji, ale bez możliwości wyboru języka. Nazwy opcji są identyczne z tymi opisanymi w rozdziale \ref{instalacja_uruchomienie_uefi}: Uruchomienie instalatora UEFI. Różnią się one tylko szatą graficzną.
 \begin{enumerate}[label=\protect\circled{\arabic*}]
 \item Zainstaluj UNetBootIn korzystając ze swojego menadżera pakietów.
 \item Uruchom zainstalowany przed momentem program.
@@ -13,14 +16,15 @@ W systemach operacyjnych Linux do nagrywania obrazu na pendrive'a najlepiej pos�
 \item W tym menu wybierz Napęd USB
 \item Z tego menu wybierz włożonego wcześniej pendriva.\\
 \textbf{UWAGA: Wszystkie dane znajdujące się na tym nośniku zostaną skasowane!}
-\item Kliknij przycisk OK aby rozpocząć nagrywanie
+\item Kliknij przycisk \textcolor{ubuntu_orange}{OK} aby rozpocząć nagrywanie.
 \end{enumerate}
+
 \subsubsection{System Linux, nagrywanie na DVD}
 %TODO potrzebny obrazek z włożoną płytą DVD i wybranym obrazem ubuntu 14.04
 \begin{wrapfigure}{l}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/instalacja_nagrywanie_obrazu_linux_DVD.png}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/instalacja_nagrywanie_obrazu_linux_DVD.png}
 \end{wrapfigure}
 
 Aby nagrać obraz na płytę DVD potrzebujesz odpowiedniego programu. W tym przykładzie posłużymy się dostępną w większości dystrybucji nagrywarką Brasero. Kliknij prawym przyciskiem myszy na pobrany wcześniej obraz instalatora Ubuntu, wybierz
 \menu{{Otwórz w \ldots}>{Brasero}}. W otwartym oknie zostaniesz poproszony o włożenie czystej płyty DVD. Zrób to, a następnie kliknij na przycisk \textcolor{ubuntu_orange}{Nagraj}.
-\clearpage

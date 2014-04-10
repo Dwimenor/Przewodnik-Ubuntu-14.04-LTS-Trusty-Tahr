@@ -21,7 +21,7 @@
 % klasa mwart autorstwa Marcina Wolińskiego
 % http://marcinwolinski.pl/mwcls.html
 % pakiet: texlive-lang-polish
-\documentclass[a4paper,11pt,oneside]{mwart}
+\documentclass[a4paper,11pt,oneside,draft]{mwart}
 
 % marginesy
 \usepackage[margin=1cm]{geometry}
@@ -83,6 +83,9 @@
 % Dla wyświetlania ładnie złożonych poleceń powłoki
 \usepackage{listings}
 
+% Nie chcemy dzielić tych słów pomiędzy wierszami.
+\hyphenation{Ubuntu}
+
 %------------------
 % STRUKTURA DOKUMENTU
 %------------------
@@ -96,7 +99,7 @@
 		\subsection{Dlaczego warto zmienić system na Ubuntu?}
 			\input{wstep_dlaczego_zmienic}
 	\section{Instalacja}
-		\subsection{Pobieranie obrazu systemu}
+		\subsection{Pobieranie obrazu instalatora}
 			\input{instalacja_pobieranie_obrazu}
 		\subsection{Nagrywanie pobranego obrazu}
 			\input{instalacja_nagrywanie_obrazu_windows}
