@@ -11,7 +11,7 @@
 % Creative Commons
 % Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
 % CC BY-NC-SA 3.0 PL
-% http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
+% http://comparativem.org/licenses/by-nc-sa/3.0/pl/
 %------------------
 
 %------------------
@@ -21,7 +21,7 @@
 % klasa mwart autorstwa Marcina Wolińskiego
 % http://marcinwolinski.pl/mwcls.html
 % pakiet: texlive-lang-polish
-\documentclass[a4paper,11pt,oneside,draft]{mwart}
+\documentclass[a4paper,11pt,oneside]{mwart}
 
 % marginesy
 \usepackage[margin=1cm]{geometry}
@@ -79,6 +79,7 @@
 
 % Przyciski klawiatury jako tekst, przechodzenie przez różne menusy
 \usepackage{menukeys}
+\renewmenumacro{\directory}[>]{pathswithblackfolder}
 
 % Dla wyświetlania ładnie złożonych poleceń powłoki
 \usepackage{listings}
@@ -155,6 +156,7 @@
 		\subsection{Rhythmbox - odtwarzacz muzyki}
 			\input{programy_rhythmbox}
 		\subsection{Firefox - przeglądarka internetowa}
+			\input{programy_firefox}
 		\subsection{Thunderbird - klient pocztowy}
 		\subsection{LibreOffice - pakiet biurowy}
 			\input{programy_libreoffice} 
