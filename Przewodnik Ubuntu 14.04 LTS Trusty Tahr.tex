@@ -83,6 +83,12 @@
 
 % Dla wyświetlania ładnie złożonych poleceń powłoki
 \usepackage{listings}
+\lstset{ 
+upquote=true,
+columns=fullflexible,
+literate={*}{{\char42}}1
+         {-}{{\char45}}1
+}
 
 % Nie chcemy dzielić tych słów pomiędzy wierszami.
 \hyphenation{Ubuntu}
