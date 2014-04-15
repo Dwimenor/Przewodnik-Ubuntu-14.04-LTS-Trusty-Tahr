@@ -1,10 +1,10 @@
 Jednym z przydatnych bajerów jest wyświetlanie na pulpicie zawartości katalogu domoego. W ten sposób katalogi takie jak Pobrane, Myzuka, Dokumenty czy Wideo będą dostępne pod ręką na pulpicie. Aby to zrobić otwórz edytor tekstu Gedit. Wybierz \menu{{Plik}>{Otwórz}} wciśnij kombinajce klawiszy \keys{CTRL +h} aby wyświetlić ukryte pliki. Przejdź do katalogu .config i otwórz plik \textcolor{ubuntu_orange}{user-dirs.dirs}. Odnajdź linię:
 \begin{lstlisting}
-XDG_DESKTOP_DIR=="$HOME/Pulpit"
+XDG_DESKTOP_DIR="$HOME/Pulpit"
 \end{lstlisting}
 i zmień ją na:
 \begin{lstlisting}
-XDG_DESKTOP_DIR=="$HOME"
+XDG_DESKTOP_DIR="$HOME"
 \end{lstlisting}
 
 Zmiany będą widoczne po ponowny zalogowaniu się do systemu.

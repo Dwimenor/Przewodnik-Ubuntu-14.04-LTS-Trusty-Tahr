@@ -10,10 +10,10 @@ wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
 \end{lstlisting}
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{wget} - program do pobierania plików s internetu.
-\item \textcolor{ubuntu_orange}{-q} - flaga "cicha praca" (quiet) informująca wget, że ma nie wyświetlać żadnych informacji na ekranie.
-\item \textcolor{ubuntu_orange}{-O} - flaga "wyjście" (output) informująca wget gdzie ma zapisać pobrany plik.
+\item \textcolor{ubuntu_orange}{-q} - flaga ,,cicha praca'' (quiet) informująca wget, że ma nie wyświetlać żadnych informacji na ekranie.
+\item \textcolor{ubuntu_orange}{-O} - flaga ,,wyjście'' (output) informująca wget gdzie ma zapisać pobrany plik.
 \item \textcolor{ubuntu_orange}{-} - myślnik po fladze wyjście informuje, że plik ma zostać wyświetlony na ekranie
-\item \textcolor{ubuntu_orange}{|} - "rura", "pipe" przekierowanie wyjścia z jednego programu na wejście drugiego programu. W tym wypadku wyjściem z wgeta jest pobrany z internetu skrypt. Zostanie on przekazany do programu bash.
+\item \textcolor{ubuntu_orange}{|} - ,,rura'', ,,pipe'' przekierowanie wyjścia z jednego programu na wejście drugiego programu. W tym wypadku wyjściem z wgeta jest pobrany z internetu skrypt. Zostanie on przekazany do programu bash.
 \item \textcolor{ubuntu_orange}{bash} - interpreter poleceń. Na swoim wejściu dostał pobrany plik i teraz wykona zawarte w nim polecenia.
 \end{itemize}
 Pobrany i wykonany zostanie skrypt, który bardzo restrykcyjnie ustawi opcje prywatności w systemie:
