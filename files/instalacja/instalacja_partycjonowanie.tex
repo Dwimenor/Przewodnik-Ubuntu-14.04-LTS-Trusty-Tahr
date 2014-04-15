@@ -5,12 +5,12 @@ Partycjonowanie to proces zmiany układu partycji na dysku twardym. Jest to najw
 Wirtualny dysk twardy użyty w tym przewodniku ma tylko 26.8 gigabajta pojemności. Twój dysk twardy będzie miał zapewne kilkaset gigabajtów (jeżeli nie kilka terabajtów) pojemności. Dlatego też liczby jakimi się tu posługujemy będą miały niewielkie przełożenie na sytuację na twoim komputerze. W tym miejscu powinieneś się jednak zastanowić ile miejscach chcesz przeznaczyć na Ubuntu.
 Ogólnie rzecz ujmując sprawa wygląda następująco
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Partycja główna, root, /} - 6,2 Gigabajta to absolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużej partycji głównej, gdyż wolna przestrzeń będzie niewykorzystana. 15-20 gigabajtów w zupełności wystarczy.
-\item \textcolor{ubuntu_orange}{Partycja wymiany, swap} - na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAMu kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji to wielkość partycji swap powinna być co najmniej taka jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAMu. W takim wypadku nawet jeżeli nie korzystasz z hibernacji to dobrze jest stworzyć niewielką (300 - 400 megabajtów) partycję swap.
-\item \textcolor{ubuntu_orange}{Partycja domowa, /home} - W katalogu /home przechowywane są prywatne pliki użytkownika: zawartość pulpitu, dokumenty, filmy, muzyka i ustawienia programów. Katalog domowy może znajdować się na głównej partycji (/, root) lub można go wydzieć. Dobrą praktyką jest wydzielenie takiej partycji, gdyż w razie reinstalacji systemu nie trzeba będzie jej kasować. Nadpisana pozostanie tylko partycja główna, zaś wszystkie prywatne dane pozostaną niezmienione. Wielkość tej partycji zależy tylko i wyłącznie od tego jak wiele miejsca chcesz na nią przeznaczyć i jak wiele rzeczy zamierzasz na niej trzymać. 
+\item \textcolor{ubuntu_orange}{Partycja główna, root, /} --- 6,2 Gigabajta to absolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużej partycji głównej, gdyż wolna przestrzeń będzie niewykorzystana. 15-20 gigabajtów w zupełności wystarczy.
+\item \textcolor{ubuntu_orange}{Partycja wymiany, swap} --- na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAMu kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji to wielkość partycji swap powinna być co najmniej taka jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAMu. W takim wypadku nawet jeżeli nie korzystasz z hibernacji to dobrze jest stworzyć niewielką (300 --- 400 megabajtów) partycję swap.
+\item \textcolor{ubuntu_orange}{Partycja domowa, /home} --- W katalogu /home przechowywane są prywatne pliki użytkownika: zawartość pulpitu, dokumenty, filmy, muzyka i ustawienia programów. Katalog domowy może znajdować się na głównej partycji (/, root) lub można go wydzieć. Dobrą praktyką jest wydzielenie takiej partycji, gdyż w razie reinstalacji systemu nie trzeba będzie jej kasować. Nadpisana pozostanie tylko partycja główna, zaś wszystkie prywatne dane pozostaną niezmienione. Wielkość tej partycji zależy tylko i wyłącznie od tego jak wiele miejsca chcesz na nią przeznaczyć i jak wiele rzeczy zamierzasz na niej trzymać. 
 \end{itemize}
 \clearpage
-\subsubsection{Czysty dysk - wykorzystanie całego dostępnego miejsca}
+\subsubsection{Czysty dysk --- wykorzystanie całego dostępnego miejsca}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_proste.png}
 \end{center}
@@ -73,7 +73,7 @@ Kliknij na przycisk \textcolor{ubuntu_orange}{Zainstaluj} aby przejść dalej.
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie2.png}
 \end{center}
 
-Na tym ekranie podaj hasło - klucz do dysku twardego. To nie jest to samo hasło, które ustawisz dla swojego systemowego konta a jedynie hasło umożliwiające dostęp do danych zapisanych na dysku twardym. Pamiętaj, że jeżeli zapomnisz hasła jakie zostanie tu wprowadzone, nie będzie możliwości odzyskania zaszyfrowanych danych. Postaraj się też aby hasło nie było łatwe do odgadnięcia, ale łatwe dla ciebie do zapamiętania.
+Na tym ekranie podaj hasło --- klucz do dysku twardego. To nie jest to samo hasło, które ustawisz dla swojego systemowego konta a jedynie hasło umożliwiające dostęp do danych zapisanych na dysku twardym. Pamiętaj, że jeżeli zapomnisz hasła jakie zostanie tu wprowadzone, nie będzie możliwości odzyskania zaszyfrowanych danych. Postaraj się też aby hasło nie było łatwe do odgadnięcia, ale łatwe dla ciebie do zapamiętania.
 
 Opcja ,,Zamazanie pustej przestrzeni dysku'' powoduje, że niewykorzystywana, wolna przestrzeń dysku zostanie nadpisana losowymi danymi. Taka operacja znacznie utrudnia potencjalnym włamywaczom włamanie się do twoich danych. Miej na uwadze, że zamazywanie pustej przestrzeni może trwać bardzo długo, w zależności do tego ile miejsca przeznaczysz na Ubuntu.
 \begin{flushright}
@@ -109,26 +109,26 @@ Powyższy układ dysków twardych oraz partycji jest tylko przykładem skonstruo
 
 Tabela umieszczona w centrum tego okna przedstawia informacje o poszczególnych partycjach obecnych na dysku twardym. Objaśnienie poszczególnych kolumn:
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Urządzenie} - Ścieżka do poszczególnych partycji na dysku twardym. Są to oznaczenia stosowane w systemach Uniksowych, do których należy Linux a więc i Ubuntu i opisują jak rozpoznawane są poszczególne partycje. W tym wypadku:
+\item \textcolor{ubuntu_orange}{Urządzenie} --- Ścieżka do poszczególnych partycji na dysku twardym. Są to oznaczenia stosowane w systemach Uniksowych, do których należy Linux a więc i Ubuntu i opisują jak rozpoznawane są poszczególne partycje. W tym wypadku:
         \begin{itemize}
-        \item \textcolor{ubuntu_orange}{/dev/} - skrót od ,,Device'', urządzenie
-        \item \textcolor{ubuntu_orange}{sda} - oznaczenie pierwszego dysku twardego.
+        \item \textcolor{ubuntu_orange}{/dev/} --- skrót od ,,Device'', urządzenie
+        \item \textcolor{ubuntu_orange}{sda} --- oznaczenie pierwszego dysku twardego.
                 \begin{itemize}
-                        \item \textcolor{ubuntu_orange}{sd} - dysk na złączu SATA (sata disk)
-                        \item \textcolor{ubuntu_orange}{a} - pierwszy dysk. Drugi dysk twardy miałby literę ,,b'', trzeci ,,c'' i tak dalej.
+                        \item \textcolor{ubuntu_orange}{sd} --- dysk na złączu SATA (sata disk)
+                        \item \textcolor{ubuntu_orange}{a} --- pierwszy dysk. Drugi dysk twardy miałby literę ,,b'', trzeci ,,c'' i tak dalej.
                 \end{itemize}
-        \item \textcolor{ubuntu_orange}{sda1} - pierwsza partycja na pierwszym dysku twardym.
-        \item \textcolor{ubuntu_orange}{sda2} - druga partycja na pierwszym dysku twardym.
+        \item \textcolor{ubuntu_orange}{sda1} --- pierwsza partycja na pierwszym dysku twardym.
+        \item \textcolor{ubuntu_orange}{sda2} --- druga partycja na pierwszym dysku twardym.
         \end{itemize}
-\item \textcolor{ubuntu_orange}{Typ} - rodzaj systemu plików. Sposób w jaki partycja została sformatowana. System Windows korzysta z NTFS, Ubuntu może korzystać z różnych.
-\item \textcolor{ubuntu_orange}{Punkt montowania} - miejsce w którym dana partycja zostanie ,,zamontowana'', katalog w którym będzie widoczna zawartość tej partycji.
-\item \textcolor{ubuntu_orange}{Formatowanie} - zaznaczając to pole informujesz instalator, że dana partycja ma zostać sformatowana. Oznacza to utratę wszystkich danych na niej zapisanych.
-\item \textcolor{ubuntu_orange}{Rozmiar} - pojemność partycji w megabajtach.
-\item \textcolor{ubuntu_orange}{Zajęte} - ile miejsca zostało zajęte na tej partycji
-\item \textcolor{ubuntu_orange}{System} - system operacyjny zainstalowany na danej partycji. Nie zawsze da się rozpoznać zainstalowany system. Nie każda partycja musi mieć zainstalowany system operacyjny. 
+\item \textcolor{ubuntu_orange}{Typ} --- rodzaj systemu plików. Sposób w jaki partycja została sformatowana. System Windows korzysta z NTFS, Ubuntu może korzystać z różnych.
+\item \textcolor{ubuntu_orange}{Punkt montowania} --- miejsce w którym dana partycja zostanie ,,zamontowana'', katalog w którym będzie widoczna zawartość tej partycji.
+\item \textcolor{ubuntu_orange}{Formatowanie} --- zaznaczając to pole informujesz instalator, że dana partycja ma zostać sformatowana. Oznacza to utratę wszystkich danych na niej zapisanych.
+\item \textcolor{ubuntu_orange}{Rozmiar} --- pojemność partycji w megabajtach.
+\item \textcolor{ubuntu_orange}{Zajęte} --- ile miejsca zostało zajęte na tej partycji
+\item \textcolor{ubuntu_orange}{System} --- system operacyjny zainstalowany na danej partycji. Nie zawsze da się rozpoznać zainstalowany system. Nie każda partycja musi mieć zainstalowany system operacyjny. 
 \end{itemize}
 \clearpage
-\subsubsection{Zaawansowane partycjonowanie - Instalacja obok systemu Windows}
+\subsubsection{Zaawansowane partycjonowanie --- Instalacja obok systemu Windows}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}
 \end{center}
@@ -155,11 +155,11 @@ Na schemacie pojawiła się pusta, \textcolor{ubuntu_orange}{dostępna przestrze
 
 Po pierwsze musimy stworzyć partycję podstawową dla Ubuntu. O ilości miejsca potrzebnej na poszczególne partycje przeczytasz w sekcji \ref{ile_miejsca}: ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw jak na rysunku.
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Rozmiar} - rozmiar partycji w megabajtach
-\item \textcolor{ubuntu_orange}{Rodzaj nowej partycji} - jako, że system Windows korzysta z tablicy partycji ms-dos to jesteśmy ograniczeni do 4 partycji podstawowych. Aby nie było problemu, dla Ubuntu utworzymy partycje logiczne.
-\item \textcolor{ubuntu_orange}{Lokalizacja dla nowej partycji} - Czy partycja zostanie wyrównana do poczatku wolnej przestrzeni czy do jej końca. Nie ma to znaczenia dla działania systemu.
-\item \textcolor{ubuntu_orange}{Użyj jako} - jaki system plików ma być użyty do sformatowania tej partycji. Do wyboru jest wiele, ale w ramach tego przewodnika korzystamy z systemu ext4 z księgowaniem\footnote{Tematyka różnych systemów plików jest bardzo rozległa i z łatwością wypełniłaby kolejny Przewodnik.}
-\item \textcolor{ubuntu_orange}{Punkt montowania} - to nasza główna partycja, więc musi się znaleźć na początku\footnote{W systemach Windows drzewo katalogów ,,zaczyna się'' na C:$\backslash\backslash$ W systemach Linuksowych zaczyna się na /}.
+\item \textcolor{ubuntu_orange}{Rozmiar} --- rozmiar partycji w megabajtach
+\item \textcolor{ubuntu_orange}{Rodzaj nowej partycji} --- jako, że system Windows korzysta z tablicy partycji ms-dos to jesteśmy ograniczeni do 4 partycji podstawowych. Aby nie było problemu, dla Ubuntu utworzymy partycje logiczne.
+\item \textcolor{ubuntu_orange}{Lokalizacja dla nowej partycji} --- Czy partycja zostanie wyrównana do poczatku wolnej przestrzeni czy do jej końca. Nie ma to znaczenia dla działania systemu.
+\item \textcolor{ubuntu_orange}{Użyj jako} --- jaki system plików ma być użyty do sformatowania tej partycji. Do wyboru jest wiele, ale w ramach tego przewodnika korzystamy z systemu ext4 z księgowaniem\footnote{Tematyka różnych systemów plików jest bardzo rozległa i z łatwością wypełniłaby kolejny Przewodnik.}
+\item \textcolor{ubuntu_orange}{Punkt montowania} --- to nasza główna partycja, więc musi się znaleźć na początku\footnote{W systemach Windows drzewo katalogów ,,zaczyna się'' na C:$\backslash\backslash$ W systemach Linuksowych zaczyna się na /}.
 \end{itemize}
 Kliknij na przycisk \textcolor{ubuntu_orange}{OK} aby utworzyć nową partycję.
 \clearpage

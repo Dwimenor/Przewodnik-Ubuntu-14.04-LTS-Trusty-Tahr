@@ -31,11 +31,11 @@ sudo deborphan --guess-all | xargs sudo apt-get -y remove --purge
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{sudo} nakazuje wykonanie polecenia jako administrator.
 \item \textcolor{ubuntu_orange}{deborphan} program szukający osieroconych pakietów.
-\item \textcolor{ubuntu_orange}{--quess-all} dlaga dla programu deborphan informująca go, że ma szukać we wszystkich pakietach.
+\item \textcolor{ubuntu_orange}{\-\-quess-all} flaga dla programu deborphan informująca go, że ma szukać we wszystkich pakietach.
 \item \textcolor{ubuntu_orange}{$\vert$} przekazanie wyniku działania (wyjścia) programu deborphan do drugiego programu (na jego wejście).
 \item \textcolor{ubuntu_orange}{sudo} nakazuje wykonanie polecenia jako administrator.
 \item \textcolor{ubuntu_orange}{apt-get} program zarządzający pakietami
-\item \textcolor{ubuntu_orange}{-y} flga dla apt-get informująca, że z góry zgadzamy się na wszystkie działania
+\item \textcolor{ubuntu_orange}{-y} flaga dla apt-get informująca, że z góry zgadzamy się na wszystkie działania
 \item \textcolor{ubuntu_orange}{remove} flaga dla apt-get informująca, ze ma usunąć wskazane programy
-\item \textcolor{ubuntu_orange}{--purge} flaga dla apt-get informująca, ze ma także usunać pozostałości (pliki konfiguracyjne, historię, ikony itp).
+\item \textcolor{ubuntu_orange}{\-\-purge} flaga dla apt-get informująca, ze ma także usunać pozostałości (pliki konfiguracyjne, historię, ikony itp).
 \end{itemize}

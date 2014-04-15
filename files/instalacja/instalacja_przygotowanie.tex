@@ -1,4 +1,4 @@
-\subsubsection{Przygotowanie do instalacji - Windows - wskazówki ogólne}
+\subsubsection{Przygotowanie do instalacji --- Windows --- wskazówki ogólne}
 \label{sec:przygotowanie_windows}
 Powinieneś mieć świadomość, że instalacja innego systemu operacyjnego na dysku twardym twojego komputera zawsze wiąże się z ryzykiem utraty danych. Niestety, czasem zdarzają się nam nieprzewidziane rzeczy: zanik zasilania w czasie partycjonowania dysku twardego najczęściej prowadzi do utraty jego zawartości, do rzadkości nie należy również sytuacja, w której ktoś przez zwykłą nieuwagę  nadpisze jeden system drugim i w ten sposób utraci dane. Zanim przystąpisz więc do instalacji systemu Ubuntu, upewnij się, że wszystkie ważne dane zostały zabezpieczone na zewnętrznych nośnikach danych. Innymi słowy: zrób kopię zapasową.
 
@@ -7,21 +7,21 @@ Ważnym krokiem jest ustalenie, czy twoja płyta główna obsługiwana jest prze
 
 W konsoli systemu Windows\footnote{\menu{Start>Uruchom} wpisz ,,cmd'' i wciśnij \keys{\returnwin} } wpisz \textcolor{ubuntu_orange}{Confirm-SecureBootUEFI}. System może zwrócić jedną z trzech informacji:
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Cmdlet not supported on this platform} lub \textcolor{ubuntu_orange}{Polecenia nie znaleziono} - Ten komputer nie korzysta z SecureBoot. Nie potrzebujesz podejmować żadnych dodatkowych kroków, wystarczy włożyć przygotowany nośnik instalacyjny i zainstalować Ubuntu.
-\item \textcolor{ubuntu_orange}{False} - Ten komputer ma UEFI, ale nie korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
-\item \textcolor{ubuntu_orange}{True} - Ten komputer ma UEFI i korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
+\item \textcolor{ubuntu_orange}{Cmdlet not supported on this platform} lub \textcolor{ubuntu_orange}{Polecenia nie znaleziono} --- Ten komputer nie korzysta z SecureBoot. Nie potrzebujesz podejmować żadnych dodatkowych kroków, wystarczy włożyć przygotowany nośnik instalacyjny i zainstalować Ubuntu.
+\item \textcolor{ubuntu_orange}{False} --- Ten komputer ma UEFI, ale nie korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
+\item \textcolor{ubuntu_orange}{True} --- Ten komputer ma UEFI i korzysta z SecureBoot. Przejdź do sekcji porad dla Windows 8
 \end{itemize}
-\subsubsection{Przygotowanie do instalacji - Windows 8}
+\subsubsection{Przygotowanie do instalacji --- Windows 8}
 \label{sec:przygotowanie_windows8}
 Windows 8 wymusił na producentach sprzętu stosowanie technologi UEFI (zamiast BIOS-u) oraz SecureBoot (Zabezpieczenie komputera przed zmianami systemu operacyjnego), co znacznie utrudniło instalację innych systemów operacyjnych. Ubuntu jest przygotowane do współpracy z Windowsem 8, ale Windows nie jest przygotowany do współdzielenia komputera z innymi systemami operacyjnymi. Pamiętaj, że jeżeli posiadasz UEFI (a używanie Windows 8 na to wskazuje) to potrzebujesz Ubuntu w wersji 64 bitowej. Systemy 32 bitowe nie są obsługiwane przez technologię UEFI\footnote{A przynajmniej nie bez dużej ilości kombinowania}.
 
-W tym momencie warto przygotować wolną przestrzeń na dysku pod instalację Ubuntu. Ten punkt można wykonać zarówno teraz, jak i podczas instalacji Ubuntu - jeżeli jednak używasz Windows 8, lepiej zrobić to teraz. Wciśnij kombinację klawiszy \keys{Super + r} i uruchom program \textcolor{ubuntu_orange}{compmgmt.msc}. W uruchomionym programie utwórz partycję dla Ubuntu. Absolutne minimum w przypadku tej partycji to 8 GB. Ubuntu potrzebuje około 4 GB na podstawową instalację, pozostałe miejsce będzie można przeznaczyć na instalację oprogramowania oraz pliki użytkownika. Jak wspomniano powyżej, 8GB to naprawdę minimum - tak naprawdę zalecamy stworzenie partycji liczącej sobie przynajmniej 20 GB.
+W tym momencie warto przygotować wolną przestrzeń na dysku pod instalację Ubuntu. Ten punkt można wykonać zarówno teraz, jak i podczas instalacji Ubuntu --- jeżeli jednak używasz Windows 8, lepiej zrobić to teraz. Wciśnij kombinację klawiszy \keys{Super + r} i uruchom program \textcolor{ubuntu_orange}{compmgmt.msc}. W uruchomionym programie utwórz partycję dla Ubuntu. Absolutne minimum w przypadku tej partycji to 8 GB. Ubuntu potrzebuje około 4 GB na podstawową instalację, pozostałe miejsce będzie można przeznaczyć na instalację oprogramowania oraz pliki użytkownika. Jak wspomniano powyżej, 8GB to naprawdę minimum --- tak naprawdę zalecamy stworzenie partycji liczącej sobie przynajmniej 20 GB.
 
 Windows 8 korzysta z opcji Szybkiego Uruchamiania (Fast Boot), która uniemożliwia Ubuntu dostęp do plików znajdujących się na partycji Windowsa. Jedynym sposobem na obejście tego problemu jest wyłączenie opcji Szybkiego uruchamiania. Wejdź w \menu{{Panel Sterowania}>{Opcje Zasilania}>{Co ma robić przycisk zasilania}} i odchacz \textcolor{ubuntu_orange}{Włącz szybkie uruchamianie}.
-\subsubsection{Przygotowanie do instalacji - Linux}
+\subsubsection{Przygotowanie do instalacji --- Linux}
 \label{sec:przygotowanie_linux}
 Instalacja kilku systemów Linux obok siebie nie powoduje zadnych problemów, powinieneś jednak wiedzieć o paru sprawach. W systemach operacyjnych należących do tej rodziny pliki użytkownika przechowywane są w katalogu /home. Dobrą praktyką jest wydzielenie dla tego katalogu osobnej partycji, aby przy reinstalacji systemu nie tracić swoich ustawień.
 
-Jeżeli instalujesz jednego Linuksa obok drugiego, pomysł wykorzystania jednej partycji domowej dla obu systemów może wyglądać naprawdę kusząco. To jest możliwe, ale weź pod uwagę, że każdy z tych systemów może korzystać z innych plików - może się więc okazać, że nie wszystkie ustawienia będą prawidłowo odczytywane w obu dystrybucjach (szczególnie jeżeli używasz różnych środowisk graficznych). Przy takiej konfiguracji ważne jest też aby nazwa użytkownika oraz jego grupy były taka sama na obu systemach. Jeżeli instalowane obok siebie dystrybucje Linuksa dzieli wiele różnic, lepiej nie korzystać ze wspólnego katalogu domowego, zamiast tego umieścić dokumenty, filmy czy muzykę w miejscu dostępnym dla obydwu systemów.
+Jeżeli instalujesz jednego Linuksa obok drugiego, pomysł wykorzystania jednej partycji domowej dla obu systemów może wyglądać naprawdę kusząco. To jest możliwe, ale weź pod uwagę, że każdy z tych systemów może korzystać z innych plików --- może się więc okazać, że nie wszystkie ustawienia będą prawidłowo odczytywane w obu dystrybucjach (szczególnie jeżeli używasz różnych środowisk graficznych). Przy takiej konfiguracji ważne jest też aby nazwa użytkownika oraz jego grupy były taka sama na obu systemach. Jeżeli instalowane obok siebie dystrybucje Linuksa dzieli wiele różnic, lepiej nie korzystać ze wspólnego katalogu domowego, zamiast tego umieścić dokumenty, filmy czy muzykę w miejscu dostępnym dla obydwu systemów.
 
-Jeszcze jedna uwaga - nie ma znaczenia, ile dystrybucji Linuksa planujesz zainstalować, i tak wystarczy im jedna, wspólna partycja wymiany (swap).
+Jeszcze jedna uwaga --- nie ma znaczenia, ile dystrybucji Linuksa planujesz zainstalować, i tak wystarczy im jedna, wspólna partycja wymiany (swap).
