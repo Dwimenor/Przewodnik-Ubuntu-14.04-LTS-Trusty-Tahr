@@ -1,20 +1,19 @@
-F\begin{wrapfigure}{R}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_download.png}
+\begin{wrapfigure}{L}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_download.png}
 \end{wrapfigure}
 
 Alternatywnym sposobem wypróbowania Ubuntu bez instalowania go bezpośrednio na komputerze jest wykorzystanie maszyny wirtualnej. Oprogramowanie to umożliwia uruchomienie systemu operacyjnego zwanego ,,gościem'', jako program działający wewnątrz drugiego systemu, zwanego ,,gospodarzem''. Wiąże się to oczywiście z dużym zapotrzebowaniem na moc obliczeniową procesora oraz pamięć operacyjną. Jeżeli masz przynajmniej 2 gigabajty RAMu, a twój procesor jest nie starszy niż 5 lat (wtedy jest szansa, że będzie zapewniał akcelerację sprzętową dla wirtualizacji) to możesz w ten sposób wypróbować Ubuntu.
 
+\begin{wrapfigure}[11]{r}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_wizard1.png}
+\end{wrapfigure}
+
 Jedną z najpopularniejszych maszyn wirtualnych jest VirtualBox. Udaj się na stronę \href{https://www.virtualbox.org/wiki/Downloads}{virtualbox.org/download} i pobierz instalator VirtualBoksa dla swojego systemu. Zainstaluj pobrany plik w swoim systemie i uruchom program VirtualBox. Przy pierwszym uruchomieniu, program zapyta cię, czy pobrać i zainstalować dodatkowe rozszerzenia od Oracle. Zgódź się.
-\clearpage
-\begin{center}
-        \includegraphics[scale=0.7]{images/virtualbox_main.png}
-\end{center}
 
 W oknie głównym programu VirtualBox kliknij na przycisk \textcolor{ubuntu_orange}{New} aby uruchomić kreator maszyny wirtualnej.
-\clearpage
-\begin{wrapfigure}{r}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_wizard1.png}
-\end{wrapfigure}
+
 
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{Name} - Nazwa maszyny wirtualne. Może to być cokolwiek.
@@ -28,7 +27,8 @@ Kliknij na przycisk \textcolor{ubuntu_orange}{Next} aby przejść dalej.
 
 \clearpage
 \begin{wrapfigure}{r}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_wizard2.png}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_wizard2.png}
 \end{wrapfigure}
 
 Na tym ekranie ustaw ilość pamięci operacyjnej twojego komputera, jaką chcesz przeznaczyć dla systemu-gościa. Weź pod uwagę, że ta pamięć zostanie zajęta w momencie uruchomienia maszyny wirtualnej i nie będzie dostępna dla systemu-gospodarza. Nie powinno się przydzielać gościowi więcej niż 50\% zasobów gospodarza. Ubuntu wymaga minimum 512 megabajtów (system plus oprogramowanie) a zdecydowanie lepiej jest przydzielić 1024 megabajty.
@@ -36,9 +36,10 @@ Jeżeli w twój komputer posiada tylko 2 gigabajty RAMu, to przydzielając 1 gig
 \begin{flushright}
 Kliknij na przycisk \textcolor{ubuntu_orange}{Next} aby przejść dalej.
 \end{flushright}
-\clearpage
-\begin{wrapfigure}{r}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_wizard3.png}
+
+\begin{wrapfigure}{L}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_wizard3.png}
 \end{wrapfigure}
 
 Ten ekran pozwala skorzystać z już istniejącego wirtualnego dysku twardego lub stworzyć nowy. Ponieważ nie masz jeszcze żadnego takiego urządzenia, wybierz środkową opcję \textcolor{ubuntu_orange}{Create a virtual hard drive now}.
@@ -46,16 +47,20 @@ Ten ekran pozwala skorzystać z już istniejącego wirtualnego dysku twardego lu
 Kliknij na przycisk \textcolor{ubuntu_orange}{Next} aby przejść dalej.
 \end{flushright}
 \clearpage
-\begin{wrapfigure}{r}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_wizard4.png}
+
+\begin{wrapfigure}[11]{r}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_wizard4.png}
 \end{wrapfigure}
 
 Na tym ekranie wybierz typ dysku twardego. Wybierz opcję \textcolor{ubuntu_orange}{VDI (Virtual Disk Image)}.
 \begin{flushright}
 Kliknij na przycisk \textcolor{ubuntu_orange}{Next} aby przejść dalej.
 \end{flushright}
+
 \clearpage
-\begin{wrapfigure}{r}{0.5\textwidth}
+\begin{wrapfigure}[11]{r}{0.5\textwidth}
+	\vspace{-10pt}
 	\includegraphics[width=\linewidth]{images/virtualbox_wizard5.png}
 \end{wrapfigure}
 
@@ -67,15 +72,15 @@ Wybierz pomiędzy dyskiem tworzonym dynamicznie a dyskiem o stałym rozmiarze.
 \begin{flushright}
 Kliknij na przycisk \textcolor{ubuntu_orange}{Next} aby przejść dalej.
 \end{flushright}
-\clearpage
+
 \begin{wrapfigure}{r}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/virtualbox_wizard6.png}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/virtualbox_wizard6.png}
 \end{wrapfigure}
 
 Na tym ekranie możesz wybrać rozmiar dysku twardego. Korzystając z suwaka możesz wybrać żądany rozmiar. Ubuntu 14.04 LTS wymaga przynajmniej 6.2 gigabajta, górną granicą są tylko możliwości VirtualBoksa (2 terabajty). W celach testowych stwórz dysk o rozmiarze przynajmniej 25 gigabajtów.
 
 Kliknij na przycisk \textcolor{ubuntu_orange}{Create} aby stworzyć dysk i zakończyć działanie kreatora.
-
 \clearpage
 \begin{center}
 	\includegraphics[width=\linewidth]{images/virtualbox_start.png}
@@ -85,5 +90,5 @@ Twoja maszyna wirtualna dla Ubuntu jest gotowa. W głównym oknie programu Virtu
 
 Kiedy po zakończeniu instalacji zostaniesz poproszony o wyjście płyty instalatora z napędu to z paska menu maszyny wirtualnej wybierz \menu{{Devices}>{Cd/DVD Devices}>{Remove disk from virtual drive}}.
 
-Żeby móc się cieszyć w pełni sprawną maszyną wirtualną należy doinstalować w systemie-gościu \textcolor{ubuntu_orange}{Używanie x86 virtualization solution - guest addition module source for dkms z virtualbox-guest-dkms (własnościowy)} zgodnie z instrukcją zawartą w \ref{pierwsze_uruchomienie_aktualizacja_instalacja}:,,Instalacja dodatkowych sterowników''.
+Żeby móc się cieszyć w pełni sprawną maszyną wirtualną należy doinstalować w systemie-gościu \textcolor{ubuntu_orange}{Używanie x86 virtualization solution - guest addition module source for dkms z virtualbox-guest-dkms (własnościowy)} zgodnie z instrukcją zawartą w \ref{pierwsze_uruchomienie_aktualizacja_instalacja}: ,,Instalacja dodatkowych sterowników''.
 \clearpage
