@@ -1,0 +1,29 @@
+Domyślnym klientem poczty elektronicznej w systemie Ubuntu jest Thunderbird. Jego obsługa jest identyczna na każdym systemie operacyjnym (Windows, Mac, Linux). Podczas pierwszego uruchomienia program będzie chciał skonfigurować połączenie z pierwszą skrzynka pocztową. Aby dodać istniejąca skrzynkę pocztową wybierz \textcolor{ubuntu_orange}{Pomiń i użyj istniejącego adresu e-mail}. Teraz wypełnij formularz:
+\begin{itemize}
+\item \textcolor{ubuntu_orange}{Imię i nazwisko} --- Będzie wysyłane w nagłówku wiadomości e-mail jako autor listu.
+\item \textcolor{ubuntu_orange}{Adres e-mail} --- Adres twojej skrzynki pocztowej.
+\item \textcolor{ubuntu_orange}{Hasło} --- Hasło do twojej skrzynki pocztowej.
+\item \textcolor{ubuntu_orange}{Zapamiętaj hasło} --- Jeżeli zaznaczysz to pole, to hasło zostanie zapisane na dysku twardym. Jeżeli pozostawisz to pole puste, będziesz musiał podać swoje hasło przy każdym logowaniu się do skrzynki pocztowej za pośrednictwem programu Thunderbird.
+\end{itemize}
+
+Teraz kliknij na przycisk \textcolor{ubuntu_orange}{Kontynuuj}. Thunderbird spróbuje odnaleźć twojego dostawcę usług pocztowych w swojej bazie danych i na tej podstawie skonfigurować połączenie. Większość popularnych skrzynek pocztowych (gmail.com, o2.pl, wp.pl, onet.pl) jest dostępna i nie potrzebujesz ich dodatkowo konfigurować. Jeżeli twojej skrzynki nie ma w bazie danych Thunderbirda to musisz odwołać się do dokumentacji dostarczanej przez usługodawcę. Szukaj adresu serwera pop3 / imap / smtp w rozdziałach zatytułowanych np. ,,Konfiguracja klienta pocztowego''.\\
+Kliknij \textcolor{ubuntu_orange}{Gotowe} aby zakończyć konfigurację skrzynki pocztowej.
+
+\subsubsection{Dwuskładnikowe uwierzytelnienie gMail}
+Thunderbird nie obsługuje bezpośrednio dwuskładnikowego uwierzytelnienia. Aby móc korzystać z poczty za pomocą tego programu musisz wygenerować specjalne hasło, tylko dla Thunderbirda. Aby to zrobić wykonaj następujące czynności:
+\begin{enumerate}
+\item Udaj się na stronę \href{https://www.google.com/settings/personalinfo}{Edycji profilu}
+\item Wybierz \menu{{Bezpieczeństwo}>{Hasła aplikacji}>{Ustawienia}}
+\item Powtórnie zaloguj się do swojego konta Google.
+\item W pole \textcolor{ubuntu_orange}{Nazwa} wpisz nazwę dla danego hasła. Może to być cokolwiek, wystarczy abyś w przyszłości wiedział do czego odnosi się dane hasło. Wpisz np. \textit{Thunderbird}
+\item Kliknij \textcolor{ubuntu_orange}{Generuj Hasło}
+\item Otrzymasz 16-znakowy ciąg liter. 
+\item W oknie konfiguracji Thunderbirda podaj to hasło jako hasło dostępu do skrzynki pocztowej.
+\end{enumerate}
+
+\subsubsection{Różnica pomiędzy protokołem POP3 a IMAP}
+Kiedy ktoś napisze do ciebie e-maila to ta wiadomość jest przechowywana na serwerach firmy obsługującej twoją skrzynkę pocztową. Korzystając z poczty przez przeglądarkę internetową (webmail) operujesz bezpośrednio na serwerach usługodawcy. Klien pocztowy, taki jak Thunderbird, łączy się co jakiś czas z serwerami poczty i pobiera informacje o stanie skrzynki. Ta komunikacja może odbywać się za pośrednictwem dwóch protokołów.
+
+POP3 jest prostym protokołem, umożliwia ściągnięcie zawartości skrzynki pocztowej na dysk twardy twojego komputera. Zazwyczaj po tej operacji wiadomości są kasowane z serwerów. POP3 powstał w czasach, kiedy pojemność skrzynek pocztowych liczona była w pojedynczych megabajtach a nie gigabajtach i stąd takie zachowanie. Można to wyłączyć w konfiguracji skrzynki pocztowej (przez webmail). Protokół POP3 jest starszy i ma mało funkcji, ale jest obsługiwany przez wszystkie skrzynki pocztowe.
+
+IMAP jest protokołem nowocześniejszym. Pozwala na operowanie zawartością skrzynki pocztowej z poziomu klienta pocztowego. Obsługuje też podział skrzynki na foldery/etykiety. Zmiany w kliencie pocztowym korzystającym z IMAP są wprowadzane także na serwerach, tak więc lokalne przeniesienie wiadomości ze skrzynki odbiorczej do innego katalogu powoduje wykonanie identycznej operacji na serwerze. 
