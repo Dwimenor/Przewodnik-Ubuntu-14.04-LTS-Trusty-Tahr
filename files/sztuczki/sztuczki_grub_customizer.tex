@@ -1,0 +1,33 @@
+Menu rozruchowe (boot menu) służy do wskazywania, który z zainstalowanych systemów operacyjnych ma zostać uruchomiony podczas rozruchu komputera. Jeżeli zainstalowałeś Ubuntu jako jedyny system operacyjny, to menu rozruchowego nie zobaczysz. Można je wyświetlić poprzez wciśnięcie klawisza \keys{Shift} lub \keys{\arrowkeydown} kiedy wyświetlą się filowetowe pasy na krawędziach ekranu. Jeżeli masz więcej niż jeden system operacyjny, ekran rozruchowy programu GRUB zostanie wyświetlony i rozpocznie się odliczanie, po u8pływie którego zostanie wybrana pierwsza pozycja z listy.
+
+Konfiguracja wygląda i zachowania menu rozruchowego jest możliwa, ale wymaga bardzo dobrej znajomości dokumentacji programu GRUB i umiejętnego stosowania wiersza poleceń. To wykracza daleko poza zakres tego Przewodnika. Zamiast tego posłużymy się programem \textcolor{ubuntu_orange}{Grub Customizer}. Aby go zainstalowac wykonaj:
+\begin{enumerate}
+\item
+\begin{lstlisting}[language=bash]
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+\end{lstlisting}
+\item
+\begin{lstlisting}[language=bash]
+sudo apt-get update
+\end{lstlisting}
+\item
+\begin{lstlisting}[language=bash]
+sudo apt-get install grub-customizer
+\end{lstlisting}
+\end{enumerate}
+
+\begin{wrapfigure}{R}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/programy_grub_customizer.png}
+\end{wrapfigure}
+
+Uruchom teraz zainstalowany program Grub Customizer. Zmiany w menu rozruchowym wymagają uprawnień administratora, więc zostaniesz poproszony o podanie hasła. Kiedy to zrobić, program przeskanuje aktualną konfigurację i wyświetli swoje okno. Dostępne są w nim trzy zakładki:
+\begin{itemize}
+\item \textcolor{ubuntu_orange}{Ustawienia listy} --- służy do konfiguracji kolejności elementów na liście. Pierwszy element na liście zostanie domyślnie wybrany podczas rozruchu systemu. Elementy skasowane na tej liście nie pojawią się podczas uruchamiania komputera (co może skutkować niemożliwością uruchomienia systemu wgóle).
+\item \textcolor{ubuntu_orange}{Ustawienia ogólne} --- ta zakładka służy do zmiany podstawowych parametrów.
+\item \textcolor{ubuntu_orange}{Ustawienia wyglądu} --- ta zakładka pozwala zmienić kolory i rozmiar menu rozruchowego a także wgrać tapetę.
+\end{itemize}
+
+W programie dostępny jest jeszcze przycisk \textcolor{ubuntu_orange}{Zaawansowane}. Opcje zawarte w tych ustawieniach przeznaczone są dla doświadczonych administratorów systemu.
+
+Aby zapisać wprowadzone przez siebie zmiany kliknij na przycisk \textcolor{ubuntu_orange}{Zapisz} znajdujący się na górnej belce narzedziowej.
