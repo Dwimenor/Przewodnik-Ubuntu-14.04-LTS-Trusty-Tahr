@@ -29,19 +29,20 @@
 \documentclass[a4paper,11pt,oneside]{mwart}
 
 % marginesy
-\usepackage[margin=1cm]{geometry}
+\usepackage[left=1cm, right=1cm, top=1cm, bottom=2cm]{geometry} 
 
 % interlinia (1.6 = półtora linii odstępu wg. nomenklatury Worda/Writera)
 \linespread{1.6}
 
 % Język polski, polfonty
-\usepackage[OT4]{polski}
 \usepackage[utf8]{inputenc}
+\usepackage[OT4]{polski}
+\usepackage[polish]{babel}
 
 % dzielenie wierszy
-\brokenpenalty=1000
-\clubpenalty=1000
-\widowpenalty=1000
+\brokenpenalty=10000
+\clubpenalty=10000
+\widowpenalty=10000
 
 % Obrazki
 %TODO nie ładuj plików png z nałożonymi grafikami. Uzyj TIKZ:
