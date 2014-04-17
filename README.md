@@ -1,4 +1,4 @@
-Przewodnik-Ubuntu-14.04-LTS-Trusty-Thar
+Przewodnik-Ubuntu-14.04-LTS-Trusty-Tahr
 =======================================
 
 Przewodnik udostępniony na licencji Creative Commons Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
