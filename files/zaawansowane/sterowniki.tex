@@ -71,6 +71,21 @@ Akcelerację wideo poprzez VDPAU można doinstalować poleceniem:
 sudo apt-get install libvdpau1 vdpauinfo
 \end{lstlisting}
 
+Jeśli twój komputer to laptop z układem NVidia Optimus, a system nie rozpoznał tego układu, to może zajść potrzeba ręcznej instalacji pakietu nvidia-prime. 
+
+\begin{lstlisting}[language=bash]
+sudo apt-get nvidia-prime
+\end{lstlisting}
+
+\noindent Możliwość przełączania układu graficznego znajduje się w panelu ustwień \textcolor{ubuntu_orange}{nvidia-settings}.
+
+Gdyby pakiet nvidia-prime nie zdawał egzaminu, można go odinstalować i w jego miejsce zainstalować Bumblebee. Ten program wyłącza dyskretną kartę NVidii, jednocześnie umożliwiając jej włączenie wtedy, gdy jest potrzebna.
+Po wcześniejszym odinstalowaniu nvidia-prime Bumblebee można zainstalować poleceniem:
+
+\begin{lstlisting}[language=bash]
+sudo apt-get install bumblebee bumblebee-nvidia
+\end{lstlisting}
+
 \subsubsection{AMD}
 AMD jest czymś między Intelem, a nVidią. Z jednej strony dostarcza zamknięte sterowniki (ale tylko dla najnowszych kart graficznych), z drugiej strony rozwijają otwarte sterowniki, które wspierają starsze modele. W związku z tym jeżeli jesteś użytkownikiem karty graficznej AMD Radeon HD 5000 lub nowszej powinieneś zainstalować zamknięte sterowniki zgodnie z procedurą opisaną w rozdziale \ref{pierwsze_uruchomienie_aktualizacja_instalacja}: ,,Instalacja dodatkowych sterowników''. W przypadku posiadania starszej karty graficznej powinieneś pozostać na otwartych sterownikach.
 
@@ -78,8 +93,13 @@ AMD jest czymś między Intelem, a nVidią. Z jednej strony dostarcza zamknięte
 	\includegraphics[width=\linewidth]{images/sterowniki_AMD.png}
 \end{center}
 
-
 W tym drugim wypadku można zapewnić akcelerację wideo poprzez VDPAU instalując pakiety poleceniem:
 \begin{lstlisting}[language=bash]
 sudo apt-get install libvdpau1 vdpauinfo mesa-vdpau-drivers
+\end{lstlisting}
+
+Posiadacze hybrydowych układów AMD powinni zainstalować paczki fglrx oraz fglrx-pxpress:
+
+\begin{lstlisting}[language=bash]
+sudo apt-get install fglrx fglrx-pxpress
 \end{lstlisting}
