@@ -1,0 +1,49 @@
+\subsubsection{Brak możliwości uruchomienia systemu Ubuntu lub Windows}
+Zajrzyj do \ref{grub_przywracanie}: ,,Przywracanie GRUB-a''.
+
+\subsubsection{GRUB startuje, ale nie uruchamia systemu}
+W GRUB-ie wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj aż system się załaduje i wybierz opcję \textcolor{ubuntu_orange}{grub}. Następnie wybierz opcję \textcolor{ubuntu_orange}{resume} lub zrestartuj komputer.
+
+\subsubsection{System plików został uszkodzony i wymaga naprawy}
+W GRUB-ie wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj aż system się załaduje i wybierz opcję \textcolor{ubuntu_orange}{fsck}. Następnie wybierz opcję \textcolor{ubuntu_orange}{resume} lub zrestartuj komputer.
+
+\subsubsection{Czarny ekran podczas uruchamiania systemu}
+Przyczyny tego mogą być różne, jednak najczęściej jest to problem ze sterownikami karty graficznej. Uruchom ponownie komputer, wejdź w menu GRUB-a i wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj aż system się załaduje i wybierz opcję \textcolor{ubuntu_orange}{failsafex}. System zostanie uruchomiony w bezpiecznym trybie graficznym. Wybierz \textcolor{ubuntu_orange}{Run in low-graphics mode for just one session}. Przejdź do sekcji \ref{sterowniki}: ,,Sterowniki do kart graficznych'' aby dowiedzieć się więcej o sterownikach.
+
+Drugą możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. W menu GRUB-a ustaw się na pozycji Ubuntu i wciśnij \keys{e}. Zjedź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przed-ostatnia linijka)skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciźnij \keys{CTRL + x} aby uruchomić komputer z nowymi parametrami.
+
+\subsubsection{Problemy z instalacją pakietów}
+Przerwany proces instalacji pakietów oprogramowania skutkuje niemożliwością dokonywania zmian w systemie. Menadżer pakietów w takiej sytuacji wykrywa, że pakiety zostały uszkodzone i nie pozwoli nic zrobić, póki nie zostaną naprawione. Najprostszym remedium jest otworzenie konsoli \keys{CTRL + Alt + t} i wpisanie następujących poleceń:
+
+\begin{lstlisting}[language=bash]
+sudo dpkg --configure -a
+sudo apt-get clean
+sudo apt-get autoclean
+sudo apt-get install -f
+\end{lstlisting}
+
+\subsubsection{Przywracanie paska launchera}
+Aby przywrócić domyślne ikony na pasku Launchera wykonaj:
+
+\begin{lstlisting}[language=bash]
+unity --reset-icons
+\end{lstlisting}
+
+Zmiany będą widoczne po ponownym zalogowaniu się do systemu.
+
+\subsubsection{Przywracanie wyglądu systemu do ustawień domyślnych}
+Aby przywrócić domyślny wygląd interfejsu użytkownika wykonaj:
+
+Samo Unity:
+\begin{lstlisting}[language=bash]
+unity --reset
+\end{lstlisting}
+
+Całe środowisko graficzne:
+
+\begin{lstlisting}[language=bash]
+sudo apt-get install dconf-tools
+dconf reset -f /org/compiz/
+\end{lstlisting}
+
+Zmiany będą widoczne po ponownym zalogowaniu się do systemu.
