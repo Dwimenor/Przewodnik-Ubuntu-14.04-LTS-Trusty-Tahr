@@ -1,0 +1,14 @@
+W systemie Ubunu są dwie metody uruchamiania programów wraz ze startem systemu. Metoda globalna powoduje wykonanie wskazanego polecenia tuż po zakończeniu rozruchu systemu, ale przed włączeniem środowiska graficznego i zalogowaniem użytkownika. Sam użytkownik ma dostęp do swojego własnego autostartu, wskazane programy zostaną uruchomione w momencie zalogowania się do systemu.
+
+\subsubsection{Autostart użytkownika}
+Autostart użytkownika służy do uruchamiania programów przy rozpoczynaniu graficznej sesji. Może to być np. przeglądarka internetowa, czytnik RSS, klient pocztowy, komunikator internetowy - co tylko chcesz. Aby ustawić opcje autostartu w Dashu wpisz \textcolor{ubuntu_orange}{Programy Startowe}. Aby stworzyć nowy wpis kliknij na \textcolor{ubuntu_orange}{Dodaj}:
+\begin{itemize}
+\item \textcolor{ubuntu_orange}{Nazwa} --- nazwa pod jaką będzie wyświetlany dany wpis
+\item \textcolor{ubuntu_orange}{Polecenie} --- polecenie do uruchomienia. Aby uruchomić przeglądarkę internetową Firefox wpisz \textcolor{ubuntu_orange}{firefox}. Komunikator internetowy --- \textcolor{ubuntu_orange}{empathy} itd.
+\item \textcolor{ubuntu_orange}{Komentarz} --- dodatkowe informacje. Może pozostać puste.
+\end{itemize}
+
+Pamiętaj, że im więcej pragramów startowych dodasz, tym dłużej będzie trwało uruchamianie systemu.
+
+\subsubsection{Autostart systemowy}
+Z autostartu systemowego powinni korzystać tylko zaawansowani użytkownicy. Konfiguracja odbywa się poprzez edycję pliku \textcolor{ubuntu_orange}{/etc/rc.local} i powinna być przeprowadzana jedynie przez doświadczonych uzytkowników. Pamiętaj, że polecenia zawarte w tym pliku są wykonywane przed uruchomieniem srodowiska graficznego i nie można za jego pomocą wpływać na to co zostanie uruchomione użytkownikowi. Rc.local służy jedynie do przeprowadzania zmian w systemie niezbędnych do jego prawidłowego działania, np. załadowanie dodatkowych sterowników jeżeli inaczej nie można. Nie jest to plik dla zwykłego użytkownika.
