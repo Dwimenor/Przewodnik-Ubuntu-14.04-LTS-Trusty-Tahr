@@ -1,0 +1,13 @@
+W Ubuntu domyślnie włączony jest mechanizm raportowania błędów - Apport. Aby wyłączyć usługę i zarazem pozbyć się komunikatów o wystąpieniu błędów:
+\begin{enumerate}
+\item Otwórz jako administrator plik konfiguracyjny apporta:
+\begin{lstlisting}[language=bash]
+sudo gedit /etc/default/apport
+\end{lstlisting}
+\item Zmień \textit{enabled=1} na \textit{enabled=0}
+\item Zapisz zmiany.
+\item Wykonaj polecenie:
+\begin{lstlisting}[language=bash]
+sudo service apport stop
+\end{lstlisting}
+\end{enumerate}

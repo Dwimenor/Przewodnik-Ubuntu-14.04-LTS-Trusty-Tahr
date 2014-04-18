@@ -1,0 +1,35 @@
+\subsubsection{Dodawanie nowego użytkownika}
+Aby dodać nowego użytkownika systemu uruchom w Dashu \textcolor{ubuntu_orange}{Konta użytkowników}. W prawym górnym rogu ekranu kliknij na \textcolor{ubuntu_orange}{Odblokuj} i podaj swoje hasło. Aby dodać nowego użytkownika:
+\begin{enumerate}
+\item Kliknij na przycisk \textcolor{ubuntu_orange}{+} znajdujący się pod lewym panelem z listą użytkowników.
+\item Wypełnij formularz:
+\begin{itemize}
+\item \textcolor{ubuntu_orange}{Typ konta} --- konto standardowe umożliwia korzystanie z komputera. Konto administratora pozwala dokonywać zmian w systemie (instalacja pakietów, zmiana ustawień, wszędzie tam gdzie do tej pory podawałeś hasło aby coś odblokować).
+\item \textcolor{ubuntu_orange}{Imię i nazwisko} --- aby system wiedział jak ma się zwracać do użytkownika
+\item \textcolor{ubuntu_orange}{Nazwa użytkownika} --- systemowa nazwa, inaczej login do konta. Tylko małe litery, bez polskich znaków i znaków specjalnych.
+\end{itemize}
+\item Kliknij \textcolor{ubuntu_orange}{Dodaj}
+\item Aby aktywować konto ustaw dla niego hasło. Kliknij na \textcolor{ubuntu_orange}{Brak} obok pola \textcolor{ubuntu_orange}{Hasło} w prawej części okna. Możesz tam też ustawić logowanie bez hasła.
+\end{enumerate}
+
+\subsubsection{Konto gościa}
+Ubuntu umożliwia korzystanie z systemu w sesji gościa. Wyboru należy dokonać na ekranie logowania. Wszystkie zmiany wprowadzone podczas takiej sesji zostaną utracone po zakończeniu pracy. Gość nie może też dokonywać zmian w systemie, ma dostęp tylko do aktualnie zainstalowanego oprogramowania i nie może instalować nowego.
+
+Aby wyłączyć konto gościa uruchom edytor tekstu jako administrator:
+\begin{lstlisting}[language=bash]
+sudo gedit
+\end{lstlisting}
+
+Wklej do niego:
+
+\begin{lstlisting}[language=bash]
+[SeatDefaults]
+allow-guest=false
+\end{lstlisting}
+
+Zapisz plik jako /usr/share/lightdm/lightdm.conf.d/50-no-guest.conf\\
+Aby ponownie włączyć konto gościa skasuj tamten plik:
+
+\begin{lstlisting}[language=bash]
+sudo rm /usr/share/lightdm/lightdm.conf.d/50-no-guest.conf
+\end{lstlisting}
