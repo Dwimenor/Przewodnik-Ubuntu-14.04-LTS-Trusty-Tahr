@@ -1,6 +1,10 @@
 Wraz z systemem Ubuntu na twoim dysku twardym znalazła się cała gama oprogramowania --- pakiet biurowy, przeglądarka internetowa, odtwarzacze multimediów, itd. Jednak zapewne chciałbyś zainstalować więcej programów, bardziej odpowiadających twoim potrzebom. W tym rozdziale przedstawione zostaną sposoby instalacji programów w systemie Ubuntu.
 
+<<<<<<< HEAD
 W systemach linuksowych (Ubuntu do nich należy) instalacja programów przebiega nieco inaczej, niż gdzie indziej, a jednocześnie bardzo podobnie. Jak to możliwe? Bardzo prosto. Zapewne znasz pojęcie ,,sklepu z oprogramowaniem''. Apple ma swój ,,App Store'', Google ma swoje ,,Play''. Są to stosunkowo nowe metody instalacji oprogramowania, które upowszechniły się w przeciągu ostatnich lat. Nawet Microsoft w najnowszych wydaniach swojego systemu Windows promuje instalację softu przez wbudowany sklep, zamiast ręcznego przeszukiwania sieci, ściągania instalatorów, skanowania ich antywirusem i instalowania w systemie.
+=======
+W systemach Linuksowych (jakim jest Ubuntu) instalacja programów przebiega nieco inaczej niż gdzie indziej a jednocześnie bardzo podobnie. Jak to możliwe? Bardzo prosto. Zapewne znane Tobie jest pojęcie ,,Sklepu z Oprogramowaniem". Apple ma swój ,,App Store'', Google ma swoje ,,Play''. Są to stosunkowo nowe metody instalacji oprogramowania, które upowszechniły się w przeciągu ostatnich lat. Nawet Microsoft w najnowszych wydaniach swojego systemu Windows promuje instalacje softu przez wbudowany sklep zamiast ręcznego przeszukiwania sieci, ściągania instalatorów, skanowania ich antywirusem i instalowania w systemie.
+>>>>>>> e6a3add93ce23ba24a376447797364b6de3be654
 
 Takie sklepy z oprogramowaniem istnieją w systemach linuksowych od dawna, przy czym w tym przypadku nazywają się \textcolor{ubuntu_orange}{repozytoriami}. Repozytorium to serwer, na którym opiekunowie danej dystrybucji Linuksa (np. firma Canonical jest opiekunem Ubuntu) przechowują paczki z programami. Użytkownik, chcąc zainstalować jakiś program (np. przeglądarkę internetową Firefox), uruchamia program zwany \textcolor{ubuntu_orange}{menadżerem pakietów}, wyszukuje w nim to, czego potrzebuje i instaluje. Nic więcej go nie interesuje --- menadżer pakietów sam ściągnie paczkę z programem, pobierze wszystkie zależności (programy niezbędne do funkcjonowania instalowanego programu) i zainstaluje soft w systemie. Kiedy w repozytoriach program zostanie zaktualizowany, to użytkownik zostanie o tym powiadomiony, a menadżer pakietów dokona aktualizacji.
 
@@ -64,11 +68,11 @@ VLC jest znanym na całym świecie kombajnem do odtwarzania wszelkiego rodzaju m
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{sudo} --- instalacja pakietów (a także ich usuwanie) wymaga uwierzytelnienia i tylko administrator systemu może to zrobić. \textit{Sudo} jest programem umożliwiającym wykonanie kolejnego polecenia przez innego użytkownika (w tym wypadku roota, administratora). Spróbuj wpisać to polecenie bez sudo na początku i zobacz, co się stanie.
 \item \textcolor{ubuntu_orange}{apt-get} --- to konsolowy program do zarządzania pakietami.
-\item \textcolor{ubuntu_orange}{install} --- opcja \textit{install} jest jedną z możliwości programu apt-get. W tym wypadku każe mu wykonać instalacje programu.
-\item \textcolor{ubuntu_orange}{vlc} --- jaki program chcemy zainstalować. Zwróć uwagę, że nazwy programów pisane są zawsze małymi literami, a także podawane są bez rozszerzenia.
+\item \textcolor{ubuntu_orange}{install} --- \textit{install} to jedno z poleceń programu apt-get. W tym wypadku nakazuje mu zainstalować program.
+\item \textcolor{ubuntu_orange}{vlc} --- nazwa programu, który chcesz zainstalować. Zwróć uwagę, że nazwy programów pisane są zawsze małymi literami, a także podawane są bez rozszerzenia.
 \end{itemize}
 
-Po podaniu hasła apt-get przetworzy żądanie (zainstaluj pakiet vlc) i wyświetli informacje podobną do poniższej:
+Po podaniu hasła apt-get przetworzy żądanie (zainstaluj pakiet vlc) i wyświetli informację podobną do poniższej:
 
 \begin{lstlisting}[language=bash]
 Czytanie list pakietów... Gotowe
@@ -140,11 +144,19 @@ udo apt-get install libreoffice
 
 Aby dodać repozytorium w sposób graficzny, wykonaj następujące czynności:
 \begin{enumerate}
+<<<<<<< HEAD
 \item Wyszukaj w Dashu, a następnie uruchom \textcolor{ubuntu_orange}{Oprogramowanie i aktualizacje}.
 \item Przejdź do zakładki \textcolor{ubuntu_orange}{Inne oprogramowanie}.
 \item Kliknij przycisk \textcolor{ubuntu_orange}{Dodaj}.
 \item W pole \textcolor{ubuntu_orange}{Wiersz APT} wpisz adres repozytorium, tutaj: \textit{ppa:libreoffice/ppa}.
 \item Kliknij \textcolor{ubuntu_orange}{Dodaj zasób}, a nastepnie \textcolor{ubuntu_orange}{Zamknij}.
+=======
+\item W dashu uruchom \textcolor{ubuntu_orange}{Oprogramowanie i Aktualizacje}.
+\item Przejdź do zakłądki \textcolor{ubuntu_orange}{Inne oprogramowanie}.
+\item Kliknij przycisk \textcolor{ubuntu_orange}{Dodaj}
+\item W pole \textcolor{ubuntu_orange}{Wiersz APT} wpisz adres repozytorium, tutaj: \textit{ppa:libreoffice/ppa}
+\item Kliknij \textcolor{ubuntu_orange}{Dodaj zasób} a nastepnie \textcolor{ubuntu_orange}{Zamknij}
+>>>>>>> e6a3add93ce23ba24a376447797364b6de3be654
 \item Zostaniesz poproszony o zaktualizowanie listy pakietów. Wykonaj tę czynność.
 \end{enumerate}
 
@@ -181,4 +193,8 @@ Niektórzy dostawcy oprogramowania (na szczęście nieliczni) udostępniają wł
 \subsubsection{Instalacja programów przez przeglądarkę internetową}
 Przeglądarka internetowa Firefox, wchodząca w skład standardowej instalacji Ubuntu, wyposażona jest w dodatek, umożliwiający instalację oprogramowania bezpośrednio ze strony internetowej poprzez protokół apt. Kliknięcie odpowiedniego linku otworzy okno \textcolor{ubuntu_orange}{Centrum Oprogramowania Ubuntu} na stronie danego programu.
 
+<<<<<<< HEAD
 Jeżeli Firefox nie rozpoznaje protokołu apt, to wyświetli okno z prośbą o wybór aplikacji. Kliknij przycisk \textcolor{ubuntu_orange}{Wybierz\ldots}, a następnie wskaż plik \menu{{System plików}>{usr}>{bin}>{software-center}}. Pamiętaj, aby zaznaczyć pole \textcolor{ubuntu_orange}{Zapamiętaj wybór dla odnośników apt}.
+=======
+Jeżeli Firefox nie rozpoznaje protokołu apt to wyświetli okno z prośbą o wybór aplikacji. Kliknij na przycisk \textcolor{ubuntu_orange}{Wybierz\ldots} a następnie wskaż plik \menu{{System plików}>{usr}>{bin}>{software-center}}. Pamiętaj aby zaznaczyć pole \textcolor{ubuntu_orange}{Zapamiętaj wybór dla odnośników apt}.
+>>>>>>> e6a3add93ce23ba24a376447797364b6de3be654
