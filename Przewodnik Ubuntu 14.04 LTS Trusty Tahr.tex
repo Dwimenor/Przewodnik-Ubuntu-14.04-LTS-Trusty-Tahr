@@ -3,10 +3,11 @@
 % 
 %
 % Autorzy:
-% 1. Piotr "Dwimenor Vali" Sochocki, dwimeron@gmail.com : tekst, skład
-% 2. makson : tekst, korekta
-% 3. K2cl : korekta
-% 4. bear_7 : korekta
+% 1. Piotr "Dwimenor Vali" Sochocki, dwimeron@gmail.com: tekst, skład
+% 2. makson: tekst, korekta
+% 3. Ionash: korekta
+% 4. K2cl: korekta
+% 5. bear_7: korekta
 % Dodatkowe podziekowania
 %	za korektę: qnebra, Tomfoc, enedil, rob006(Robert Korulczyk), kszyhus
 %	za pomoc przy składzie: perzan
@@ -57,7 +58,7 @@
 % Dwie kolumny w spisie treści
 \usepackage[toc]{multitoc}
 
-% Jako, że nie bawimy się w rozdziały, sekcja i podsekcja są podstawowymi jednostmaki podziału dokumentu.
+% Jako że nie bawimy się w rozdziały, sekcja i podsekcja są podstawowymi jednostkami podziału dokumentu.
 % Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
 \renewcommand*\thesection{\arabic{section}}
 
@@ -77,13 +78,13 @@
 
 \renewcommand{\labelitemi}{\imageUbuntuCircleOfFriends}
 
-% Listy numerowane - styl taki jak na obrazkach.
+% Listy numerowane - styl taki, jak na obrazkach.
 \usepackage{enumitem}
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz{
 \node[shape=circle,fill=white,line width=2pt,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}
 
-% Przyciski klawiatury jako tekst, przechodzenie przez różne menusy
+% Przyciski klawiatury jako tekst, przechodzenie przez różne menu
 \usepackage{menukeys}
 \renewmenumacro{\directory}[>]{pathswithblackfolder}
 

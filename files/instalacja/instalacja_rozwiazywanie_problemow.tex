@@ -1,16 +1,16 @@
 \subsubsection{Po wybraniu opcji ,,Wypróbuj Ubuntu bez instalacji'' lub ,,Instaluj Ubuntu'' mam tylko czarny ekran}
-Po pierwsze odczekaj dłuższą chwilę, wczytanie wszystkich danych z nośnika instalacyjnego trwa dłuższą chwilę. Jeżeli trwa to dłużej niż 2--3 minuty to zrestartuj komputer i uruchom instalator Ubuntu jeszcze raz. W przypadku instalatora BIOS (filoetowe tło) po wybraniu języka wcśnij \keys{F6} (inne opcje), zaznacz opcję ,,nomodeset'' klawiszem \keys{\returnwin}, wyjdź z menu klawiszem \keys{Esc} i uruchom instalator. Opcja ,,acpi=off'' też może być pomocna.
+Po pierwsze, nie spiesz się, wczytanie wszystkich danych z nośnika instalacyjnego trwa dłuższą chwilę. Jeżeli nic się nie dzieje dłużej, niż 2 -- 3 minuty, to zrestartuj komputer i uruchom instalator Ubuntu jeszcze raz. W przypadku instalatora BIOS (fioletowe tło) po wybraniu języka wcśnij \keys{F6} (inne opcje), zaznacz opcję ,,nomodeset'' klawiszem \keys{\returnwin}, wyjdź z menu klawiszem \keys{Esc} i uruchom instalator. Opcja ,,acpi=off'' też może być pomocna.
 
 \subsubsection{Instalacja została przerwana}
-Jeżeli instalacja została przerwana w trakcie kopiowania danych na dysk to uruchom ponownie instalator i zainstaluj system od nowa.
+Jeżeli instalacja została przerwana w trakcie kopiowania danych na dysk, to uruchom ponownie instalator i zainstaluj system od nowa.
 
-Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku) to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''} i uruchom program GParted.
+Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku), to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''} i uruchom program GParted.
 
 \subsubsection{Po instalacji Ubuntu uruchamia się tylko Windows}
-Prawdopodobnie na Windowsie masz ustawione ,,Szybkie uruchamianie'' (\textit{Fast-boot}). Wyłącz tą funkcję i ponownie zainstaluj Ubuntu. Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
+Prawdopodobnie na Windowsie masz ustawione ,,Szybkie uruchamianie'' (\textit{Fast-boot}). Wyłącz tę funkcję i ponownie zainstaluj Ubuntu. Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
 
 \subsubsection{Po instalacji Ubuntu nie można uruchomić systemu Windows}
-przyczyny mogą być dwie. Albo usunąłeś system Windows z dysku twardego, albo nie został on prawidłowo rozpoznany. W pierwszym przypadku pozostaje tylko go ponownie zainstalować. Koniecznie przeczytaj rozdział Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
+przyczyny mogą być dwie. Albo usunąłeś system Windows z dysku twardego, albo nie został on prawidłowo rozpoznany. W pierwszym przypadku pozostaje tylko ponownie go zainstalować. Koniecznie przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
 
 W drugim przypadku przejdź do sekcji ,,Przywracanie GRUB-a''
 
@@ -18,16 +18,16 @@ W drugim przypadku przejdź do sekcji ,,Przywracanie GRUB-a''
 \label{grub_przywracanie}
 Problemy z programem rozruchowym występują najczęściej:
 \begin{itemize}
-\item Po instalacji systemu Windows obok Ubuntu. Windows nadpisuje MBR (\textit{Master Boot Record)} dysku twardego i uniemożliwia dostęp do systemów Linuksowych.
-\item Po instalacji Ubuntu obok Windowsa, jeżeli ten był za-hibernowany, miał włączoną opcję ,,Fast-Boot'' lub podobne.
-\item Po zmianie rozkładu partycji.
-\item Po nieumiejętnych próbach edytowania GRUBa lub zastąpienia go innym menadżerem rozruchowym.
+\item Po instalacji systemu Windows obok Ubuntu. Windows nadpisuje MBR (\textit{Master Boot Record)} dysku twardego i uniemożliwia dostęp do systemów linuksowych.
+\item Po instalacji Ubuntu obok Windowsa, jeżeli ten był zahibernowany, miał włączoną opcję ,,Fast-Boot'' lub podobne.
+\item Po zmianie układu partycji.
+\item Po nieumiejętnych próbach edytowania GRUB-a lub zastąpienia go innym menadżerem rozruchowym.
 \end{itemize}
 
-Najprostszym sposobem naprawienia menadżera rozruchu GRUB jest skorzystanie z boot-repair disk. Jest to dystrybucja Linuksa typu Live (działa tylko z zewnętrznego nośnika, nie zainstalujesz jej na dysku twardym). Wejdź na stronę \href{http://sourceforge.net/projects/boot-repair-cd/files/}{pobierania}, wybierz plik z obrazem zgodny z architekturą twojego procesora i zapisz go na dysku. Proces przygotowywania nośnika z Boot-Rapair disk jest analogiczny do tego przedstawionego w rozdziale \ref{nagrywanie_obrazu}: ,,Nagrywanie pobranego obrazu''.\\
-Po uruchomieniu tak przygotowanego systemu poczekaj aż się załaduje i wybierz opcję \textcolor{ubuntu_orange}{Recomended repair} a nastepnie spróbuj ponownie uruchomić komputer.
+Najprostszym sposobem naprawienia menadżera rozruchu GRUB jest skorzystanie z Boot Repair Disk. Jest to dystrybucja Linuksa typu Live (działa tylko z zewnętrznego nośnika, nie zainstalujesz jej na dysku twardym). Otwórz stronę \href{http://sourceforge.net/projects/boot-repair-cd/files/}{pobierania}, wybierz plik z obrazem zgodny z architekturą twojego procesora i zapisz go na dysku. Proces przygotowywania nośnika z Boot Repair Disk jest analogiczny do przedstawionego w rozdziale \ref{nagrywanie_obrazu}: ,,Nagrywanie pobranego obrazu''.\\
+Po uruchomieniu tak przygotowanego systemu poczekaj, aż się załaduje i wybierz opcję \textcolor{ubuntu_orange}{Recomended repair}, a nastepnie spróbuj ponownie uruchomić komputer.
 
-Jeżeli nie możesz uruchomić żadnego systemu operacyjnego to program boot-repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''}, następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące trzy polecenia:
+Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''}, następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące trzy polecenia:
 
 \begin{lstlisting}[language=bash]
 sudo add-apt-repository ppa:yannubuntu/boot-repair
@@ -36,25 +36,25 @@ sudo apt-get install -y boot-repair && (boot-repair &)
 \end{lstlisting}
 
 \subsubsection{Ręczne przywracanie GRUB-a}
-Ta metoda nie sprawdzi się, jeżeli masz zainstalowany tylko system Windows.
+Ta metoda jest nieprzydatna, jeżeli masz zainstalowany tylko system Windows.
 
-Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem) to możesz zrobić to ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''} a następnie otwórz terminal \keys{CTRL + Alt + t}.
+Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''}, a następnie otwórz terminal \keys{CTRL + Alt + t}.
 
-Po pierwsze zidentyfikuj partycję na której już jest zainstalowane Ubuntu (lub inny Linux). Wykonaj:
+Zidentyfikuj partycję, na której już jest zainstalowane Ubuntu (lub inny linux). Wykonaj:
 
 \begin{lstlisting}[language=bash]
 ls /dev |grep sd
 \end{lstlisting}
 
-Otrzymasz listę dysków twardych wraz z partycjami. \textcolor{ubuntu_orange}{sda} to najprawdopodobniej twój główny dysk twardy, sdb to pendrive. Możesz się upewnić wydając polecenie
+Otrzymasz listę dysków twardych wraz z partycjami. \textcolor{ubuntu_orange}{sda} to najprawdopodobniej twój główny dysk twardy, sdb to pendrive. Możesz się upewnić wydając polecenie:
 
 \begin{lstlisting}[language=bash]
 sudo fdisk -l
 \end{lstlisting}
 
-Wyszukaj oznaczenie głównej partycji zainstalowanego Linuksa. W wielu przypadkach będzie to /dev/sda1 ale jeżeli masz zainstalowany obok inny system (np. Windows) to może być inaczej. W dalszej częsci tego tekstu zakładamy, że jest to /dev/sda1.
+Wyszukaj oznaczenie głównej partycji zainstalowanego linuksa. W wielu przypadkach będzie to /dev/sda1, ale jeżeli masz zainstalowany obok inny system (np. Windows), to może być inaczej. W dalszej częsci tego tekstu zakładamy, że jest to /dev/sda1.
 
-Zamontuj partycję zinstalowanego systemu oraz inne niezbędne rzeczy
+Zamontuj partycję zainstalowanego systemu oraz inne niezbędne rzeczy:
 \begin{lstlisting}[language=bash]
 sudo mount /dev/sda1 /mnt
 sudo mount --bind /dev /mnt/dev
@@ -69,14 +69,14 @@ Przełącz się na nowy system plików:
 sudo chroot /mnt
 \end{lstlisting}
 
-Zainstaluj GRUB-a. Zwróć uwagę, że instalujemy go na dysku (sda) a nie partycji (sda1)
+Zainstaluj GRUB-a. Zwróć uwagę, że instalujemy go na dysku (sda), a nie partycji (sda1).
 
 \begin{lstlisting}[language=bash]
 grub-install /dev/sda
 update-grub
 \end{lstlisting}
 
-Wyjdź i posprzątaj za sobą:
+Wyjdź i posprzątaj po sobie:
 
 \begin{lstlisting}[language=bash]
 exit
