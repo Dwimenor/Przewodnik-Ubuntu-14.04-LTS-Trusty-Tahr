@@ -1,14 +1,14 @@
-Domyślną przeglądarką internetową w systemie Ubuntu jest Firefox. Przeglądarka ta pracuje i zachowuje się tak samo jak swoje wersje na systemy Mac czy Windows. Dostępne sa te same rozszerzenia, motywy i ustawienia.
+Domyślną przeglądarką internetową w systemie Ubuntu jest Firefox. Pracuje i zachowuje się ona tak samo, jak wersje na Mac OS, czy Windows. Dostępne są te same rozszerzenia, motywy i ustawienia.
 
 \subsubsection{Przenoszenie ustawień}
-Firefox przechowuje swoje ustawienia w katalogu .mozilla znajdującym się w twoim katalogu domowym\footnote{ukryte pliki i katalogi (zaczynające się od kropki) wyświetlisz wciskając \keys{CTRL + h}}. Zrobienie kopii zapasowej tego katalogu umożliwi przeniesienie ustawień pomiędzy różnymi systemami operacyjnymi. W innych systemach operacyjnych ten katalog znajduje się w :
+Firefox przechowuje ustawienia w katalogu .mozilla, znajdującym się w katalogu domowym\footnote{Ukryte pliki i katalogi (ich nazwa zaczyna się kropką) wyświetlisz wciskając \keys{CTRL + h}}. Wykonanie kopii zapasowej tego katalogu umożliwi przeniesienie ustawień pomiędzy różnymi systemami operacyjnymi. W innych systemach ten katalog znajduje się w podanych niżej miejscach:
 \begin{itemize}
 \item Windows 95, 98, ME\\
 \directory{C / Windows / {Application Data} / Mozilla}\\
 \directory{C / Windows/ Profiles / {Nazwa użytkownika} / {Application Data} / Mozilla}
-\item Windows 2000, XP\footnote{Aby wyświetlić ukryte pliki \menu{Narzędzia>Opcje Folderów>Widok>{Pokazuj ukryte pliki i foldery}}}\\
+\item Windows 2000, XP\footnote{Aby wyświetlić ukryte pliki, kliknij \menu{Narzędzia>Opcje folderów>Widok>{Pokazuj ukryte pliki i foldery}}}\\
 \directory{C / {Documents and Settings}  / {Nazwa użytkownika} / {Application Data} / Mozilla}
-\item Windows Vista, 7\footnote{Patrz wyżej}\\
+\item Windows Vista, 7\footnote{Patrz wyżej.}\\
 \directory{C / Users / {Nazwa użytkownika} / AppData / Roaming / Mozilla}
 \item Mac\\
 \directory{\textasciitilde / Library / {Application Support} / Firefox}\\
@@ -16,10 +16,10 @@ Firefox przechowuje swoje ustawienia w katalogu .mozilla znajdującym się w two
 \end{itemize}
 
 \subsubsection{Flash}
-Wtyczka flash została zainstalowana z pakietem \textcolor{ubuntu_orange}{ubuntu-restricted-extras}. Jeżeli chcesz zainstalować samą wtyczkę flash, bez innych dodatków, potrzebujesz pakietu \textcolor{ubuntu_orange}{flashplugin-installer}. Niestety, Adobe zaprzestało rozwoju wtyczki Flash dla Linuksa i wersja instalowana w ten sposób jest stara. Do większości zadań wystarczy, ale wiele internetowych gier wymaga nowszej wersji wtyczki. Rozwiązania są dwa. Ablo instalacja przeglądarki Google Chrome (ta przeglądarka dystrybuowana jest z najnowszą wersją Flasha wbudowaną w nią) albo instalacja Windowsowego pluginu za pośrednictwem aplikacji Pipelight. Zostało to omówione w następnej sekcji.
+Wtyczka Flash została zainstalowana wraz z pakietem \textcolor{ubuntu_orange}{ubuntu-restricted-extras}. Jeżeli chcesz zainstalować samą wtyczkę Flash bez innych dodatków, potrzebujesz pakietu \textcolor{ubuntu_orange}{flashplugin-installer}. Niestety, Adobe przestało rozwijać wtyczkę Flash dla linuksa i wersja instalowana w ten sposób jest stara. Do większości zadań wystarczy, ale wiele internetowych gier wymaga nowszej wersji. Rozwiązania są dwa. Ablo instalacja przeglądarki Google Chrome (wbudowana w nią jest najnowsza wersja Flasha), albo instalacja windowsowego pluginu za pośrednictwem aplikacji Pipelight, co zostało omówione w następnej sekcji.
 
 \subsubsection{Instalacja Pipelight}
-Aby móc odtwarzać materiały przy pomocy wtyczek Silverlight, Widevine, ViewRight Caiway czy najnowszy Flash, potrzebujesz aplikacji PipeLight. Aby ją zainstalować wykonaj następujące polecenia w konsoli\footnote{konsolę otworzysz kombinacją klawiszy \keys{CTRL + ALT + t}}
+Aby móc odtwarzać materiały przy pomocy wtyczek, takich jak Silverlight, Widevine, ViewRight Caiway, czy najnowszy Flash, potrzebujesz aplikacji PipeLight. Aby ją zainstalować, wykonaj w konsoli\footnote{konsolę otworzysz kombinacją klawiszy \keys{CTRL + ALT + t}}poniżej podane polecenia.
 \begin{enumerate}
 \item Dodanie repozytorium z programem PipeLight:
 \begin{lstlisting}[language=bash]
@@ -35,31 +35,31 @@ sudo apt-get install pipelight-multi
 \end{lstlisting}
 \end{enumerate}
 
-\noindent Nie instaluj wszystkich dostępnych pluginów, gdyż znacznie spowolni to przeglądarkę. Używaj tylko tych co potrzebujesz.
+\noindent Nie instaluj wszystkich dostępnych pluginów, gdyż znacznie spowolni to przeglądarkę. Instaluj tylko te, których potrzebujesz.
 
-Wiele stron internetowych sprawdza także zgodność przeglądarki z ich wymaganiami. Domyślnie odrzucają one nawet zgodne przeglądarki z odpowiednimi pluginami jeżeli wykryją, że pracują na systemie Linux. Aby oszukać takie strony potrzebujesz rozszerzenia zmieniającego wartość \textcolor{ubuntu_orange}{UserAgent} wysyłaną do strony internetowej. Dla Firefoka polecany jest dodatek \href{https://addons.mozilla.org/pl-PL/firefox/addon/user-agent-overrider/}{User Agent Overrider}. Po zainstalowaniu tego dodatku udaj się do \menu{{Narzędzia}>{Dodatki}>{Rozszerzenia}>{User Agent Overrider}>{Preferencje}} i wklej na końcu otwartego okna poniższe dwie linijki:
+Wiele stron internetowych sprawdza zgodność przeglądarki z ich wymaganiami. Domyślnie odrzucają one nawet zgodne przeglądarki z odpowiednimi pluginami, jeżeli wykryją, że pracują na linuksie. Aby oszukać takie strony, potrzebujesz rozszerzenia zmieniającego wartość \textcolor{ubuntu_orange}{UserAgent} wysyłaną do strony internetowej. Do Firefoksa polecany jest dodatek \href{https://addons.mozilla.org/pl-PL/firefox/addon/user-agent-overrider/}{User Agent Overrider}. Po jego zainstalowaniu otwórz \menu{{Narzędzia}>{Dodatki}>{Rozszerzenia}>{User Agent Overrider}>{Preferencje}} i wklej na końcu otwartego okna poniższe dwie linijki:
 \begin{itemize}
 \item Firefox 15/Windows: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:15.0) Gecko/20120427 Firefox/15.0a1
 \item Safari/OSX: Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_7\_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10
 \end{itemize}
 
-Kiedy natrafisz na problematyczną stronę to zmień UserAgent i przeładuj ją. Przycisk pozwalający zmienić ustawienia znajduje się na prawo od paska adresu w oknie przeglądarki.
+Kiedy natrafisz na problematyczną stronę, to zmień UserAgent i przeładuj ją. Przycisk pozwalający zmienić ustawienia znajduje się na prawo od paska adresu w oknie przeglądarki.
 
 \subsubsection{Instalacja wtyczki Silverlight}
-\noindent Jak masz już zainstalowany program PipeLight to wykonaj:
+\noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
 \item Zainstaluj wtyczkę Silverlight:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable silverlight
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
-\item Wejdź na stronę \href{http://bubblemark.com/silverlight2.html}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie to wtyczka Silverlight wyświetli zielone, skaczace kulki.
+\item Otwórz stronę \href{http://bubblemark.com/silverlight2.html}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie, to wtyczka Silverlight wyświetli zielone, skaczące kulki.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Flash}
-\noindent Jak masz już zainstalowany program PipeLight to wykonaj:
+\noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
 \item Usuń starą wtyczkę Flash:
 \begin{lstlisting}[language=bash]
@@ -69,89 +69,89 @@ sudo apt-get remove --purge flashplugin-installer
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable flash
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
-\item Wejdź na stronę \href{https://www.adobe.com/software/flash/about/}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie to zobaczysz animowane logo Adobe Flash.
+\item Otwórz stronę \href{https://www.adobe.com/software/flash/about/}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie, to zobaczysz animowane logo Adobe Flash.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Shockwave Player}
-\noindent Jak masz już zainstalowany program PipeLight to wykonaj:
+\noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
 \item Zainstaluj wtyczkę:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --unlock shockwave
 sudo pipelight-plugin --enable shockwave
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
-\item Jeżeli na stronach wykorzystujących Shockwave Player masz puste prostokąty, kliknij na jednym z nich prawym przyciskiem myszy i wybierz \textcolor{ubuntu_orange}{OpenGL} jak silnik renderujący.
+\item Jeżeli na stronach wykorzystujących Shockwave Player widzisz puste prostokąty, kliknij jeden z nich prawym przyciskiem myszy i wybierz \textcolor{ubuntu_orange}{OpenGL} jako silnik renderujący.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Unity Webplayer}
-\noindent Jak masz już zainstalowany program PipeLight to wykonaj:
+\noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
 \item Zainstaluj wtyczkę:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable unity3d
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet lika minut. W tym czasie przeglądarka bedzie niedostępna.
-\item Wejdź na stronę \href{https://unity3d.com/showcase/live-demos}{testową} aby przetestować działanie wtyczki.
+\item Otwórz stronę \href{https://unity3d.com/showcase/live-demos}{testową}, aby przetestować działanie wtyczki.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Widevine do obsługi materiałów DRM}
-\noindent Jak masz już zainstalowany program PipeLight to wykonaj:
+\noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
-\item Upewnij się, że masz zainstalowanego Flasha. Wtyczka Widavine działa zarówno z wtyczką linuksową jak wtyczką instalowaną przez PipeLight.
+\item Upewnij się, że masz zainstalowaną wtyczkę Flash. Wtyczka Widavine działa zarówno z wtyczką linuksową, jak i wtyczką instalowaną przez PipeLight.
 \item Zainstaluj wtyczkę:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable widevine
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet lika minut. W tym czasie przeglądarka bedzie niedostępna.
-\item Wejdź na stronę \href{http://www.widevine.com/demo/index.html}{testową} aby przetestować działanie wtyczki.
+\item Otwórz stronę \href{http://www.widevine.com/demo/index.html}{testową}, aby przetestować działanie wtyczki.
 \end{enumerate}
 
 \subsubsection{Instalacja innych pluginów}
-\noindent Pipelight umożliwia instalację kilku dodatkowych pluginów. Ich aktywowanie przebiega zawsze w identyczny sposób:
+\noindent Pipelight umożliwia instalację kilku dodatkowych pluginów. Ich aktywowanie przebiega zawsze w identyczny sposób.
 \begin{enumerate}
 \item Zainstaluj wtyczkę:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable nazwa_wtyczki
 \end{lstlisting}
-\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}
+\item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
 \item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
 \end{enumerate}
 Lista dostępnych pluginów:
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{adobereader} --- Zastępuje wbudowaną w Firefoksa przeglądarkę PDF pluginem Adobe Acrobat Reader.
-\item \textcolor{ubuntu_orange}{foxitpdf} --- Zastępuje wbudowaną w Firefoksa przeglądarkę PDF pluginem Foxit Reader.
-\item \textcolor{ubuntu_orange}{grandstream} --- Plugin do podłączania kamer IP.
-\item \textcolor{ubuntu_orange}{hikvision} --- Plugin do podłączania kamer IP.
-\item \textcolor{ubuntu_orange}{roblox} --- Plugin do gier napisanych na silniku roblox.
+\item \textcolor{ubuntu_orange}{adobereader} --- zastępuje wbudowaną w Firefoksa przeglądarkę PDF pluginem Adobe Acrobat Reader;
+\item \textcolor{ubuntu_orange}{foxitpdf} --- zastępuje wbudowaną w Firefoksa przeglądarkę PDF pluginem Foxit Reader;
+\item \textcolor{ubuntu_orange}{grandstream} --- plugin do podłączania kamer IP;
+\item \textcolor{ubuntu_orange}{hikvision} --- plugin do podłączania kamer IP;
+\item \textcolor{ubuntu_orange}{roblox} --- plugin do gier napisanych na silniku roblox.
 \end{itemize}
 
 \subsubsection{Rozwiązywanie problemów}
-Jeżeli z jakiegokolwiek powodu przeglądarka zaczyna źle działac to pierwszym etapem jest przywrócenie ustawień domyślnych. W ten sposób upewnisz się, że nieprawidłowe działanie przeglądarki spowodowane jest złymi ustawieniami użytkownika (np. wadliwy dodatek) a nie kwestią systemową.
+Jeżeli z jakiegokolwiek powodu przeglądarka zaczyna źle działać, to pierwszym etapem jest przywrócenie ustawień domyślnych. W ten sposób upewnisz się, czy nieprawidłowe działanie przeglądarki spowodowane jest złymi ustawieniami użytkownika (np. wadliwy dodatek), a nie kwestią systemową.
 \begin{enumerate}
-\item Wyłącz przeglądarkę Firefox
-\item Przenieś katalog .mozilla w bezpieczne miejsce (wciśnij \keys{CTRL + h} aby wyświetlić ukryte pliki) lub wykonaj:
+\item Wyłącz przeglądarkę Firefox.
+\item Przenieś katalog .mozilla w bezpieczne miejsce (wciśnij \keys{CTRL + h}, aby wyświetlić ukryte pliki) lub wykonaj polecenie:
 \begin{lstlisting}[language=bash]
 mv ~/.mozilla ~/.mozilla_bak
 \end{lstlisting}
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{mv} --- polecenie przenoszenia plików move.
-\item \textcolor{ubuntu_orange}{\textasciitilde /.mozilla} który plik ma zostać przeniesiony.
+\item \textcolor{ubuntu_orange}{mv} --- polecenie przenoszenia plików move;
+\item \textcolor{ubuntu_orange}{\textasciitilde /.mozilla} --- określenie, co ma zostać przeniesione;
 	\begin{description}
 	\item[\textasciitilde /] --- tylda i slash oznaczają katalog domowy użytkownika
-	\item[.mozilla] katalog do skopiowania.
+	\item[.mozilla] --- katalog do skopiowania.
 	\end{description}
 \item \textasciitilde / .mozilla.bak --- miejsce docelowe.
 \end{itemize}
-\item Włącz ponownie przeglądarkę i sprawdź czy problem dalej występuje.
+\item Włącz ponownie przeglądarkę i sprawdź, czy problem nadal występuje.
 \end{enumerate}
