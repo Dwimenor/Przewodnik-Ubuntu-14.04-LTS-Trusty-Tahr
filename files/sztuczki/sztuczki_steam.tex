@@ -1,17 +1,17 @@
-Steam jest platformą cyfrowej dystrybucji gier zarządzaną przez firmę Valve. Zarówno Steam jak i gry na nim dostępne nie są wolnym oprogramowaniem. Tytuły są dodatkowo zabezpieczone technologią DRM, tak więc kupując za pośrednictwem Steama na zawsze wiążesz swój zakup z tą platformą. Jeżeli ci to nie przeszkadza i chcesz zainstalować Steama to:
+Steam jest platformą cyfrowej dystrybucji gier, zarządzaną przez firmę Valve. Ani Steam, ani gry na nim dostępne, nie należą do wolnego oprogramowania. Tytuły są dodatkowo zabezpieczone technologią DRM, tak więc kupując za pośrednictwem Steama na zawsze wiążesz swój zakup z tą platformą. Jeżeli ci to nie przeszkadza i chcesz zainstalować Steama to wykonaj następujące kroki:
 \begin{enumerate}
-\item Udaj się na \href{http://store.steampowered.com/about/}{steampowered.com}
-\item Kliknij na \textcolor{ubuntu_orange}{Install Steam Now}.
+\item Otwórz stronę \href{http://store.steampowered.com/about/}{steampowered.com}.
+\item Kliknij \textcolor{ubuntu_orange}{Install Steam Now}.
 \item Pobrany plik steam.deb zapisz w katalogu domowym.
-\item Uruchom konsolę \keys{CTRL + ALT + t} i wykonaj:
+\item Uruchom konsolę \keys{CTRL + ALT + t} i wykonaj polecenie:
 \begin{lstlisting}[language=bash]
 sudo dpkg -i steam.deb
 \end{lstlisting}
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{sudo} --- wykonuje dalsze polecenia z uprawieniami administratora systemu.
-\item \textcolor{ubuntu_orange}{dpkg} --- program do bepośredniego zarządzania paczkami z oprogramowaniem
-\item \textcolor{ubuntu_orange}{-i} --- flaga dla dpkg, że ma zainstalować podaną paczkę.
+\item \textcolor{ubuntu_orange}{sudo} --- wykonuje dalsze polecenia z uprawieniami administratora systemu;
+\item \textcolor{ubuntu_orange}{dpkg} --- program do bepośredniego zarządzania paczkami z oprogramowaniem;
+\item \textcolor{ubuntu_orange}{-i} --- polecenie programu dpkg, nakazujące zainstalować podaną paczkę;
 \item \textcolor{ubuntu_orange}{steam.deb} --- nazwa paczki do zainstalowania.
 \end{itemize}
-\item Uruchom program Steam aby dokończyć instalację. Zostaniesz poproszony o zapoznanie się z warunkami licencji i zalogowanie się do swojego konta Steam (lub stworzenie nowego).
+\item Uruchom program Steam, aby dokończyć instalację. Zostaniesz poproszony o zapoznanie się z warunkami licencji i zalogowanie do swojego konta Steam (lub stworzenie nowego).
 \end{enumerate}
