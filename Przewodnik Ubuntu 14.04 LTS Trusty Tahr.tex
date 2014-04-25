@@ -41,9 +41,10 @@
 \usepackage[polish]{babel}
 
 % dzielenie wierszy
-\brokenpenalty=10000
-\clubpenalty=10000
 \widowpenalty=10000
+\clubpenalty=10000 
+\brokenpenalty=10000
+
 
 % Obrazki
 %TODO nie ładuj plików png z nałożonymi grafikami. Uzyj TIKZ:
@@ -62,6 +63,17 @@
 % Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
 \renewcommand*\thesection{\arabic{section}}
 
+% Rozmiar nagłówków sekcji
+\usepackage{titlesec}
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
 % Oficjalne kolory Ubuntu
 % http://design.ubuntu.com/brand/colour-palette
 \usepackage{xcolor}
@@ -71,15 +83,14 @@
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-% Logo Ubuntu jako "punkt" listy
-\newcommand{\imageUbuntuCircleOfFriends}{%
-\input{images/circle_of_friends}
-}%
+% Listy
+\usepackage[shortlabels]{enumitem}
 
+% Logo Ubuntu jako "punkt" listy
+\newcommand{\imageUbuntuCircleOfFriends}{\input{images/circle_of_friends}}
 \renewcommand{\labelitemi}{\imageUbuntuCircleOfFriends}
 
 % Listy numerowane - styl taki, jak na obrazkach.
-\usepackage{enumitem}
 \usepackage{tikz}
 \newcommand*\circled[1]{\tikz{
 \node[shape=circle,fill=white,line width=2pt,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}
@@ -93,7 +104,7 @@
 \lstset{ 
 upquote=true,
 columns=fullflexible,
-literate={*}{{\char42}}1 %polfonty
+literate={*}{{\char42}}1
 		{-}{{\char45}}1
 		{ą}{{\k{a}}}1
 		{Ą}{{\k{A}}}1
