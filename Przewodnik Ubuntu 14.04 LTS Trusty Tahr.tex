@@ -30,9 +30,9 @@
 \documentclass[a4paper,11pt,oneside]{mwart}
 
 % marginesy
-\usepackage[left=1.5cm, right=1.5cm, top=1.5cm, bottom=1.5cm]{geometry} 
+\usepackage[left=2cm, right=2cm, top=1.5cm, bottom=1.5cm]{geometry} 
 
-% interlinia (1.6 = półtora linii odstępu wg. nomenklatury Worda/Writera)
+% interlinia	
 \linespread{1.3}
 
 % Język polski, polfonty
@@ -64,8 +64,7 @@
 % Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
 \renewcommand*\thesection{\arabic{section}}
 
-% Rozmiar nagłówków sekcji
-\usepackage{titlesec}
+\usepackage[indentafter]{titlesec}
 \titleformat{\section}
 {\normalfont\Large\bfseries}{\thesection}{1em}{}
 
@@ -74,6 +73,7 @@
 
 \titleformat{\subsubsection}
 {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+
 
 % Oficjalne kolory Ubuntu
 % http://design.ubuntu.com/brand/colour-palette
@@ -140,11 +140,11 @@ literate={*}{{\char42}}1
 \input{files/spis_tresci}
 	\section{Wstęp}
 	\input{files/wstep_wprowadzenie}
-		\subsection{O Ubuntu}
+		\subsection{O Ubuntu}			
 			\input{files/wstep_o_ubuntu}
 		\subsection{Dlaczego warto zmienić system na Ubuntu?}
 			\input{files/wstep_dlaczego_zmienic}
-	\section{Instalacja}
+	\section{Instalacja Ubuntu}
 		\subsection{Pobieranie obrazu instalatora}
 			\input{files/instalacja/instalacja_pobieranie_obrazu}
 		\subsection{Nagrywanie pobranego obrazu}
