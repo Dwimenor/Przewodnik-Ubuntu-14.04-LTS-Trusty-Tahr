@@ -45,13 +45,13 @@
 \clubpenalty=10000 
 \brokenpenalty=10000
 
-
 % Obrazki
 %TODO nie ładuj plików png z nałożonymi grafikami. Uzyj TIKZ:
 % http://tex.stackexchange.com/questions/30427/simplest-way-to-overlay-a-text-rectangle-label-an-image
 \usepackage{graphicx}
 \usepackage{wrapfig}
 \usepackage{adjustbox}
+\usepackage{tikz}
 
 % linki, URL
 \usepackage[urlcolor=blue, colorlinks=true]{hyperref} 
@@ -86,14 +86,16 @@
 % Listy
 \usepackage[shortlabels]{enumitem}
 
+% Mniejsza przerwa pomiędzy lista i paragrafem oraz pomiędzy elementami listy.
+\setlist[itemize]{noitemsep, topsep=0pt}
+\setlist[enumerate]{noitemsep, topsep=0pt}
+
 % Logo Ubuntu jako "punkt" listy
 \newcommand{\imageUbuntuCircleOfFriends}{\input{images/circle_of_friends}}
 \renewcommand{\labelitemi}{\imageUbuntuCircleOfFriends}
 
 % Listy numerowane - styl taki, jak na obrazkach.
-\usepackage{tikz}
-\newcommand*\circled[1]{\tikz{
-\node[shape=circle,fill=white,line width=2pt,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}
+\newcommand*\circled[1]{\tikz{\node[shape=circle,fill=white,line width=2pt,draw=ubuntu_orange,inner sep=2pt] (char) {#1};}}
 
 % Przyciski klawiatury jako tekst, przechodzenie przez różne menu
 \usepackage{menukeys}
