@@ -53,8 +53,9 @@
 \usepackage{adjustbox}
 \usepackage{tikz}
 
-% linki, URL
-\usepackage[urlcolor=blue, colorlinks=true]{hyperref} 
+% linki, URL, opcje pdf
+\usepackage[urlcolor=blue, colorlinks=true]{hyperref}
+\hypersetup{pdftitle=Przewodnik Ubuntu 14.04 LTS Trusty Tahr, pdfauthor=Zespół Ubuntu.pl,}
 
 % Dwie kolumny w spisie treści
 \usepackage[toc]{multitoc}
@@ -238,7 +239,7 @@ literate={*}{{\char42}}1
 		\subsection{Wyłączenie raportowania błędów}
 			\input{files/sztuczki/apport}
 		\subsection{Odtwarzanie szyfrowanych płyt DVD}
-			\input{files/sztuczki/sztuczki_libdvdcss2}
+,			\input{files/sztuczki/sztuczki_libdvdcss2}
 		\subsection{Przyspieszanie systemu poprzez lepsze wykorzystanie pamięci}
 			\input{files/sztuczki/sztuczki_preload}
 		\subsection{Oczyszczanie systemu}
