@@ -5,8 +5,8 @@ Partycjonowanie to proces zmiany układu partycji na dysku twardym. Jest to najw
 Wirtualny dysk twardy użyty w tym przewodniku ma tylko 26,8 gigabajta pojemności. Twój dysk twardy zapewne będzie miał kilkaset gigabajtów (jeżeli nie kilka terabajtów) pojemności. Dlatego też liczby, jakimi się tu posługujemy, będą miały niewielkie przełożenie na sytuację na twoim komputerze. W tym miejscu powinieneś się jednak zastanowić, ile miejsca chcesz przeznaczyć na Ubuntu.
 Ogólnie rzecz ujmując, sprawa wygląda następująco:
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Partycja główna, root, /} --- 6,2 gigabajta to absolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużą partycję główną, gdyż wolna przestrzeń będzie niewykorzystana. 15 -- 20 gigabajtów w zupełności wystarczy.
-\item \textcolor{ubuntu_orange}{Partycja wymiany, swap} --- na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAM-u, kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji, to wielkość partycji swap powinna być co najmniej taka, jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji, to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAM-u. W takim wypadku, nawet jeżeli nie korzystasz z hibernacji, to dobrze jest stworzyć niewielką (300 --- 400 megabajtów) partycję swap.
+\item \textcolor{ubuntu_orange}{Partycja główna, root, /} --- 6,2 gigabajta to absolutne minimum. 10 gigabajtów da pewną elastyczność i pozwoli zainstalować więcej programów. Nie ma potrzeby przesadzać w drugą stronę i tworzyć zbyt dużą partycję główną, gdyż wolna przestrzeń będzie niewykorzystana. 15 -- 20 gigabajtów w~zupełności wystarczy.
+\item \textcolor{ubuntu_orange}{Partycja wymiany, swap} --- na tej partycji zapisywane są dane, które nie mieszczą się w pamięci operacyjnej. Tutaj też przechowywany jest obraz RAM-u, kiedy poddajesz komputer hibernacji. Jeżeli korzystasz z hibernacji, to wielkość partycji swap powinna być co najmniej taka, jak ilość pamięci operacyjnej twojego komputera. Jeżeli nie planujesz korzystać z hibernacji, to możesz nie tworzyć partycji wymiany. Jednak zaleca się jej stworzenie, jeżeli masz mniej niż 2 gigabajty RAM-u. W~takim wypadku, nawet jeżeli nie korzystasz z hibernacji, to dobrze jest stworzyć niewielką (300 --- 400 megabajtów) partycję swap.
 \item \textcolor{ubuntu_orange}{Partycja domowa, /home} --- W katalogu /home przechowywane są prywatne pliki użytkownika: zawartość pulpitu, dokumenty, filmy, muzyka i ustawienia programów. Katalog domowy może znajdować się na głównej partycji (/, root) lub można go wydzielić. Dobrą praktyką jest wydzielenie takiej partycji, gdyż w razie reinstalacji systemu nie trzeba będzie jej kasować. Nadpisana pozostanie tylko partycja główna, zaś wszystkie prywatne dane pozostaną niezmienione. Wielkość tej partycji zależy tylko i wyłącznie od tego, jak wiele miejsca chcesz na nią przeznaczyć i jak wiele rzeczy zamierzasz na niej trzymać. 
 \end{itemize}
 \clearpage
@@ -21,7 +21,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
 Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-\clearpage
+
 \subsubsection{Instalacja obok zainstalowanego Ubuntu}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_ubuntu.png}
@@ -37,7 +37,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
 Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-\clearpage
+
 \subsubsection{Instalacja obok Windowsa}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_wondows7.png}
@@ -58,7 +58,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
 Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-\clearpage
+
 \subsubsection{Szyfrowanie dysku twardego}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie1.png}
@@ -68,7 +68,7 @@ Przy wyborze jednego z automatycznych rozwiązań partycjonowania miałeś możl
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.
 \end{flushright}
-\clearpage
+
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie2.png}
 \end{center}
@@ -81,7 +81,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
 Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.\\
 \end{flushright}
-\clearpage
+
 \subsection{Zaawansowane partycjonowanie}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted1.png}
@@ -93,7 +93,7 @@ Do GParted warto zajrzeć jeszcze z jednego powodu. Podział partycji stosowany 
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby przejść dalej.
 \end{flushright}
-\clearpage
+
 \subsubsection{Główne okno programu GParted}
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2.png}
@@ -102,7 +102,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby przejść dalej.
 Na powyższym obrazku widzisz główne okno programu GParted. Wykryty został układ partycji na dysku twardym. Poziomy pasek \textcolor{ubuntu_orange}{(}1\textcolor{ubuntu_orange}{)}, rozciągający się na całą szerokość okna, jest graficzną reprezentacją układu partycji. Poniżej paska znajduje się legenda objaśniająca użyte kolory. Tabela \textcolor{ubuntu_orange}{(}2\textcolor{ubuntu_orange}{)}, znajdująca się w centralnej części okna, przedstawia szczegółowe informacje na temat partycji na dysku twardym. Zestaw przycisków \textcolor{ubuntu_orange}{(}3\textcolor{ubuntu_orange}{)} służy do dodawania (\textcolor{ubuntu_orange}{+}), usuwania (\textcolor{ubuntu_orange}{-}) lub modyfikacji partycji(\textcolor{ubuntu_orange}{Change}). W tej chwili inne rzeczy nas nie interesują.
 
 Powyższy układ dysków twardych oraz partycji jest tylko przykładem skonstruowanym na maszynie wirtualnej. Na twoim komputerze liczby będą inne.
-\clearpage
+
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}
 \end{center}
@@ -135,7 +135,7 @@ Tabela umieszczona w centrum tego okna przedstawia informacje o poszczególnych 
 
 Na powyższym obrazku widać dwie partycje utworzone przez instalator systemu Windows 7. Partycja zielona o rozmiarze 104 megabajtów służy jako partycja programu rozruchowego systemu Windows. Duża, pomarańczowa partycja (26736 megabajtów) to główna partycja systemu Windows 7. Bardzo podobny układ partycji stosowany jest przez każdy z systemów z rodziny Windows.\\
 Pierwszym krokiem jest wydzielenie miejsca dla systemu Ubuntu. Kliknij na partycji \textcolor{ubuntu_orange}{/dev/sda2}. Następnie kliknij przycisk \textcolor{ubuntu_orange}{Change}, znajdujący się pod tabelą. W otwartym oknie możesz zmniejszyć rozmiar wybranej partycji.
-\clearpage
+
 \begin{wrapfigure}{R}{0.5\textwidth}
                 \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_zmniejszenie_partycji_windows.png}
 \end{wrapfigure}
@@ -148,7 +148,6 @@ Na schemacie pojawiła się pusta, oznaczona kolorem szarym \textcolor{ubuntu_or
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted3.png}
 \end{center}
 
-\clearpage
 \begin{wrapfigure}{R}{0.5\textwidth}
                 \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_root.png}
 \end{wrapfigure}
@@ -162,7 +161,7 @@ Na początku musimy stworzyć partycję podstawową dla Ubuntu. O ilości miejsc
 \item \textcolor{ubuntu_orange}{Punkt montowania} --- To nasza główna partycja, więc musi się znaleźć na początku\footnote{W systemach Windows drzewo katalogów ,,zaczyna się'' na C:$\backslash\backslash$,  systemach linuksowych --- na /}.
 \end{itemize}
 Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
-\clearpage
+
 \begin{wrapfigure}{R}{0.5\textwidth}
                 \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_swap.png}
 \end{wrapfigure}
@@ -171,7 +170,7 @@ Teraz utwórz partycję wymiany. Więcej o tej partycji przeczytasz w w sekcji \
                 \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_home.png}
 \end{wrapfigure}
 Na koniec pozostało utworzenie partycji domowej. Więcej o tej partycji przeczytasz w sekcji \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw jak na rysunku. Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
-\clearpage
+
 \begin{center}
         \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted4.png}
 \end{center}
@@ -179,4 +178,3 @@ Ekran programu GParted wygląda teraz mniej więcej tak, jak na rysunku powyżej
 
 Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby wprowadzić zmiany na partycjach. Teraz możesz powrócić do lektury procesu instalacji w miejscu, gdzie go przerwałeś.\\
 Powrót do \ref{instalator_strefa_czasowa}: ,,Wybór strefy czasowej''.
-\clearpage
