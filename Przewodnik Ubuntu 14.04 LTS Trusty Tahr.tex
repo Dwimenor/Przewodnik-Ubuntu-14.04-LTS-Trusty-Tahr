@@ -45,6 +45,9 @@
 \clubpenalty=10000 
 \brokenpenalty=10000
 
+% Dla podpisów bez numerów \caption*
+\usepackage{caption}
+
 % Obrazki
 %TODO nie ładuj plików png z nałożonymi grafikami. Uzyj TIKZ:
 % http://tex.stackexchange.com/questions/30427/simplest-way-to-overlay-a-text-rectangle-label-an-image
@@ -52,6 +55,7 @@
 \usepackage{wrapfig}
 \usepackage{adjustbox}
 \usepackage{tikz}
+\usetikzlibrary{decorations.pathreplacing} 
 
 % linki, URL, opcje pdf
 \usepackage[urlcolor=blue, colorlinks=true]{hyperref}

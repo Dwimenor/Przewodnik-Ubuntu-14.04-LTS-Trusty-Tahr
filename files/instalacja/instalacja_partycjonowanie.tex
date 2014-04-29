@@ -12,19 +12,20 @@ Ogólnie rzecz ujmując, sprawa wygląda następująco:
 \clearpage
 \subsubsection{Czysty dysk --- wykorzystanie całego dostępnego miejsca}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_proste.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_proste.png}
 \end{center}
 
 Jeżeli na dysku twardym nie ma żadnego innego systemu operacyjnego, instalator Ubuntu zaproponuje wykorzystanie całej dostępnej przestrzeni. Instalator sam dobierze odpowiedni rozmiar partycji systemowej, partycji wymiany oraz partycji użytkownika.
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
-Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
+Zostaniesz poproszony o potwierdzenie.\\
+Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-
+\clearpage
 \subsubsection{Instalacja obok zainstalowanego Ubuntu}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_ubuntu.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_ubuntu.png}
 \end{center}
 
 Jeżeli instalator wykryje obecność wcześniej zainstalowanej innej wersji Ubuntu, to zaproponuje kilka innych rozwiązań.
@@ -34,34 +35,51 @@ Skasowane zostaną zainstalowane w systemie programy oraz ustawienia systemowe. 
 Drugą z możliwości jest usunięcie zainstalowanego Ubuntu i ponowna instalacja systemu. Wszystkie dane zostaną wymazane.
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
-Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
+Zostaniesz poproszony o potwierdzenie.\\
+Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-
+\clearpage
 \subsubsection{Instalacja obok Windowsa}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_wondows7.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_wondows7.png}
 \end{center}
 
 Jeżeli instalator wykryje obecność wcześniej zainstalowanego systemu Windows, to zaproponuje inne rozwiązanie. ,,Zamiana Windows na Ubuntu'' wymaże całą zawartość partycji Windows (wraz ze wszystkimi danymi) i w to miejsce zainstaluje Ubuntu. Zostało to opisane dwie strony wcześniej.
 \begin{flushright}
 Kliknij na przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.
 \end{flushright}
-\clearpage
+
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_wondows7_2.png}
+\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_obok_wondows7_2.png}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.16,0.72) rectangle (0.98,0.79);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.55,0.85) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 1};
+		\draw[ubuntu_orange,dashed,line width=3pt] (0.55,0.81) -- (0.55,0.79);	
+	
+		\draw[ubuntu_orange,line width=1.5pt,decorate,decoration={brace,amplitude=12pt,mirror}] (0.02,0.36) -- (0.6,0.36);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.31,0.24) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 2};
+		\draw[ubuntu_orange,line width=1.5pt,decorate,decoration={brace,amplitude=12pt,mirror}] (0.61,0.36) -- (0.98,0.36);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.795,0.24) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 3};
+    \end{scope}
+\end{tikzpicture}
 \end{center}
 
-Drugą możliwością jest instalacja Ubuntu obok już zainstalowanego systemu Windows. Jeżeli wybierzesz tę opcję, to następny ekran pozwoli wybrać o ile instalator ma zmniejszyć partycję, na której zainstalowany jest system Windows. Użyj myszy, aby przesunąć pomarańczową podziałkę w lewo (więcej miejsca dla Ubuntu) lub w prawo (więcej miejsca dla Windowsa). Oryginalna partycja systemu Windows jest oznaczona na tym obrazie jako ,,Pliki''. Pamiętaj, że Ubuntu potrzebuje minimum 6,2 gigabajta przestrzeni, ale tak mała partycja zostanie prawie w całości wypełniona przez system i na twoje pliki pozostanie niewiele miejsca.
+Drugą możliwością jest instalacja Ubuntu obok już zainstalowanego systemu Windows. Jeżeli wybierzesz tę opcję, to następny ekran pozwoli wybrać o ile instalator ma zmniejszyć partycję, na której zainstalowany jest system Windows. Menu \circled 1 pozwala wybrać dysk dwardy, na którym mają zostać dokonane operacje. Użyj myszy, aby przesunąć pomarańczową podziałkę w lewo (więcej miejsca dla Ubuntu) lub w prawo (więcej miejsca dla Windowsa). Oryginalna partycja systemu Windows jest oznaczona na tym obrazie jako ,,Pliki'' \circled 2. Partycja dla Ubuntu na powyższym obrazku to \circled 3. Pamiętaj, że Ubuntu potrzebuje minimum 6,2 gigabajta przestrzeni, ale tak mała partycja zostanie prawie w całości wypełniona przez system i na twoje pliki pozostanie niewiele miejsca.
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
-Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
+Zostaniesz poproszony o potwierdzenie.\\
+Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.\\
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.
 \end{flushright}
-
+\clearpage
 \subsubsection{Szyfrowanie dysku twardego}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie1.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie1.png}
 \end{center}
 
 Przy wyborze jednego z automatycznych rozwiązań partycjonowania miałeś możliwość zastosowania szyfrowania dysku twardego. Jeśli wybierzesz tę opcję zostanie wyświetlone okno jak na powyższym obrazku. Zaszyfrowanie dysku twardego sprawi, że nikt nie uzyska dostępu do twoich danych, ani nie zmodyfikuje zainstalowanego systemu. Wadą tego rozwiązania jest pewne zwiększenie obciążenia procesora i związane z tym zmniejszenie płynności działania komputera. Nowoczesne procesory zapewniają akcelerację sprzętową dla obliczeń kryptograficznych, w związku z czym utrata wydajności będzie się mieścić w granicach 5\% przy intensywnych opracacjach dyskowych.
@@ -70,7 +88,7 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.
 \end{flushright}
 
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie2.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_szyfrowanie2.png}
 \end{center}
 
 W tym miejscu podaj hasło --- klucz do dysku twardego. To nie jest to samo hasło, które ustawisz dla swojego systemowego konta, a hasło umożliwiające dostęp do danych zapisanych na dysku twardym. Pamiętaj, że jeżeli zapomnisz wprowadzone tu hasło, nie będzie możliwości odzyskania zaszyfrowanych danych. Postaraj się też, aby hasło było trudne do odgadnięcia, ale łatwe do zapamiętania przez ciebie.
@@ -78,13 +96,14 @@ W tym miejscu podaj hasło --- klucz do dysku twardego. To nie jest to samo has�
 Opcja ,,Zamazanie pustej przestrzeni dysku'' powoduje, że niewykorzystywana, wolna przestrzeń dysku zostanie nadpisana losowymi danymi. Taka operacja znacznie utrudnia potencjalnym włamywaczom odczytanie twoich danych. Miej na uwadze, że zamazywanie pustej przestrzeni może trwać bardzo długo, w zależności od tego, ile miejsca przeznaczysz na Ubuntu.
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Zainstaluj}, aby przejść dalej.\\
-Zostaniesz poproszony o potwierdzenie. Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.
+Zostaniesz poproszony o potwierdzenie.\\
+Upewnij się, że wszystko jest w porządku i kliknij \textcolor{ubuntu_orange}{Naprzód}.
 W tym momencie wybrane zmiany zostaną zapisane na dysku twardym.\\
 \end{flushright}
-
+\clearpage
 \subsection{Zaawansowane partycjonowanie}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted1.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted1.png}
 \end{center}
 
 \textcolor{ubuntu_orange}{Użycie innego rozwiązania} uruchamia program GParted, który umożliwia nieograniczone modyfikowanie partycji na dysku twardym. Jest to opcja dla bardziej zaawansowanych użytkowników, którzy mają świadomość tego, jak działa partycjonowanie i jak powinien zostać podzielony ich dysk twardy. Jeżeli na swoim komputerze masz zainstalowany więcej niż jeden system operacyjny lub z jakiegoś innego powodu przedstawione wcześniej opcje nie spełniają twoich wymagań, to konieczne będzie sięgnięcie do zaawansowanego partycjonowania.
@@ -96,16 +115,29 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby przejść dalej.
 
 \subsubsection{Główne okno programu GParted}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2.png}
+\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.01,0.76) rectangle (0.99,0.81);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.45,0.90) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 1};
+		\draw[ubuntu_orange,dashed,line width=3pt] (0.45,0.87) -- (0.45,0.81);
+		
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.01,0.45) rectangle (0.99,0.70);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.75,0.55) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 2};
+			
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.01,0.38) rectangle (0.15,0.43);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.35,0.35) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 3};
+		\draw[ubuntu_orange,dashed,line width=3pt] (0.33,0.35) -- (0.15,0.40);
+    \end{scope}
+\end{tikzpicture}
 \end{center}
 
-Na powyższym obrazku widzisz główne okno programu GParted. Wykryty został układ partycji na dysku twardym. Poziomy pasek \textcolor{ubuntu_orange}{(}1\textcolor{ubuntu_orange}{)}, rozciągający się na całą szerokość okna, jest graficzną reprezentacją układu partycji. Poniżej paska znajduje się legenda objaśniająca użyte kolory. Tabela \textcolor{ubuntu_orange}{(}2\textcolor{ubuntu_orange}{)}, znajdująca się w centralnej części okna, przedstawia szczegółowe informacje na temat partycji na dysku twardym. Zestaw przycisków \textcolor{ubuntu_orange}{(}3\textcolor{ubuntu_orange}{)} służy do dodawania (\textcolor{ubuntu_orange}{+}), usuwania (\textcolor{ubuntu_orange}{-}) lub modyfikacji partycji(\textcolor{ubuntu_orange}{Change}). W tej chwili inne rzeczy nas nie interesują.
+Na powyższym obrazku widzisz główne okno programu GParted. Wykryty został układ partycji na dysku twardym. Poziomy pasek \circled 1, rozciągający się na całą szerokość okna, jest graficzną reprezentacją układu partycji. Poniżej paska znajduje się legenda objaśniająca użyte kolory. Tabela \circled 2, znajdująca się w centralnej części okna, przedstawia szczegółowe informacje na temat partycji na dysku twardym. Zestaw przycisków \circled 3 służy do dodawania (\textcolor{ubuntu_orange}{+}), usuwania (\textcolor{ubuntu_orange}{-}) lub modyfikacji partycji(\textcolor{ubuntu_orange}{Change}). W tej chwili inne rzeczy nas nie interesują.
 
 Powyższy układ dysków twardych oraz partycji jest tylko przykładem skonstruowanym na maszynie wirtualnej. Na twoim komputerze liczby będą inne.
-
-\begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}
-\end{center}
 
 Tabela umieszczona w centrum tego okna przedstawia informacje o poszczególnych partycjach obecnych na dysku twardym. Oto objaśnienie poszczególnych kolumn:
 \begin{itemize}
@@ -127,30 +159,35 @@ Tabela umieszczona w centrum tego okna przedstawia informacje o poszczególnych 
 \item \textcolor{ubuntu_orange}{Zajęte} --- ilość zajętego miejsca na partycji.
 \item \textcolor{ubuntu_orange}{System} --- system operacyjny zainstalowany na danej partycji. Nie zawsze da się rozpoznać zainstalowany system. Nie każda partycja musi mieć zainstalowany system operacyjny. 
 \end{itemize}
-\clearpage
+
 \subsubsection{Zaawansowane partycjonowanie --- Instalacja obok systemu Windows}
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted2_czysty.png}
 \end{center}
 
 Na powyższym obrazku widać dwie partycje utworzone przez instalator systemu Windows 7. Partycja zielona o rozmiarze 104 megabajtów służy jako partycja programu rozruchowego systemu Windows. Duża, pomarańczowa partycja (26736 megabajtów) to główna partycja systemu Windows 7. Bardzo podobny układ partycji stosowany jest przez każdy z systemów z rodziny Windows.\\
 Pierwszym krokiem jest wydzielenie miejsca dla systemu Ubuntu. Kliknij na partycji \textcolor{ubuntu_orange}{/dev/sda2}. Następnie kliknij przycisk \textcolor{ubuntu_orange}{Change}, znajdujący się pod tabelą. W otwartym oknie możesz zmniejszyć rozmiar wybranej partycji.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_zmniejszenie_partycji_windows.png}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_zmniejszenie_partycji_windows.png}
 \end{wrapfigure}
 
-W polu \textcolor{ubuntu_orange}{Rozmiar} podaj nowy rozmiar partycji. O tym ile miejsca potrzebujesz na Ubuntu przeczytasz w rozdziale \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. W polu podajesz rozmiar partycji w megabajtach. Jeden gigabajt to 1024 megabajty.\\
+W polu \textcolor{ubuntu_orange}{Rozmiar} podaj nowy rozmiar partycji. O tym ile miejsca potrzebujesz na Ubuntu przeczytasz w rozdziale \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. W polu podajesz rozmiar partycji w megabajtach. Jeden gigabajt to 1024 megabajty.
+
 Upewnij się, że wybrano opcję \textcolor{ubuntu_orange}{nie używaj tej partycji}. Teraz kliknij przycisk \textcolor{ubuntu_orange}{OK}, a następnie \textcolor{ubuntu_orange}{Naprzód}, aby dokonać zmiany na partycji. Wykonanie żądanej zmiany może trwać dłuższą chwilę.
-Na schemacie pojawiła się pusta, oznaczona kolorem szarym \textcolor{ubuntu_orange}{dostępna przestrzeń}. Zaznacz ją, a następnie kliknij przycisk (\textcolor{ubuntu_orange}{+}), aby stworzyć nową partycję.
 
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted3.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted3.png}
 \end{center}
 
-\begin{wrapfigure}{R}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_root.png}
+\begin{wrapfigure}[9]{R}{0.5\textwidth}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_root.png}
+	\caption*{Ustawienia dla partycji głównej (/).}
 \end{wrapfigure}
+
+Na schemacie pojawiła się pusta, oznaczona kolorem szarym \textcolor{ubuntu_orange}{dostępna przestrzeń}. Zaznacz ją, a następnie kliknij przycisk (\textcolor{ubuntu_orange}{+}), aby stworzyć nową partycję.
 
 Na początku musimy stworzyć partycję podstawową dla Ubuntu. O ilości miejsca potrzebnego na poszczególne partycje przeczytasz w sekcji \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw, jak na rysunku.
 \begin{itemize}
@@ -161,20 +198,29 @@ Na początku musimy stworzyć partycję podstawową dla Ubuntu. O ilości miejsc
 \item \textcolor{ubuntu_orange}{Punkt montowania} --- To nasza główna partycja, więc musi się znaleźć na początku\footnote{W systemach Windows drzewo katalogów ,,zaczyna się'' na C:$\backslash\backslash$,  systemach linuksowych --- na /}.
 \end{itemize}
 Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
+\clearpage
+\begin{wrapfigure}{R}{0.5\textwidth}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_swap.png}
+	\caption*{Ustawienia dla partycji wymiany (swap).}
+\end{wrapfigure}
+
+Teraz utwórz partycję wymiany. Więcej o tej partycji przeczytasz w w sekcji \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw jak na rysunku. Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
 
 \begin{wrapfigure}{R}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_swap.png}
+	\vspace{-10pt}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_home.png}
+	\caption*{Ustawienia dla partycji domowej (/home).}
 \end{wrapfigure}
-Teraz utwórz partycję wymiany. Więcej o tej partycji przeczytasz w w sekcji \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw jak na rysunku. Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
-\begin{wrapfigure}{L}{0.5\textwidth}
-                \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted_dodaj_home.png}
-\end{wrapfigure}
+
 Na koniec pozostało utworzenie partycji domowej. Więcej o tej partycji przeczytasz w sekcji \ref{ile_miejsca} ,,Ile miejsca przeznaczyć na Ubuntu''. Pozostałe opcje ustaw jak na rysunku. Kliknij przycisk \textcolor{ubuntu_orange}{OK}, aby utworzyć nową partycję.
 
 \begin{center}
-        \includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted4.png}
+	\includegraphics[width=\linewidth]{images/instalator_partycjonowanie_gparted4.png}
 \end{center}
+
 Ekran programu GParted wygląda teraz mniej więcej tak, jak na rysunku powyżej. Masz dwie partycje systemu Windows (NTFS), partycję wymiany systemu Linux (swap) oraz dwie partycje dla systemu Ubuntu (ext4). Upewnij się, że partycje NTFS \textcolor{ubuntu_orange}{nie} są zaznaczone do sformatowania, zaś partycje ext4 tak.
 
-Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby wprowadzić zmiany na partycjach. Teraz możesz powrócić do lektury procesu instalacji w miejscu, gdzie go przerwałeś.\\
+Kliknij przycisk \textcolor{ubuntu_orange}{Naprzód}, aby wprowadzić zmiany na partycjach.\\
+Teraz możesz powrócić do lektury procesu instalacji w miejscu, gdzie go przerwałeś.\\
 Powrót do \ref{instalator_strefa_czasowa}: ,,Wybór strefy czasowej''.
+\clearpage
