@@ -2,9 +2,9 @@ Wraz z systemem Ubuntu na twoim dysku twardym znalazła się cała gama oprogram
 
 W systemach linuksowych (Ubuntu do nich należy) instalacja programów przebiega nieco inaczej, niż gdzie indziej, a jednocześnie bardzo podobnie. Jak to możliwe? Bardzo prosto. Zapewne znasz pojęcie ,,sklepu z oprogramowaniem''. Apple ma swój ,,App Store'', Google ma swoje ,,Play''. Są to stosunkowo nowe metody instalacji oprogramowania, które upowszechniły się w przeciągu ostatnich lat. Nawet Microsoft w najnowszych wydaniach swojego systemu Windows promuje instalację softu przez wbudowany sklep, zamiast ręcznego przeszukiwania sieci, ściągania instalatorów, skanowania ich antywirusem i instalowania w systemie.
 
-Takie sklepy z oprogramowaniem istnieją w systemach linuksowych od dawna, przy czym w tym przypadku nazywają się \textcolor{ubuntu_orange}{repozytoriami}. Repozytorium to serwer, na którym opiekunowie danej dystrybucji Linuksa (np. firma Canonical jest opiekunem Ubuntu) przechowują paczki z programami. Użytkownik, chcąc zainstalować jakiś program (np. przeglądarkę internetową Firefox), uruchamia program zwany \textcolor{ubuntu_orange}{menadżerem pakietów}, wyszukuje w nim to, czego potrzebuje i instaluje. Nic więcej go nie interesuje --- menadżer pakietów sam ściągnie paczkę z programem, pobierze wszystkie zależności (programy niezbędne do funkcjonowania instalowanego programu) i zainstaluje soft w systemie. Kiedy w repozytoriach program zostanie zaktualizowany, to użytkownik zostanie o tym powiadomiony, a menadżer pakietów dokona aktualizacji.
+Takie sklepy z oprogramowaniem istnieją w systemach linuksowych od dawna, przy czym w tym przypadku nazywają się \textcolor{ubuntu_orange}{repozytoriami}. Repozytorium to serwer, na którym opiekunowie danej dystrybucji Linuksa (np. firma Canonical jest opiekunem Ubuntu) przechowują paczki z programami. Użytkownik, chcąc zainstalować jakiś program (np. przeglądarkę internetową Firefox), uruchamia program zwany \textcolor{ubuntu_orange}{menadżerem pakietów}, wyszukuje w nim to, czego potrzebuje i instaluje. Nic więcej go nie interesuje --- menadżer pakietów sam ściągnie paczkę z programem, pobierze wszystkie zależności (programy niezbędne do funkcjonowania instalowanego programu) i zainstaluje soft w systemie. Kiedy w repozytoriach program zostanie zaktualizowany, to użytkownik zostanie o tym powiadomiony, a~menadżer pakietów dokona aktualizacji.
 
-W przeciwieństwie do sklepów z oprogramowaniem system repozytoriów przechowuje nie tylko programy użytkowe, ale też składniki systemu operacyjnego, sterowniki, dokumentację, pliki pomocy, paczki z tematami graficznymi i ikonami oraz wiele innych. Użytkownik nie jest też ograniczony wyłącznie do repozytoriów oferowanych przez opiekunów dystrybucji --- swobodnie może łączyć się z innymi serwerami w celu poszerzenia oferty oprogramowania. W Ubuntu istnieje cały ekosystem repozytoriów PPA (\textit{Personal Package Archive}), które kilkoma kliknięciami można dodać do systemu. Deweloperzy różnych aplikacji za pośrednictwem PPA dostarczają użytkownikom oprogramowanie, które nie znalazło się w repozytoriach oferowanych przez Canonical.
+W przeciwieństwie do sklepów z oprogramowaniem system repozytoriów przechowuje nie tylko programy użytkowe, ale też składniki systemu operacyjnego, sterowniki, dokumentację, pliki pomocy, paczki z tematami graficznymi i ikonami oraz wiele innych. Użytkownik nie jest też ograniczony wyłącznie do repozytoriów oferowanych przez opiekunów dystrybucji --- swobodnie może łączyć się z~innymi serwerami w celu poszerzenia oferty oprogramowania. W Ubuntu istnieje cały ekosystem repozytoriów PPA (\textit{Personal Package Archive}), które kilkoma kliknięciami można dodać do systemu. Deweloperzy różnych aplikacji za pośrednictwem PPA dostarczają użytkownikom oprogramowanie, które nie znalazło się w repozytoriach oferowanych przez Canonical.
 
 Podstawową jednostką w repozytorium jest paczka. Jest to skompresowane archiwum, zawierające wszystkie pliki programu (czyli soft oraz dodatki: dokumentacja, ikony, grafiki, dźwięki i inne), a także informacje co i gdzie ma zostać wypakowane.
 
@@ -12,10 +12,22 @@ Podstawową jednostką w repozytorium jest paczka. Jest to skompresowane archiwu
 \textcolor{ubuntu_orange}{Centrum Oprogramowania Ubuntu} jest programem służącym do zarządzania zainstalowanymi aplikacjami. W przeciwieństwie do bardziej rozbudowanej klasy programów, zwanych menadżerami pakietów, Centrum Oprogramowania jest swego rodzaju sklepem z aplikacjami. Znajdziesz tu gotowe instalatory programów dostępnych w podstawowych repozytoriach, a także programy płatne. Z drugiej strony, nie ma tutaj pakietów z podstawowymi składnikami systemu.
 
 \begin{center}
-	\includegraphics[width=\linewidth]{images/programy_centrum.png}
-\end{center} 
+	\begin{tikzpicture}
+	\node[anchor=south west,inner sep=0] (image) at (0,0) {\includegraphics[width=\linewidth]{images/programy_centrum.png}};
+	\begin{scope}[x={(image.south east)},y={(image.north west)}]
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.80,0.95) rectangle (0.99,0.99);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.65,0.97) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 1};
+		\draw[ubuntu_orange,dashed,line width=3pt] (0.67,0.97) -- (0.79,0.97);
+		
+		\draw[ubuntu_orange,line width=3pt,rounded corners] (0.01,0.35) rectangle (0.16,0.73);
+		\draw[ubuntu_orange,line width=3pt,fill=white,fill opacity=0.75] (0.10,0.55) circle [radius=0.30cm]
+			node[text=black]{\Large \textbf 2};
+	\end{scope}
+\end{tikzpicture}
+\end{center}
 
-W prawym górnym rogu znajduje się pole, w którym można wpisać nazwę szukanego programu (lub jej część), a Centrum Oprogramowania Ubuntu wyświetli wyniki wyszukiwania. Środkowa część ekranu zawiera polecane i najwyżej oceniane aplikacje. Z lewej strony jest lista kategorii oprogramowania:
+W prawym górnym rogu znajduje się pole \circled 1, w którym można wpisać nazwę szukanego programu (lub jej część), a Centrum Oprogramowania Ubuntu wyświetli wyniki wyszukiwania. Środkowa część ekranu zawiera polecane i najwyżej oceniane aplikacje. Z lewej strony \circled 2 jest lista kategorii oprogramowania:
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{Akcesoria}: niewielkie programy, pomocne w codziennym używaniu komputera;
 \item \textcolor{ubuntu_orange}{Biuro}: programy biurowe, bardziej rozbudowane edytory tekstu, arkusze kalkulacyjne, organizery i inne;
@@ -58,9 +70,11 @@ Konsolowym menadżerem pakietów w systemie Ubuntu jest \textcolor{ubuntu_orange
 sudo apt-get install vlc
 \end{lstlisting}
 \item Wciśnij \keys{\returnwin}
-\item wpisz swoje hasło i wciśnij \keys{\returnwin}. Nie przejmuj się, że hasło się nie pojawia. Jest to zabezpieczenie przed podglądaczami.
+\item Wpisz swoje hasło i wciśnij \keys{\returnwin}. Nie przejmuj się, że hasło się nie pojawia. Jest to zabezpieczenie przed podglądaczami.
 \end{enumerate}
+
 VLC jest znanym na całym świecie kombajnem do odtwarzania wszelkiego rodzaju multimediów. Nie ma go w standardowej instalacji Ubuntu, ale dostępny jest za pośrednictwem repozytoriów. Co oznaczają poszczególne części tego polecenia?
+
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{sudo} --- instalacja pakietów (a także ich usuwanie) wymaga uwierzytelnienia i tylko administrator systemu może to zrobić. \textit{Sudo} jest programem umożliwiającym wykonanie kolejnego polecenia przez innego użytkownika (w tym wypadku roota, administratora). Spróbuj wpisać to polecenie bez sudo na początku i zobacz, co się stanie.
 \item \textcolor{ubuntu_orange}{apt-get} --- to konsolowy program do zarządzania pakietami.
@@ -75,17 +89,19 @@ Czytanie list pakietów... Gotowe
 Budowanie drzewa zależności       
 Odczyt informacji o stanie... Gotowe
 Zostaną zainstalowane następujące dodatkowe pakiety:
-  libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1 libhogweed2 libiso9660-8 liblivemedia23 libmatroska6
-  libproxy-tools libresid-builder0c2a libsdl-image1.2 libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5
-  libvlccore7 libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
+  libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1
+  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a libsdl-image1.2
+  libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5 libvlccore7
+  libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
 Sugerowane pakiety:
   firmware-crystalhd gnutls-bin videolan-doc
 Polecane pakiety:
   libdvdcss2
 Zostaną zainstalowane następujące NOWE pakiety:
-  libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1 libhogweed2 libiso9660-8 liblivemedia23 libmatroska6
-  libproxy-tools libresid-builder0c2a libsdl-image1.2 libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5
-  libvlccore7 libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
+  libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1
+  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a libsdl-image1.2
+  libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5 libvlccore7
+  libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
 0 aktualizowanych, 31 nowo instalowanych, 0 usuwanych i 0 nieaktualizowanych.
 Konieczne pobranie 10,4 MB archiwów.
 Po tej operacji zostanie dodatkowo użyte 51,3 MB miejsca na dysku.
@@ -134,7 +150,7 @@ sudo apt-get update
 \end{lstlisting}
 \item Zainstaluj LibreOffice:
 \begin{lstlisting}[language=bash]
-udo apt-get install libreoffice
+sudo apt-get install libreoffice
 \end{lstlisting}
 \end{enumerate}
 
@@ -166,6 +182,7 @@ Po takiej operacji raczej na pewno otrzymasz komunikat o ,,niespełnionych zale�
 \begin{lstlisting}[language=bash]
 sudo apt-get install -f
 \end{lstlisting}
+
 Polecenie \textcolor{ubuntu_orange}{install} z opcją \textcolor{ubuntu_orange}{-f} informuje apt-get, że ma sprawdzić stan paczek oraz zreperować (f, czyli fix) stan pakietów. Po tej operacji program zostanie prawidłowo zainstalowany i skonfigurowany, a paczkę .deb można skasować.
 
 Aby graficznie zainstalować pobraną paczkę .deb, potrzebujesz odpowiedniego programu. Nazywa się on \textcolor{ubuntu_orange}{GDebi}. Znajdziesz go w Centrum Oprogramowania, Synapticu lub zainstalujesz z konsoli poleceniem:
@@ -176,9 +193,10 @@ sudo apt-get install gdebi
 Kiedy GDebi jest gotowe do użycia, kliknij prawym przyciskiem myszy na paczkę .deb, a następnie wybierz \menu{{Otwórz za pomocą}>{GDebi Package Installer}}. Teraz wystarczy kliknąć \textcolor{ubuntu_orange}{Install}, aby GDebi sprawdziło zależności i zainstalowało wszystko, co potrzebne.
 
 \subsubsection{Instalacja programów .bin}
-Niektórzy dostawcy oprogramowania (na szczęście nieliczni) udostępniają własne instalatory programów, na sposób znany z systemu Windows (pliki .exe i .msi). Na szczęście są to coraz rzadsze przypadki. Jednak gdybyś przypadkiem trafił na tak przestarzały sposób dystrybucji programu, to kliknij prawym przyciskiem myszy na pobranym programie i wybierz \menu{{Właściwości}>{Uprawienia}>{Wykonywanie}} i zaznacz pole \textcolor{ubuntu_orange}{Zezwolenie na wykonywanie pliku jako programu}. Teraz kliknij dwukrotnie lewym przyciskiem myszy na pliku, aby go uruchomić.
+Niektórzy dostawcy oprogramowania (na szczęście nieliczni) udostępniają własne instalatory programów, na sposób znany z systemu Windows (pliki .exe i .msi). Na szczęście są to coraz rzadsze przypadki. Jednak gdybyś przypadkiem trafił na tak przestarzały sposób dystrybucji programu, to kliknij prawym przyciskiem myszy na pobranym programie i wybierz \menu{{Właściwości}>{Uprawienia}>{Wykonywanie}} i~zaznacz pole \textcolor{ubuntu_orange}{Zezwolenie na wykonywanie pliku jako programu}. Teraz kliknij dwukrotnie lewym przyciskiem myszy na pliku, aby go uruchomić.
 
 \subsubsection{Instalacja programów przez przeglądarkę internetową}
 Przeglądarka internetowa Firefox, wchodząca w skład standardowej instalacji Ubuntu, wyposażona jest w dodatek, umożliwiający instalację oprogramowania bezpośrednio ze strony internetowej poprzez protokół apt. Kliknięcie odpowiedniego linku otworzy okno \textcolor{ubuntu_orange}{Centrum Oprogramowania Ubuntu} na stronie danego programu.
 
 Jeżeli Firefox nie rozpoznaje protokołu apt, to wyświetli okno z prośbą o wybór aplikacji. Kliknij przycisk \textcolor{ubuntu_orange}{Wybierz\ldots}, a następnie wskaż plik \menu{{System plików}>{usr}>{bin}>{software-center}}. Pamiętaj, aby zaznaczyć pole \textcolor{ubuntu_orange}{Zapamiętaj wybór dla odnośników apt}.
+\clearpage

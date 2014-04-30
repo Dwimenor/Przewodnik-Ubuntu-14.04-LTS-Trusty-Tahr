@@ -31,7 +31,7 @@ Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Re
 
 \begin{lstlisting}[language=bash]
 sudo add-apt-repository ppa:yannubuntu/boot-repair
-sudo sed 's/trusty/saucy/g' -i /etc/apt/sources.list.d/yannubuntu-boot-repair-trusty.list
+sudo sed "s/trusty/saucy/g\" -i /etc/apt/sources.list.d/yannubuntu-boot-repair-trusty.list
 sudo apt-get update
 sudo apt-get install -y boot-repair && (boot-repair &)
 \end{lstlisting}
@@ -39,7 +39,7 @@ sudo apt-get install -y boot-repair && (boot-repair &)
 \subsubsection{Ręczne przywracanie GRUB-a}
 Ta metoda jest nieprzydatna, jeżeli masz zainstalowany tylko system Windows.
 
-Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''}, a następnie otwórz terminal \keys{CTRL + Alt + t}.
+Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}'', a następnie otwórz terminal \keys{CTRL + Alt + t}.
 
 Zidentyfikuj partycję, na której już jest zainstalowane Ubuntu (lub inny linux). Wykonaj:
 
