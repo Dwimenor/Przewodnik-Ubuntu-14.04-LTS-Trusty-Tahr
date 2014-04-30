@@ -1,18 +1,15 @@
-Wiele płyt DVD z filmami zabezpieczone jest systemem CSS (Content Scramble System), ograniczającym możliwość ich odtwarzania na nieautoryzowanych urządzeniach. W kilku krajach obchodzenie takich zabezpieczeń (nawet jeżeli legalnie zakupiłeś płytę z filmem) jest nielegalne i dlatego w Ubuntu domyślnie nie ma oprogramowania umożliwiającego odtwarzanie takich multimediów.
+Wiele płyt DVD z filmami zabezpieczone jest systemem CSS (Content Scramble System), ograniczającym możliwość ich odtwarzania na nieautoryzowanych urządzeniach. W kilku krajach obchodzenie takich zabezpieczeń (nawet jeżeli legalnie zakupiłeś płytę z filmem) jest nielegalne i dlatego w~Ubuntu domyślnie nie ma oprogramowania umożliwiającego odtwarzanie takich multimediów.
 
 Aby mieć możliwość odtwarzania zabezpieczonych płyt DVD, zainstaluj pakiet \textcolor{ubuntu_orange}{libdvdread4} (jeżeli wcześniej zainstalowałeś ubuntu-restricted-extras, to możesz pominąć ten krok):
+
 \begin{lstlisting}[language=bash]
 sudo apt-get install libdvdread4
 \end{lstlisting}
-\begin{itemize}
-\item \textcolor{ubuntu_orange}{sudo} --- wykonuje dalsze polecenia z uprawieniami administratora systemu;
-\item \textcolor{ubuntu_orange}{apt-get} --- program do zarządzania zainstalowanym oprogramowaniem;
-\item \textcolor{ubuntu_orange}{install} --- informujesz apt, że chcesz zainstalować paczkę z oprogramowaniem;
-\item \textcolor{ubuntu_orange}{libdvdread4} --- nazwa paczki do zainstalowania.
-\end{itemize}
 
-Następnie w Terminalu wykonaj następujące polecenie:
+\noindent Następnie w Terminalu wykonaj następujące polecenie:
+
 \begin{lstlisting}[language=bash]
 sudo /usr/share/doc/libdvdread4/install-css.sh
 \end{lstlisting}
-uruchomiony w ten sposób program pobierze i zainstaluje brakujące oprogramowanie. Odtwarzanie zabezpieczonych płyt DVD powinno być teraz możliwe przy pomocy większości dostępnych odtwarzaczy (np. Totem, MPlayer, VLC).
+
+\noindent uruchomiony w ten sposób program pobierze i zainstaluje brakujące oprogramowanie. Odtwarzanie zabezpieczonych płyt DVD powinno być teraz możliwe przy pomocy większości dostępnych odtwarzaczy (np. Totem, MPlayer, VLC).

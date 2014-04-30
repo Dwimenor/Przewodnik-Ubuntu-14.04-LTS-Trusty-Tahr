@@ -1,3 +1,4 @@
+\ref{rozwiązywanie problemów}
 \subsubsection{Brak możliwości uruchomienia systemu Ubuntu lub Windows}
 Zajrzyj do \ref{grub_przywracanie}: ,,Przywracanie GRUB-a''.
 
@@ -10,7 +11,7 @@ W GRUB-ie wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}
 \subsubsection{Czarny ekran podczas uruchamiania systemu}
 Przyczyny tego mogą być różne, jednak najczęściej jest to problem ze sterownikami karty graficznej. Uruchom ponownie komputer, wejdź w menu GRUB-a i wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj, aż system się załaduje, i wybierz opcję \textcolor{ubuntu_orange}{failsafex}. System zostanie uruchomiony w bezpiecznym trybie graficznym. Wybierz \textcolor{ubuntu_orange}{Run in low-graphics mode for just one session}. Przejdź do sekcji \ref{sterowniki} ,,Sterowniki do kart graficznych'', aby dowiedzieć się więcej o sterownikach.
 
-Drugą możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. W menu GRUB-a zaznacz Ubuntu i wciśnij \keys{e}. Przejdź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przedostatnia linijka), skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciźnij \keys{CTRL + x}, aby uruchomić komputer z nowymi parametrami.
+Drugą możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. W~menu GRUB-a zaznacz Ubuntu i wciśnij \keys{e}. Przejdź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przedostatnia linijka), skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciźnij \keys{CTRL + x}, aby uruchomić komputer z nowymi parametrami.
 
 \subsubsection{Problemy z instalacją pakietów}
 Przerwany proces instalacji pakietów oprogramowania skutkuje niemożliwością dokonywania zmian w systemie. Menadżer pakietów w takiej sytuacji wykrywa, że pakiety zostały uszkodzone i nie pozwoli nic zrobić, póki nie zostaną naprawione. Najprostszym remedium jest uruchomienie konsoli \keys{CTRL + Alt + t} i wpisanie następujących poleceń:
@@ -32,18 +33,19 @@ unity --reset-icons
 Zmiany będą widoczne po ponownym zalogowaniu się do systemu.
 
 \subsubsection{Przywracanie wyglądu systemu do ustawień domyślnych}
-Aby przywrócić domyślny wygląd interfejsu użytkownika, wykonaj:
+\label{unity_reset} \noindent Aby przywrócić domyślny wygląd interfejsu użytkownika, wykonaj w terminalu:
 
-Samo Unity:
+\noindent Samo Unity:
 \begin{lstlisting}[language=bash]
 unity --reset
 \end{lstlisting}
 
-Przywracanie domyślnych ustawień całego środowiska graficznego:
+\noindent Przywracanie domyślnych ustawień całego środowiska graficznego:
 
 \begin{lstlisting}[language=bash]
 sudo apt-get install dconf-tools
 dconf reset -f /org/compiz/
 \end{lstlisting}
 
-Zmiany będą widoczne po ponownym zalogowaniu się do systemu.
+\noindent Zmiany będą widoczne po ponownym zalogowaniu się do systemu.
+\clearpage

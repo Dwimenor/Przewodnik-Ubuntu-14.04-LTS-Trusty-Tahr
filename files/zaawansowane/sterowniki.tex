@@ -1,5 +1,5 @@
 \label{sterowniki}
-W rozdziale \ref{pierwsze_uruchomienie_aktualizacja_instalacja} ,,Instalacja dodatkowych sterowników'' opisana została metoda instalacji dodatkowych sterowników. Często w ten sposób instaluje się właśnie sterowniki do kart graficznych. Jednak skoro komputer wyświetla obraz jeszcze przed instalacją tych modułów, to znaczy, że jakieś sterowniki muszą już wcześniej być obecne w systemie. Zgadza się. W Ubuntu domyślnie zainstalowane są sterowniki do niemalże każdej karty graficznej, rozwijane zgodnie z zasadami wolnego i otwartego oprogramowania. Spotykają się one z różną reakcją producentów sprzętu. Niektórzy ten sposób dostarczania sterówników w pełni popierają i właśnie tak zapewniają oficjalne wsparcie dla Ubuntu, inni natomiast zupełnie go ignorują. Poza tymi, otwartoźródłowymi sterownikami niektórzy producenci sprzętu dostarczają też dla Ubuntu sterowniki oparte na zamkniętym (własnościowym) kodzie źródłowym. Są to na ogół swego rodzaju porty ich odpowiedników z windowsa, dzięki czemu zapewniają komplementarną wydajność i funkcjonalność. To właśnie takie sterowniki możesz doinstalować na zasadach opisanych w rozdziale poświęconym dodatkowym sterownikom. W tym rozdziale dowiesz się więcej o tym, z jakich sterowników powinieneś korzystać w swoim konkretnym przypadku.
+W rozdziale \ref{pierwsze_uruchomienie_aktualizacja_instalacja} ,,Instalacja dodatkowych sterowników'' opisana została metoda instalacji dodatkowych sterowników. Często w ten sposób instaluje się właśnie sterowniki do kart graficznych. Jednak skoro komputer wyświetla obraz jeszcze przed instalacją tych modułów, to znaczy, że jakieś sterowniki muszą już wcześniej być obecne w systemie. Zgadza się. W Ubuntu domyślnie zainstalowane są sterowniki do niemalże każdej karty graficznej, rozwijane zgodnie z zasadami wolnego i~otwartego oprogramowania. Spotykają się one z różną reakcją producentów sprzętu. Niektórzy ten sposób dostarczania sterówników w pełni popierają i właśnie tak zapewniają oficjalne wsparcie dla Ubuntu, inni natomiast zupełnie go ignorują. Poza tymi, otwartoźródłowymi sterownikami niektórzy producenci sprzętu dostarczają też dla Ubuntu sterowniki oparte na zamkniętym (własnościowym) kodzie źródłowym. Są to na ogół swego rodzaju porty ich odpowiedników z windowsa, dzięki czemu zapewniają komplementarną wydajność i funkcjonalność. To właśnie takie sterowniki możesz doinstalować na zasadach opisanych w rozdziale poświęconym dodatkowym sterownikom. W tym rozdziale dowiesz się więcej o tym, z jakich sterowników powinieneś korzystać w swoim konkretnym przypadku.
 
 \subsubsection{Identyfikacja karty graficznej i sterownika}
 Żeby wiedzieć z jakich sterowników należy skorzystać, najpierw trzeba sprawdzić w jaki sprzęt wyposażony jest komputer. Część osób zapewne i bez żadnych dodatkowych procedur wie, jaką ma kartę graficzną, jednak żeby się upewnić, należy w terminalu wpisać:
@@ -9,7 +9,7 @@ lspci | grep VGA
 \end{lstlisting}
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{lspci} --- program wyświetlający urządzenia obecne w komputerze;
-\item \textcolor{ubuntu_orange}{I} --- ,,rura'', ,,pipe'', przekierowanie wyjścia z jednego programu na wejście drugiego;
+\item \textcolor{ubuntu_orange}{$|$} --- ,,rura'', ,,pipe'', przekierowanie wyjścia z jednego programu na wejście drugiego;
 \item \textcolor{ubuntu_orange}{grep} --- program wyszukujący wzorce;
 \item \textcolor{ubuntu_orange}{VGA} --- szukany wzorzec, w tym wypadku szukamy urządzeń zgodnych ze standardem VGA (kart graficznych).
 \end{itemize}
@@ -64,7 +64,7 @@ Do odpowiednich kart graficznych należy zainstalować sterowniki o wskazanych n
 \item Sterownik 96.x do kart GeForce 4 i starszych.
 \end{itemize}
 
-Program instalujący dodatkowe sterowniki powinien poprawnie zidentyfikować kartę graficzną i zaproponować odpowiednią wersję sterownika.
+Program instalujący dodatkowe sterowniki powinien poprawnie zidentyfikować kartę graficzną i~zaproponować odpowiednią wersję sterownika.
 Akcelerację wideo poprzez VDPAU można doinstalować poleceniem:
 
 \begin{lstlisting}[language=bash]
@@ -87,7 +87,7 @@ sudo apt-get install bumblebee bumblebee-nvidia
 \end{lstlisting}
 
 \subsubsection{AMD}
-AMD w kwestii sterowników wybrało podejście pośrednie pomiędzy sposobem Intela, a nVidii. Z jednej strony ten producent dostarcza zamknięte sterowniki (ale tylko do najnowszych kart graficznych), z drugiej zaś rozwija sterowniki otwarte, obsługujące starsze modele. Jeżeli jesteś użytkownikiem karty graficznej AMD Radeon HD 5000 lub nowszej, powinieneś zainstalować sterownik zamknięty, zgodnie z procedurą opisaną w rozdziale \ref{pierwsze_uruchomienie_aktualizacja_instalacja} ,,Instalacja dodatkowych sterowników''. W przypadku posiadania starszej karty graficznej, pozostaje użycie otwartego sterownika.
+AMD w kwestii sterowników wybrało podejście pośrednie pomiędzy sposobem Intela, a nVidii. Z~jednej strony ten producent dostarcza zamknięte sterowniki (ale tylko do najnowszych kart graficznych), z drugiej zaś rozwija sterowniki otwarte, obsługujące starsze modele. Jeżeli jesteś użytkownikiem karty graficznej AMD Radeon HD 5000 lub nowszej, powinieneś zainstalować sterownik zamknięty, zgodnie z procedurą opisaną w rozdziale \ref{pierwsze_uruchomienie_aktualizacja_instalacja} ,,Instalacja dodatkowych sterowników''. W przypadku posiadania starszej karty graficznej, pozostaje użycie otwartego sterownika.
 
 \begin{center}
 	\includegraphics[width=\linewidth]{images/sterowniki_AMD.png}

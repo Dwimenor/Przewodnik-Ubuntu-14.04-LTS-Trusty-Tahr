@@ -4,7 +4,7 @@ Okresowe czyszczenie systemu Ubuntu nie jest potrzebne. Pewne rzeczy pozostają,
 Korzystając z Centrum Oprogramowania Ubuntu znajdź i zainstaluj program \textcolor{ubuntu_orange}{Bleachbit}. Wyszuka on niepotrzebne i zaśmiecające katalog domowy pliki, np. miniatury albo zawartość pamięci podręcznej przeglądarek internetowych. Nie zalecamy korzystania z Bleachbita do dokonywania zmian w systemie (opcja APT). Takie rzeczy lepiej wykonać ręcznie.
 
 \subsubsection{Czyszczenie systemu zarządzania pakietami}
-Instalacja i usuwanie oprogramowania może pozostawić w komputerze dużo zbędnych plików. POniższe polecenia usuną je z dysku twardego.
+Instalacja i usuwanie oprogramowania może pozostawić w komputerze dużo zbędnych plików. Poniższe polecenia usuną je z dysku twardego.
 \begin{itemize}
 \item Usunięcie pobranych archiwów z pakietami:
 \begin{lstlisting}[language=bash]
@@ -22,7 +22,7 @@ sudo apt-get autoremove
 
 Dodatkowo można się posłużyć programem \textcolor{ubuntu_orange}{deborphan}, który pomoże usunąć nieużywane pakiety. Najpierw go zainstauj:
 \begin{lstlisting}[language=bash]
-sudo apt-get deborphan
+sudo apt-get install deborphan
 \end{lstlisting}
 A następnie wykorzystaj w ten sposób:
 \begin{lstlisting}[language=bash]

@@ -6,14 +6,14 @@ Wyszukiwanie w źródłach sieciowych można wyłączyć. Warto to zrobić nie t
 
 Wersja rozszerzona. W terminalu wykonaj następujące polecenie:
 \begin{lstlisting}[language=bash]
-wget -q -O --- https://fixubuntu.com/fixubuntu.sh | bash
+wget -q -O - https://fixubuntu.com/fixubuntu.sh | bash
 \end{lstlisting}
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{wget} --- program do pobierania plików z internetu;
 \item \textcolor{ubuntu_orange}{-q} --- opcja ,,cicha praca'' (quiet), określająca, że wget ma nie wyświetlać żadnych informacji na ekranie;
 \item \textcolor{ubuntu_orange}{-O} --- opcja ,,wyjście'' (output), określająca gdzie wget ma zapisać pobrany plik;
 \item \textcolor{ubuntu_orange}{-} --- myślnik po opcji ,,wyjście'' określa, że plik będzie wyświetlony na ekranie;
-\item \textcolor{ubuntu_orange}{|} --- ,,rura'', ,,pipe''; przekierowanie wyjścia z jednego programu na wejście drugiego programu; w tym wypadku wyjściem z wgeta jest pobrany z internetu skrypt, który zostanie przekazany do programu bash;
+\item \textcolor{ubuntu_orange}{$|$} --- ,,rura'', ,,pipe''; przekierowanie wyjścia z jednego programu na wejście drugiego programu; w tym wypadku wyjściem z wgeta jest pobrany z internetu skrypt, który zostanie przekazany do programu bash;
 \item \textcolor{ubuntu_orange}{bash} --- interpreter poleceń; na swoim wejściu dostał pobrany plik i teraz wykona zawarte w nim polecenia.
 \end{itemize}
 Pobrany i wykonany zostanie skrypt, który bardzo restrykcyjnie ustawi opcje prywatności w systemie:
