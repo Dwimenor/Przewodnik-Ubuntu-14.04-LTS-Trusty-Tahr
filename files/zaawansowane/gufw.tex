@@ -1,14 +1,14 @@
 O tym, czy firewall w systemie Ubuntu jest potrzebny, czy nie, można długo dysktuować. Jeżeli dla spokoju ducha potrzebujesz działającej ,,ściany ogniowej'', to Ubuntu oferuje proste narzędzie do zarzadzania wbudowanym w system programem iptables.
 
-GUFW (\textcolor{ubuntu_orange}{GUI for Uncomplicated FireWall} znajduje się w repozytoriach Ubuntu. Zainstaluj go z~Centrum Oprogramowania (,,Konfiguracja zapory Firewall'') lub za pomocą terminala:
-\begin{lstlisting}[language=bash]
-sudo apt-get install gufw
-\end{lstlisting}
-
 \begin{wrapfigure}{R}{0.5\textwidth}
 	\vspace{-10pt}
 	\includegraphics[width=\linewidth]{images/programy_gufw.png}
 \end{wrapfigure}
+
+GUFW (\textcolor{ubuntu_orange}{GUI for Uncomplicated FireWall} znajduje się w repozytoriach Ubuntu. Zainstaluj go z~Centrum Oprogramowania (,,Konfiguracja zapory Firewall'') lub za pomocą terminala:
+\begin{lstlisting}[language=bash]
+sudo apt-get install gufw
+\end{lstlisting}
 
 Uruchom program GUFW. Konfiguracja zapory sieciowej wymaga uprawnień administratora, zostaniesz więc poproszony o uwierzytelnienie. Kiedy to zrobisz, otwarte zostanie główne okno programu.
 
@@ -16,6 +16,7 @@ Domyślnie zapora jest wyłączona. Kliknij przycisk przy pozycji \textcolor{ubu
 
 \subsubsection{Dodawanie reguł}
 Może się zdażyć, iż będziesz potrzebował wprowadzić jakiś wyjątek od wcześniej ustalonej polityki działania firewalla. Zrobisz to w zakładce \textcolor{ubuntu_orange}{Reguły}. Aby dodać regułę, kliknij przycisk +, znajdujący się pod tabelą. Są trzy sposoby na stworzenie reguły:
+
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{Predefiniowana} --- pozwala stworzyć regułę w oparciu o szablon. Jeżeli chcesz zablokować lub odblokować konkretny program, wybierz go z listy \textcolor{ubuntu_orange}{Programy} i ustaw odpowiednią metodę.
 \item \textcolor{ubuntu_orange}{Prosta} --- pozwala w prosty sposób zarzadzać poszczególnymi protokołami. Na przykład, aby zablokować połączenia przeglądarek internetowych (i wielu innych programów), wpisz \textit{http} w pole \textcolor{ubuntu_orange}{Port} i wybierz ,,Odrzuć'' z listy \textcolor{ubuntu_orange}{Metoda}.

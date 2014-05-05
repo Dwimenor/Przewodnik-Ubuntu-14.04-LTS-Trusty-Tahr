@@ -11,7 +11,8 @@ W GRUB-ie wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}
 \subsubsection{Czarny ekran podczas uruchamiania systemu}
 Przyczyny tego mogą być różne, jednak najczęściej jest to problem ze sterownikami karty graficznej. Po pierwsze karta graficzna mogła nie powiadomić monitora, że ma zacząć wyświetlać obraz. Wciśnij \keys{CTRL + Alt + F1} aby przejść na wirtualną konsolę a następnie \keys{CTRL + Alt + F7} aby powrócić do trybu graficznego.
 
-Jeżeli to nie pomaga, uruchom ponownie komputer, wejdź w menu GRUB-a i wybierz \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj, aż system się załaduje, i wybierz opcję \textcolor{ubuntu_orange}{failsafex}. System zostanie uruchomiony w bezpiecznym trybie graficznym. Wybierz \textcolor{ubuntu_orange}{Run in low-graphics mode for just one session}. Przejdź do sekcji \ref{sterowniki} ,,Sterowniki do kart graficznych'', aby dowiedzieć się więcej o sterownikach.
+Jeżeli to nie pomaga, uruchom ponownie komputer, wejdź w menu GRUB-a i wybierz\\
+\menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj, aż system się załaduje, i wybierz opcję \textcolor{ubuntu_orange}{failsafex}. System zostanie uruchomiony w bezpiecznym trybie graficznym. Wybierz \textcolor{ubuntu_orange}{Run in low-graphics mode for just one session}. Przejdź do sekcji \ref{sterowniki} ,,Sterowniki do kart graficznych'', aby dowiedzieć się więcej o sterownikach.
 
 Trzecią możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. W~menu GRUB-a zaznacz Ubuntu i wciśnij \keys{e}. Przejdź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przedostatnia linijka), skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciźnij \keys{CTRL + x}, aby uruchomić komputer z nowymi parametrami.
 
@@ -24,7 +25,7 @@ sudo apt-get clean
 sudo apt-get autoclean
 sudo apt-get install -f
 \end{lstlisting}
-
+\clearpage
 \subsubsection{Przywracanie paska launchera}
 Aby przywrócić domyślne ikony na pasku Launchera, wykonaj:
 

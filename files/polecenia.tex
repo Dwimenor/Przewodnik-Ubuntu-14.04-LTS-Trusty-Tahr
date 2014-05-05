@@ -1,0 +1,55 @@
+\label{polecenia}
+\tiny
+\begin{tabularx}{\linewidth}{p{8.5cm}|p{8.5cm}}
+\hline
+\cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Operacje na plikach}} & \cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Informacje o systemie}}\\
+\textbf{ls} --- wyświetla zawartość katalogu & \textbf{date} --- pokazuje aktualną datę i czas\\
+\textbf{ls -al} --- wyświetla katalog wraz z ukrytymi plikami & \textbf{cal} --- pokazuje kalendarz na ten miesiąc\\
+\textbf{cd dir} --- ienia katalog na \textit{dir} & \textbf{uptime} --- pokazuje czas działania komputera\\
+\textbf{cd} --- zmienia katalog na domowy (home) & \textbf{w} --- wyświetla listę zalogowanych użytkowników\\
+\textbf{pwd} --- wyświetla ścieżkę do aktualnego katalogu & \textbf{whoami} --- wyświetla jako kto jesteś zalogowany\\
+\textbf{mkdir dir} --- tworzy katalog \textit{dir} & \textbf{finger user} --- informacje o użytkowniku \textit{user}\\
+\textbf{rm file} --- usuwa plik \textit{file} & \textbf{uname -a} --- wyświetla informacje o kernelu\\
+\textbf{rm -r dir} --- usuwa katalog \textit{dir} & \textbf{cat /proc/cpuinfo} --- informacje o procesorze\\
+\textbf{rm -f file} --- siłowo usuwa plik \textit{file} & \textbf{cat /proc/meminfo} --- informacje o pamięci\\
+\textbf{rm -rf dir} --- siłowo usuwa katalog \textit{dir} * & \textbf{man app} --- wyświetla podręcznik do \textit{app}\\
+\textbf{cp file1 file2} --- kopiuje plik \textit{file1} do pliku \textit{file2} & \textbf{df} --- wyświetla zajętość dysku\\
+\textbf{cp -r dir1 dir2} --- kopiuje katalog \textit{dir1} do katalogu \textit{dir2}; tworzy katalog dir2 jeżeli ten nie istnieje & \textbf{du} --- wyświetla zajętość katalogu\\
+\textbf{mv file1 file2} --- przenosi plik \textit{file1} do \textit{file2} (zmienia nazwę z \textit{file1} na \textit{file2}); jeżeli \textit{file2} to istniejący katalog, przenosi do niego plik \textit{file1} & \textbf{free} --- wyświetla zajętość pamięci i swap\\
+\textbf{ln -s file link} --- tworzy łącze \textit{link} do pliku \textit{file} & \textbf{whereis app} --- wyświetla lokalizację aplikacji \textit{app}\\
+\textbf{touch file} --- tworzy lub uaktualnia plik \textit{file} & \textbf{which app} --- wyświetla która aplikacja zostanie uruchomiona\\
+\textbf{cat > file} --- wypisuje do pliku \textit{file} & \cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Kompresja}}\\
+\textbf{more file} --- wyświetla zawartość pliku \textit{file} & \textbf{tar cf file.tar files} --- tworzy plik \textit{file.tar} zawierający pliki \textit{files}\\
+\textbf{head file} --- wyświetla pierwsze 10 linijek pliku \textit{file} & \textbf{tar xf file.tar} --- wypakuje pliki z \textit{file.tar}\\
+\textbf{tail file} --- wyświetla ostatnie 10 linijek pliku \textit{file} & \textbf{tar czf file.tar.gz files} --- tworzy archiwum z kompresją Gzip zawierające pliki \textit{files}\\
+\textbf{tail -f file} --- wypisuje nowe dane z pliku \textit{file} kiedy ten rośnie, zaczynając od 10 ostatnich linii & \textbf{tar xzf file.tar.gz} --- wypakuje pliki z \textit{file.tar.gz} \\
+\cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Zarządzanie procesami}} & \textbf{tar cjf file.tar.bz2} --- tworzy archiwum \textit{file.tar.bz2} z kompresją Bzip2\\
+\textbf{ps} --- wyświetla listę aktualnie działających procesów & \textbf{tar xjf file.tar.bz2} --- wypakuje pliki z \textit{file.tar.bz2}\\
+\textbf{top} --- wyświetla listę wszystkich działających procesów & \textbf{gzip file} --- pakuje plik \textit{file} do archiwum \textit{file.gz}\\
+\textbf{kill pid} --- zabija proces o numerze \textit{pid} & \textbf{gzip -d file.gz} --- wypakuje pliki z \textit{file.gz}\\
+\textbf{killall proc} --- zabija procesy o nazwie \textit{proc} * & \cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Sieć}}\\
+\textbf{bg} --- wyświetla listę zatrzymanych lub działających w tle procesów & \textbf{ping host} --- pinguje \textit{host} i wyświetla rezultaty\\
+\textbf{fg} --- przywraca najnowszy proces & \textbf{whois domain} --- informacje whois o \textit{domain}\\
+\textbf{fg n} --- przywraca proces \textit{n} na pierwszy plan & \textbf{dig domain} --- informacje DNS o domenie \textit{domain}\\
+\cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Prawa dostępu do plików}} & \textbf{dig -x host} --- wyświetla informacje zwrotne o \textit{host}\\
+\textbf{chmod octal file} --- zmienia prawa dostępu do pliku \textit{file} na \textit{octal}, kolejno dla właściciela, grupy i innych & \textbf{wget file} --- pobiera \textit{file} z sieci\\
+4 --- odczyt (\textbf{r}ead) & \textbf{wget -c file} --- kontynuuje zatrzymane pobieranie\\
+2 --- zapis (\textbf{w}rite) & \cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Instalacja}} \\
+1 --- uruchamianie (e\textbf{x}ecute) & Instalacja ze źródeł:\\
+Przykłady: & \textbf{./configure}\\
+chmod 777 --- rwx dla wszystkich & \textbf{make}\\
+chmod 755 --- rwx dla właściciela, rx grupy i innych & \textbf{sudo make install}\\
+Zajrzyj do \textbf{man chmod} po więcej opcji & \textbf{dpkg -i pkg.deb} --- instaluje paczkę (Debian)\\
+\cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{SSH}} & \textbf{rpm -Uvh pkg.rpm} --- instaluje paczkę (RPM)\\
+\textbf{ssh user@host} --- łączy z \textit{host} jako \textit{user} & \cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Skróty}}\\
+\textbf{ssh -p port user@host} --- łączy z \textit{host} na porcie \textit{port} jako \textit{user} & \keys{CTRL + C} --- kończy aktualne polecenie\\
+\textbf{ssh-copy-id user@host} --- dodaje twój klucz do \textit{host} dla \textit{user} aby umożliwić logowanie bez hasła & \keys{CTRL + Z} --- zatrzymuje aktualne polecenie, \textbf{fg} przywraca na pierwszy plan, \textbf{bg} na tło\\
+\cellcolor[gray]{0.90}\textbf{\textcolor{ubuntu_orange}{Wyszukiwanie}} & \keys{CTRL + D} --- kończy aktualną sesję (jak \textbf{exit})\\
+\textbf{grep pattern file} --- szuka \textit{pattern} w pliku \textit{file} & \keys{CTRL + W} --- kasuje jedno słowo w aktualnej linii\\
+\textbf{command $|$ grep pattern} --- wyszukuje wzór \textit{pattern} w wyjściu polecenia \textit{command} & \keys{CTRL + U} --- kasuje całą linię\\
+\textbf{locate file} --- znajduje wszystkie pliki o nazwie \textit{file} & \keys{CTRL + R} --- pisz aby przywołać najczęściej używane polecenie\\
+ & \textbf{!!} - powtarza ostatnie polecenie\\
+ & exit --- kończy aktualną sesję\\
+ & \textbf{*} używać z dużą ostrożnością\\
+\hline
+\end{tabularx}

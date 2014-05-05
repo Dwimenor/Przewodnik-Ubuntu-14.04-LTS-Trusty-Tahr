@@ -31,6 +31,11 @@
 % Dla podpisów bez numerów \caption*
 \usepackage{caption}
 
+% Oficjalne kolory Ubuntu
+% http://design.ubuntu.com/brand/colour-palette
+\usepackage[table]{xcolor}
+\definecolor{ubuntu_orange}{RGB}{221,72,20}
+
 % Obrazki
 \usepackage{graphicx}
 \usepackage{wrapfig}
@@ -38,12 +43,18 @@
 \usepackage{tikz}
 \usetikzlibrary{decorations.pathreplacing} 
 
-% linki, URL, opcje pdf
+% linki, URL
 \usepackage[urlcolor=blue, colorlinks=true]{hyperref}
+
+% opcje pdf
 \hypersetup{pdftitle=Przewodnik Ubuntu 14.04 LTS Trusty Tahr, pdfauthor=Zespół Ubuntu.pl,}
 
 % Dwie kolumny w spisie treści
 \usepackage[toc]{multitoc}
+
+% Tylko sekcje (section) i subsekcje (subsection) w spisie treści.
+% Bez subsubsekcji (subsubsection)
+\setcounter{tocdepth}{2}
 
 % Jako że nie bawimy się w rozdziały, sekcja i podsekcja są podstawowymi jednostkami podziału dokumentu.
 % Poniższa komenda wymusza numerowanie sekcji od "1" zamiast od "0"
@@ -59,11 +70,8 @@
 \titleformat{\subsubsection}
 {\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
 
-
-% Oficjalne kolory Ubuntu
-% http://design.ubuntu.com/brand/colour-palette
-\usepackage{xcolor}
-\definecolor{ubuntu_orange}{RGB}{221,72,20}
+% Tabele z określonymi szerokościami kolumn
+\usepackage{tabularx}
 
 % Nagłówek i stopka
 \usepackage{fancyhdr}
@@ -92,6 +100,10 @@
 \lstset{ 
 upquote=true,
 columns=fullflexible,
+backgroundcolor=\color{ubuntu_orange!5},
+frame=trBL,
+frameround=tttt,
+rulecolor=\color{ubuntu_orange},
 literate={*}{{\char42}}1
 		{-}{{\char45}}1
 		{ą}{{\k{a}}}1
@@ -225,7 +237,7 @@ literate={*}{{\char42}}1
 		\subsection{Wyłączenie raportowania błędów}
 			\input{files/sztuczki/apport}
 		\subsection{Odtwarzanie szyfrowanych płyt DVD}
-,			\input{files/sztuczki/sztuczki_libdvdcss2}
+			\input{files/sztuczki/sztuczki_libdvdcss2}
 		\subsection{Przyspieszanie systemu poprzez lepsze wykorzystanie pamięci}
 			\input{files/sztuczki/sztuczki_preload}
 		\subsection{Oczyszczanie systemu}
@@ -245,4 +257,8 @@ literate={*}{{\char42}}1
 			\input{files/zaawansowane/uzytkownicy}
 	\section{O Przewodniku}
 		\input{files/o_przewodniku}
+	\section{Dodatek 1: Skróty klawiszowe Unity}
+		\input{files/klawiszologia}
+	\section{Dodatek 2: Informator poleceń systemu Unix/Linux}
+		\input{files/polecenia}
 \end{document}

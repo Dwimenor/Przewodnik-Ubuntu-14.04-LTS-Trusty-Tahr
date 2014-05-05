@@ -4,7 +4,7 @@ Po pierwsze, nie spiesz się, wczytanie wszystkich danych z nośnika instalacyjn
 \subsubsection{Instalacja została przerwana}
 Jeżeli instalacja została przerwana w trakcie kopiowania danych na dysk, to uruchom ponownie instalator i zainstaluj system od nowa.
 
-Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku), to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''} i uruchom program GParted.
+Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku), to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing} i uruchom program GParted.
 
 \subsubsection{Po instalacji Ubuntu uruchamia się tylko Windows}
 Prawdopodobnie na Windowsie masz ustawione ,,Szybkie uruchamianie'' (\textit{Fast-boot}). Wyłącz tę funkcję i ponownie zainstaluj Ubuntu. Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
@@ -27,7 +27,7 @@ Problemy z programem rozruchowym występują najczęściej:
 Najprostszym sposobem naprawienia menadżera rozruchu GRUB jest skorzystanie z Boot Repair Disk. Jest to dystrybucja Linuksa typu Live (działa tylko z zewnętrznego nośnika, nie zainstalujesz jej na dysku twardym). Otwórz stronę \href{http://sourceforge.net/projects/boot-repair-cd/files/}{pobierania}, wybierz plik z obrazem zgodny z architekturą twojego procesora i zapisz go na dysku. Proces przygotowywania nośnika z Boot Repair Disk jest analogiczny do przedstawionego w rozdziale \ref{nagrywanie_obrazu}: ,,Nagrywanie pobranego obrazu''.\\
 Po uruchomieniu tak przygotowanego systemu poczekaj, aż się załaduje i wybierz opcję \textcolor{ubuntu_orange}{Recomended repair}, a nastepnie spróbuj ponownie uruchomić komputer.
 
-Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing''}, następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące trzy polecenia:
+Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}, następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące polecenia:
 
 \begin{lstlisting}[language=bash]
 sudo add-apt-repository ppa:yannubuntu/boot-repair
@@ -39,7 +39,7 @@ sudo apt-get install -y boot-repair && (boot-repair &)
 \subsubsection{Ręczne przywracanie GRUB-a}
 Ta metoda jest nieprzydatna, jeżeli masz zainstalowany tylko system Windows.
 
-Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}'', a następnie otwórz terminal \keys{CTRL + Alt + t}.
+Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}), a następnie otwórz terminal \keys{CTRL + Alt + t}.
 
 Zidentyfikuj partycję, na której już jest zainstalowane Ubuntu (lub inny linux). Wykonaj:
 

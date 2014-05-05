@@ -90,18 +90,20 @@ Budowanie drzewa zależności
 Odczyt informacji o stanie... Gotowe
 Zostaną zainstalowane następujące dodatkowe pakiety:
   libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1
-  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a libsdl-image1.2
-  libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5 libvlccore7
-  libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
+  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a
+  libsdl-image1.2 libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1
+  libvcdinfo0 libvlc5 libvlccore7 libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc-data vlc-nox
+  vlc-plugin-notify vlc-plugin-pulse
 Sugerowane pakiety:
   firmware-crystalhd gnutls-bin videolan-doc
 Polecane pakiety:
   libdvdcss2
 Zostaną zainstalowane następujące NOWE pakiety:
   libbasicusageenvironment0 libcddb2 libcrystalhd3 libdvbpsi8 libebml4 libgnutls28 libgroupsock1
-  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a libsdl-image1.2
-  libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1 libvcdinfo0 libvlc5 libvlccore7
-  libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc vlc-data vlc-nox vlc-plugin-notify vlc-plugin-pulse
+  libhogweed2 libiso9660-8 liblivemedia23 libmatroska6 libproxy-tools libresid-builder0c2a
+  libsdl-image1.2 libsidplay2 libssh2-1 libtar0 libupnp6 libusageenvironment1 libva-x11-1
+  libvcdinfo0 libvlc5 libvlccore7 libxcb-composite0 libxcb-keysyms1 libxcb-xv0 vlc vlc-data
+  vlc-nox vlc-plugin-notify vlc-plugin-pulse
 0 aktualizowanych, 31 nowo instalowanych, 0 usuwanych i 0 nieaktualizowanych.
 Konieczne pobranie 10,4 MB archiwów.
 Po tej operacji zostanie dodatkowo użyte 51,3 MB miejsca na dysku.
@@ -123,7 +125,7 @@ To dużo tekstu, ale bardzo łatwo go zinterpretować:
 \item \textcolor{ubuntu_orange}{Kontynuować? [T/n]} --- wciśnij \keys{t}, aby rozpocząć pobieranie i instalację, lub \keys{n}, aby przerwać procedurę.
 \end{itemize}
 
-Apt-get pobierze teraz wszystkie paczki, sprawdzi ich spójność (sumy kontrole oraz podpisy cyfrowe), rozpakuje je w systemie plików zgodnie z instrukcjami zawartymi w paczce i skonfiguruje zainstalowane programy (np. poinformuje menadżer plików, że teraz filmy ma odtwarzać w VLC, a nie w domyślnie zainstalowanym Totemie).
+Apt-get pobierze teraz wszystkie paczki, sprawdzi ich spójność (sumy kontrole oraz podpisy cyfrowe), rozpakuje je w systemie plików zgodnie z instrukcjami zawartymi w paczce i skonfiguruje zainstalowane programy (np. poinformuje menadżer plików, że teraz filmy ma odtwarzać w VLC, a~nie w domyślnie zainstalowanym Totemie).
 
 Inne opcje programu apt-get to:
 
@@ -183,7 +185,7 @@ Po takiej operacji raczej na pewno otrzymasz komunikat o ,,niespełnionych zale�
 sudo apt-get install -f
 \end{lstlisting}
 
-Polecenie \textcolor{ubuntu_orange}{install} z opcją \textcolor{ubuntu_orange}{-f} informuje apt-get, że ma sprawdzić stan paczek oraz zreperować (f, czyli fix) stan pakietów. Po tej operacji program zostanie prawidłowo zainstalowany i skonfigurowany, a paczkę .deb można skasować.
+Polecenie \textcolor{ubuntu_orange}{install} z opcją \textcolor{ubuntu_orange}{-f} informuje apt-get, że ma sprawdzić stan paczek oraz zreperować (f, czyli fix) stan pakietów. Po tej operacji program zostanie prawidłowo zainstalowany i skonfigurowany, a~paczkę .deb można skasować.
 
 Aby graficznie zainstalować pobraną paczkę .deb, potrzebujesz odpowiedniego programu. Nazywa się on \textcolor{ubuntu_orange}{GDebi}. Znajdziesz go w Centrum Oprogramowania, Synapticu lub zainstalujesz z konsoli poleceniem:
 \begin{lstlisting}[language=bash]
