@@ -6,12 +6,12 @@
 Domyślną przeglądarką internetową w systemie Ubuntu jest Firefox. Pracuje i zachowuje się ona tak samo, jak wersje na Mac OS, czy Windows. Dostępne są te same rozszerzenia, motywy i ustawienia.
 
 \subsubsection{Przenoszenie ustawień}
-Firefox przechowuje ustawienia w katalogu .mozilla, znajdującym się w katalogu domowym\footnote{Ukryte pliki i katalogi (ich nazwa zaczyna się kropką) wyświetlisz wciskając \keys{CTRL + h}}. Wykonanie kopii zapasowej tego katalogu umożliwi przeniesienie ustawień pomiędzy różnymi systemami operacyjnymi. W innych systemach ten katalog znajduje się w podanych niżej miejscach:
+Firefox przechowuje ustawienia w katalogu .mozilla, znajdującym się w katalogu domowym\footnote{Ukryte pliki i katalogi (ich nazwa zaczyna się kropką) wyświetlisz wciskając \keys{CTRL + h}.}. Wykonanie kopii zapasowej tego katalogu umożliwi przeniesienie ustawień pomiędzy różnymi systemami operacyjnymi. W innych systemach ten katalog znajduje się w podanych niżej miejscach:
 \begin{itemize}
 \item Windows 95, 98, ME\\
 \directory{C / Windows / {Application Data} / Mozilla}\\
 \directory{C / Windows/ Profiles / {Nazwa użytkownika} / {Application Data} / Mozilla}
-\item Windows 2000, XP\footnote{Aby wyświetlić ukryte pliki, kliknij \menu{Narzędzia>Opcje folderów>Widok>{Pokazuj ukryte pliki i foldery}}}\\
+\item Windows 2000, XP\footnote{Aby wyświetlić ukryte pliki, kliknij \menu{Narzędzia>Opcje folderów>Widok>{Pokazuj ukryte pliki i foldery}}.}\\
 \directory{C / {Documents and Settings}  / {Nazwa użytkownika} / {Application Data} / Mozilla}
 \item Windows Vista, 7\footnote{Patrz wyżej.}\\
 \directory{C / Users / {Nazwa użytkownika} / AppData / Roaming / Mozilla}
@@ -21,10 +21,10 @@ Firefox przechowuje ustawienia w katalogu .mozilla, znajdującym się w katalogu
 \end{itemize}
 
 \subsubsection{Flash}
-Wtyczka Flash została zainstalowana wraz z pakietem \textcolor{ubuntu_orange}{ubuntu-restricted-extras}. Jeżeli chcesz zainstalować samą wtyczkę Flash bez innych dodatków, potrzebujesz pakietu \textcolor{ubuntu_orange}{flashplugin-installer}. Niestety, Adobe przestało rozwijać wtyczkę Flash dla linuksa i wersja instalowana w ten sposób jest stara. Do większości zadań wystarczy, ale wiele internetowych gier wymaga nowszej wersji. Rozwiązania są dwa. Ablo instalacja przeglądarki Google Chrome (wbudowana w nią jest najnowsza wersja Flasha), albo instalacja windowsowego pluginu za pośrednictwem aplikacji Pipelight, co zostało omówione w następnej sekcji.
+Wtyczka Flash została zainstalowana wraz z pakietem \textcolor{ubuntu_orange}{ubuntu-restricted-extras}. Jeżeli chcesz zainstalować samą wtyczkę Flash bez innych dodatków, potrzebujesz pakietu \textcolor{ubuntu_orange}{flashplugin-installer}. Niestety, Adobe przestało rozwijać wtyczkę Flash dla Linuksa i wersja instalowana w ten sposób jest stara. Do większości zadań wystarczy, ale wiele internetowych gier wymaga nowszej wersji. Rozwiązania są dwa. Albo instalacja przeglądarki Google Chrome (wbudowana w nią jest najnowsza wersja Flasha), albo instalacja windowsowego pluginu za pośrednictwem aplikacji Pipelight, co zostało omówione w następnej sekcji.
 
 \subsubsection{Instalacja Pipelight}
-Aby móc odtwarzać materiały przy pomocy wtyczek, takich jak Silverlight, Widevine, ViewRight Caiway, czy najnowszy Flash, potrzebujesz aplikacji PipeLight. Aby ją zainstalować, wykonaj w konsoli\footnote{konsolę otworzysz kombinacją klawiszy \keys{CTRL + ALT + t}} poniżej podane polecenia.
+Aby móc odtwarzać materiały przy pomocy wtyczek takich jak Silverlight, Widevine, ViewRight Caiway, czy najnowszy Flash, potrzebujesz aplikacji PipeLight. Aby ją zainstalować, wykonaj w konsoli\footnote{konsolę otworzysz kombinacją klawiszy \keys{CTRL + ALT + t}.} poniżej podane polecenia.
 \begin{enumerate}
 \item Dodanie repozytorium z programem PipeLight:
 \begin{lstlisting}[language=bash]
@@ -48,7 +48,7 @@ Wiele stron internetowych sprawdza zgodność przeglądarki z ich wymaganiami. D
 \item Safari/OSX: Mozilla/5.0 (Macintosh; Intel Mac OS X 10\_7\_3) AppleWebKit/534.55.3 (KHTML, like Gecko) Version/5.1.3 Safari/534.53.10
 \end{itemize}
 
-Kiedy natrafisz na problematyczną stronę, to zmień UserAgent i przeładuj ją. Przycisk pozwalający zmienić ustawienia znajduje się na prawo od paska adresu w oknie przeglądarki.
+Kiedy natrafisz na problematyczną stronę, zmień UserAgent i przeładuj ją. Przycisk pozwalający zmienić ustawienia znajduje się na prawo od paska adresu w oknie przeglądarki.
 
 \subsubsection{Instalacja wtyczki Silverlight}
 \noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
@@ -59,7 +59,7 @@ sudo pipelight-plugin --enable silverlight
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka będzie niedostępna.
 \item Otwórz stronę \href{http://bubblemark.com/silverlight2.html}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie, to wtyczka Silverlight wyświetli zielone, skaczące kulki.
 \end{enumerate}
 
@@ -76,7 +76,7 @@ sudo pipelight-plugin --enable flash
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka będzie niedostępna.
 \item Otwórz stronę \href{https://www.adobe.com/software/flash/about/}{testową}. Jeżeli wszystko zostało zainstalowane poprawnie, to zobaczysz animowane logo Adobe Flash.
 \end{enumerate}
 
@@ -90,8 +90,8 @@ sudo pipelight-plugin --enable shockwave
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
-\item Jeżeli na stronach wykorzystujących Shockwave Player widzisz puste prostokąty, kliknij jeden z nich prawym przyciskiem myszy i wybierz \textcolor{ubuntu_orange}{OpenGL} jako silnik renderujący.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka będzie niedostępna.
+\item Jeżeli na stronach wykorzystujących Shockwave Player widzisz puste prostokąty, kliknij jeden z~nich prawym przyciskiem myszy i wybierz \textcolor{ubuntu_orange}{OpenGL} jako silnik renderujący.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Unity Webplayer}
@@ -103,21 +103,21 @@ sudo pipelight-plugin --enable unity3d
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet lika minut. W tym czasie przeglądarka bedzie niedostępna.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet kilka minut. W tym czasie przeglądarka będzie niedostępna.
 \item Otwórz stronę \href{https://unity3d.com/showcase/live-demos}{testową}, aby przetestować działanie wtyczki.
 \end{enumerate}
 
 \subsubsection{Instalacja wtyczki Widevine do obsługi materiałów DRM}
 \noindent Po zainstalowaniu programu PipeLight wykonaj następujące działania:
 \begin{enumerate}
-\item Upewnij się, że masz zainstalowaną wtyczkę Flash. Wtyczka Widavine działa zarówno z wtyczką linuksową, jak i wtyczką instalowaną przez PipeLight.
+\item Upewnij się, że masz zainstalowaną wtyczkę Flash. Wtyczka Widevine działa zarówno z wtyczką linuksową, jak i wtyczką instalowaną przez PipeLight.
 \item Zainstaluj wtyczkę:
 \begin{lstlisting}[language=bash]
 sudo pipelight-plugin --enable widevine
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet lika minut. W tym czasie przeglądarka bedzie niedostępna.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać nawet kilka minut. W tym czasie przeglądarka będzie niedostępna.
 \item Otwórz stronę \href{http://www.widevine.com/demo/index.html}{testową}, aby przetestować działanie wtyczki.
 \end{enumerate}
 
@@ -130,7 +130,7 @@ sudo pipelight-plugin --enable nazwa_wtyczki
 \end{lstlisting}
 \item Zostaniesz poproszony o zaakceptowanie warunków licencji. Wciśnij \keys{y}.
 \item Zresetuj przeglądarkę Firefox.
-\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka bedzie niedostępna.
+\item Po ponownym uruchomieniu przeglądarki pobrane i zainstalowane zostaną potrzebne pliki. Może to potrwać kilkanaście sekund. W tym czasie przeglądarka będzie niedostępna.
 \end{enumerate}
 Lista dostępnych pluginów:
 \begin{itemize}
@@ -153,8 +153,8 @@ mv ~/.mozilla ~/.mozilla_bak
 \item \textcolor{ubuntu_orange}{mv} --- polecenie przenoszenia plików move;
 \item \textcolor{ubuntu_orange}{\textasciitilde /.mozilla} --- określenie, co ma zostać przeniesione;
 	\begin{description}
-	\item[\textasciitilde /] --- tylda i slash oznaczają katalog domowy użytkownika
-	\item[.mozilla] --- katalog do skopiowania.
+	\item[\textasciitilde /] --- tylda i slash oznaczają katalog domowy użytkownika;
+	\item[.mozilla] --- katalog do skopiowania;
 	\end{description}
 \item \textasciitilde / .mozilla.bak --- miejsce docelowe.
 \end{itemize}

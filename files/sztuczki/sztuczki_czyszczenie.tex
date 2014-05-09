@@ -10,7 +10,7 @@ Instalacja i usuwanie oprogramowania może pozostawić w komputerze dużo zbędn
 \begin{lstlisting}[language=bash]
 sudo apt-get clean
 \end{lstlisting}
-\item Usunięcie starych archiwów a pakietami:
+\item Usunięcie starych archiwów z pakietami:
 \begin{lstlisting}[language=bash]
 sudo apt-get autoclean
 \end{lstlisting}
@@ -30,7 +30,7 @@ sudo deborphan --guess-all | xargs sudo apt-get -y remove --purge
 \end{lstlisting}
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{sudo} nakazuje wykonanie polecenia jako administrator;
-\item \textcolor{ubuntu_orange}{deborphan} program szukający osieroconych pakietów;
+\item \textcolor{ubuntu_orange}{deborphan} program wyszukujący osierocone pakiety;
 \item \textcolor{ubuntu_orange}{\-\-quess-all} polecenie dla programu deborphan, nakazujące mu szukać we wszystkich pakietach;
 \item \textcolor{ubuntu_orange}{$\vert$} przekazanie wyniku działania (wyjścia) programu deborphan do drugiego programu (na jego wejście);
 \item \textcolor{ubuntu_orange}{sudo} nakazuje wykonanie polecenia jako administrator;

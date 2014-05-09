@@ -5,7 +5,7 @@ O tym, czy firewall w systemie Ubuntu jest potrzebny, czy nie, można długo dys
 	\includegraphics[width=\linewidth]{images/programy_gufw.png}
 \end{wrapfigure}
 
-GUFW (\textcolor{ubuntu_orange}{GUI for Uncomplicated FireWall} znajduje się w repozytoriach Ubuntu. Zainstaluj go z~Centrum Oprogramowania (,,Konfiguracja zapory Firewall'') lub za pomocą terminala:
+GUFW (\textcolor{ubuntu_orange}{GUI for Uncomplicated FireWall}) znajduje się w repozytoriach Ubuntu. Zainstaluj go z~Centrum Oprogramowania (,,Konfiguracja zapory Firewall'') lub za pomocą Terminala:
 \begin{lstlisting}[language=bash]
 sudo apt-get install gufw
 \end{lstlisting}
@@ -20,5 +20,5 @@ Może się zdażyć, iż będziesz potrzebował wprowadzić jakiś wyjątek od w
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{Predefiniowana} --- pozwala stworzyć regułę w oparciu o szablon. Jeżeli chcesz zablokować lub odblokować konkretny program, wybierz go z listy \textcolor{ubuntu_orange}{Programy} i ustaw odpowiednią metodę.
 \item \textcolor{ubuntu_orange}{Prosta} --- pozwala w prosty sposób zarzadzać poszczególnymi protokołami. Na przykład, aby zablokować połączenia przeglądarek internetowych (i wielu innych programów), wpisz \textit{http} w pole \textcolor{ubuntu_orange}{Port} i wybierz ,,Odrzuć'' z listy \textcolor{ubuntu_orange}{Metoda}.
-\item \textcolor{ubuntu_orange}{Prosta} --- pozwala ograniczyć dostep do specyficznych adresów IP, protokołów, czy konkretnych typów połączeń z siecią (np. ethernet, WiFi).
+\item \textcolor{ubuntu_orange}{Prosta} --- pozwala ograniczyć dostęp do specyficznych adresów IP, protokołów, czy konkretnych typów połączeń z siecią (np. ethernet, WiFi).
 \end{itemize}

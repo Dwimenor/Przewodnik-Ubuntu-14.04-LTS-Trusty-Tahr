@@ -4,30 +4,30 @@ Po pierwsze, nie spiesz się, wczytanie wszystkich danych z nośnika instalacyjn
 \subsubsection{Instalacja została przerwana}
 Jeżeli instalacja została przerwana w trakcie kopiowania danych na dysk, to uruchom ponownie instalator i zainstaluj system od nowa.
 
-Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku), to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing} i uruchom program GParted.
+Jeżeli instalacja została przerwana w trakcie partycjonowania (zapisywania zmian na dysku), to prawdopodobnie doszło do nieodwracalnego uszkodzenia tablicy partycji. Uruchom nośnik instalacyjny, wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}) i uruchom program GParted.
 
 \subsubsection{Po instalacji Ubuntu uruchamia się tylko Windows}
-Prawdopodobnie na Windowsie masz ustawione ,,Szybkie uruchamianie'' (\textit{Fast-boot}). Wyłącz tę funkcję i ponownie zainstaluj Ubuntu. Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
+Prawdopodobnie w Windows masz włączone ,,Szybkie uruchamianie'' (\textit{Fast-boot}). Wyłącz tę funkcję i ponownie zainstaluj Ubuntu. Przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
 
 \subsubsection{Po instalacji Ubuntu nie można uruchomić systemu Windows}
-przyczyny mogą być dwie. Albo usunąłeś system Windows z dysku twardego, albo nie został on prawidłowo rozpoznany. W pierwszym przypadku pozostaje tylko ponownie go zainstalować. Koniecznie przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
+Przyczyny mogą być dwie. Albo usunąłeś system Windows z dysku twardego, albo nie został on prawidłowo rozpoznany. W pierwszym przypadku pozostaje tylko ponownie go zainstalować. Koniecznie przeczytaj rozdział \ref{sec:przygotowanie_windows}: ,,Przygotowanie do instalacji''.
 
-W drugim przypadku przejdź do sekcji ,,Przywracanie GRUB-a''
+W drugim przypadku przejdź do sekcji ,,Przywracanie GRUB-a''.
 
 \subsubsection{Przywracanie GRUB-a}
 \label{grub_przywracanie}
 Problemy z programem rozruchowym występują najczęściej:
 \begin{itemize}
-\item Po instalacji systemu Windows obok Ubuntu. Windows nadpisuje MBR (\textit{Master Boot Record)} dysku twardego i uniemożliwia dostęp do systemów linuksowych.
-\item Po instalacji Ubuntu obok Windowsa, jeżeli ten był zahibernowany, miał włączoną opcję ,,Fast-Boot'' lub podobne.
-\item Po zmianie układu partycji.
-\item Po nieumiejętnych próbach edytowania GRUB-a lub zastąpienia go innym menadżerem rozruchowym.
+\item po instalacji systemu Windows obok Ubuntu --- Windows nadpisuje MBR (\textit{Master Boot Record)} dysku twardego i uniemożliwia dostęp do systemów linuksowych;
+\item po instalacji Ubuntu obok Windowsa, jeżeli ten był zahibernowany, miał włączoną opcję ,,Fast-Boot'' lub podobne;
+\item po zmianie układu partycji;
+\item po nieumiejętnych próbach edytowania GRUB-a lub zastąpienia go innym menadżerem rozruchowym.
 \end{itemize}
 
-Najprostszym sposobem naprawienia menadżera rozruchu GRUB jest skorzystanie z Boot Repair Disk. Jest to dystrybucja Linuksa typu Live (działa tylko z zewnętrznego nośnika, nie zainstalujesz jej na dysku twardym). Otwórz stronę \href{http://sourceforge.net/projects/boot-repair-cd/files/}{pobierania}, wybierz plik z obrazem zgodny z architekturą twojego procesora i zapisz go na dysku. Proces przygotowywania nośnika z Boot Repair Disk jest analogiczny do przedstawionego w rozdziale \ref{nagrywanie_obrazu}: ,,Nagrywanie pobranego obrazu''.\\
+Najprostszym sposobem naprawienia menadżera rozruchu GRUB jest skorzystanie z Boot Repair Disk. Jest to dystrybucja Linuksa typu Live (działa tylko z zewnętrznego nośnika, nie zainstalujesz jej na dysku twardym). Otwórz stronę \href{http://sourceforge.net/projects/boot-repair-cd/files/}{pobierania}, wybierz zgodny z architekturą twojego procesora plik z obrazem i zapisz go na dysku. Proces przygotowywania nośnika z Boot Repair Disk jest analogiczny do przedstawionego w rozdziale \ref{nagrywanie_obrazu}: ,,Nagrywanie pobranego obrazu''.\\
 Po uruchomieniu tak przygotowanego systemu poczekaj, aż się załaduje i wybierz opcję \textcolor{ubuntu_orange}{Recomended repair}, a nastepnie spróbuj ponownie uruchomić komputer.
 
-Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}, następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące polecenia:
+Jeżeli nie możesz uruchomić żadnego systemu operacyjnego, to program Boot Repair możesz zainstalować bezpośrednio na nośniku instalacyjnym Ubuntu. Podczas uruchamiania instalatora wybierz ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}), następnie otwórz terminal \keys{CTRL + Alt + t} i wydaj następujące polecenia:
 
 \begin{lstlisting}[language=bash]
 sudo add-apt-repository ppa:yannubuntu/boot-repair

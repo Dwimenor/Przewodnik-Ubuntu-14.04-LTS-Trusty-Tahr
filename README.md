@@ -1,25 +1,24 @@
 Przewodnik-Ubuntu-14.04-LTS-Trusty-Tahr
 =======================================
 
-Przewodnik udostępniony na licencji Creative Commons Uznanie autorstwa-Uzycie niekomercyjne-Na tych samych warunkach 3.0 Polska
-CC BY-NC-SA 3.0 PL
+Przewodnik po Ubuntu 14.04 LTS Trusty Tahr jest objęty licencją Creative Commons Uznanie autorstwa - Użycie niekomercyjne - Na tych samych warunkach 3.0 Polska.
 http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
 
-Czego potrzeba do kompilacji:
+Zależności do kompilacji:
 
 1. texmaker (pociągnie resztę zależności)
 2. texlive-lang-polish
 
-Dokument nie wykorzystuje NieWiadomoCzego, szybka kompilacja z texmakera działa. pdflatex też
-Cały tekst przesuwamy do osobnych plików, tak aby tekst jak najmniej mieszał się z poleceniami składu tekstu
+Dokument nie wykorzystuje NieWiadomoCzego, szybka kompilacja z texmakera działa, pdflatex też.
+Cały tekst przesuwamy do osobnych plików, aby tekst jak najmniej mieszał się z poleceniami składu tekstu.
 
+Zgłszanie poprawek:
 
-Dla ludzi nie znających LaTeXa:
-http://zelmanov.ptep-online.com/ctan/lshort_polish.pdf
+1. Poprzez interfejs githuba
+2. http://ubuntu.pl/forum/viewtopic.php?f=233&t=173107
 
-Lub po prostu przesyłać tekst/poprawki na maila lub poprzez forum.ubuntu.pl
+Obrazki
+1. Wszystkie obrazki do katalogu images/
+2. Używamy .png
+3. Nie manipulujemy obrazkami (poza kadrowaniem). Wszystkie dodatkowe lementy (numerki, zaznaczenia) opisywane są w plikach .tex za pomocą biblioteki tikz. Wszystkie nałożone elementy są opisywanie relatywnie - jako procent od lewego dolnego rogu. W ten sposób nawet jeżeli wymiary głównego obrazka się zmieniają (skalowanie, dopasowanie do strony) to i tak proporcje zostaną zachowane.
 
-
-OBRAZKI
-wszystkie obrazki do katalogu images/
-plików .svg uzywamy jako plików do edycji (pliki źródłowe). Przed wklejeniem eksportujemy do png. /svg można wstawić do latexa, ale na tym etapie nie chce mi się bawić. Może potem, jak będzie się kończyć cały dokument

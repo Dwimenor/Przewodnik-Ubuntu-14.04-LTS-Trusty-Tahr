@@ -2,7 +2,7 @@
 
 W systemach linuksowych (Ubuntu do nich należy) instalacja programów przebiega nieco inaczej, niż gdzie indziej, a jednocześnie bardzo podobnie. Jak to możliwe? Bardzo prosto. Zapewne znasz pojęcie ,,sklepu z oprogramowaniem''. Apple ma swój ,,App Store'', Google ma swoje ,,Play''. Są to stosunkowo nowe metody instalacji oprogramowania, które upowszechniły się w przeciągu ostatnich lat. Nawet Microsoft w najnowszych wydaniach swojego systemu Windows promuje instalację softu przez wbudowany sklep, zamiast ręcznego przeszukiwania sieci, ściągania instalatorów, skanowania ich antywirusem i instalowania w systemie.
 
-Takie sklepy z oprogramowaniem istnieją w systemach linuksowych od dawna, przy czym w tym przypadku nazywają się \textcolor{ubuntu_orange}{repozytoriami}. Repozytorium to serwer, na którym opiekunowie danej dystrybucji Linuksa (np. firma Canonical jest opiekunem Ubuntu) przechowują paczki z programami. Użytkownik, chcąc zainstalować jakiś program (np. przeglądarkę internetową Firefox), uruchamia program zwany \textcolor{ubuntu_orange}{menadżerem pakietów}, wyszukuje w nim to, czego potrzebuje i instaluje. Nic więcej go nie interesuje --- menadżer pakietów sam ściągnie paczkę z programem, pobierze wszystkie zależności (programy niezbędne do funkcjonowania instalowanego programu) i zainstaluje soft w systemie. Kiedy w repozytoriach program zostanie zaktualizowany, to użytkownik zostanie o tym powiadomiony, a~menadżer pakietów dokona aktualizacji.
+Takie sklepy z oprogramowaniem istnieją w systemach linuksowych od dawna, przy czym w tym przypadku nazywają się \textcolor{ubuntu_orange}{repozytoriami}. Repozytorium to serwer, na którym opiekunowie danej dystrybucji Linuksa (np. firma Canonical jest opiekunem Ubuntu) przechowują paczki z programami. Użytkownik, chcąc coś zainstalować (np. przeglądarkę internetową Firefox), uruchamia program zwany \textcolor{ubuntu_orange}{menadżerem pakietów}, wyszukuje w nim to, czego potrzebuje i instaluje. Nic więcej go nie interesuje --- menadżer pakietów sam ściągnie paczkę z programem, pobierze wszystkie zależności (programy i~biblioteki niezbędne do funkcjonowania instalowanego programu) i zainstaluje soft w systemie. Kiedy w repozytoriach program zostanie zaktualizowany, użytkownik zostanie o tym powiadomiony, a~menadżer pakietów dokona aktualizacji.
 
 W przeciwieństwie do sklepów z oprogramowaniem system repozytoriów przechowuje nie tylko programy użytkowe, ale też składniki systemu operacyjnego, sterowniki, dokumentację, pliki pomocy, paczki z tematami graficznymi i ikonami oraz wiele innych. Użytkownik nie jest też ograniczony wyłącznie do repozytoriów oferowanych przez opiekunów dystrybucji --- swobodnie może łączyć się z~innymi serwerami w celu poszerzenia oferty oprogramowania. W Ubuntu istnieje cały ekosystem repozytoriów PPA (\textit{Personal Package Archive}), które kilkoma kliknięciami można dodać do systemu. Deweloperzy różnych aplikacji za pośrednictwem PPA dostarczają użytkownikom oprogramowanie, które nie znalazło się w repozytoriach oferowanych przez Canonical.
 
@@ -32,7 +32,7 @@ W prawym górnym rogu znajduje się pole \circled 1, w którym można wpisać na
 \item \textcolor{ubuntu_orange}{Akcesoria}: niewielkie programy, pomocne w codziennym używaniu komputera;
 \item \textcolor{ubuntu_orange}{Biuro}: programy biurowe, bardziej rozbudowane edytory tekstu, arkusze kalkulacyjne, organizery i inne;
 \item \textcolor{ubuntu_orange}{Czcionki}: dodatkowe zestawy fontów;
-\item \textcolor{ubuntu_orange}{Dźwięk i wideo} zawiera oprogramowanie do tworzenia i odtwarzania multimediów;
+\item \textcolor{ubuntu_orange}{Dźwięk i wideo}: zawiera oprogramowanie do tworzenia i odtwarzania multimediów;
 \item \textcolor{ubuntu_orange}{Edukacja}: programy wspomagające nauczanie i różnego rodzaju bazy wiedzy;
 \item \textcolor{ubuntu_orange}{Grafika}: programy do grafiki wektorowej i rastowej, a także przeglądarki grafiki, programy do wywoływania i korekcji zdjęć;
 \item \textcolor{ubuntu_orange}{Gry}: oprogramowanie rozrywkowe;
@@ -59,10 +59,10 @@ Synaptic, poza przeglądaniem i instalowaniem oprogramowania, umożliwia także 
 \end{center}
 
 \subsubsection{Instalacja programów w konsoli}
-Graficzne narzędzia są wygodne, ale czasem trzeba sięgnąć po konsolę. Często na forach pomocy technicznej właśnie ten sposób jest przedstawiany w opisach metod rozwiązywania problemów. Łatwiej wpisać jedno polecenie w konsoli, niż opisywać, jak przedostać się przez gąszcz menu i przycisków. Wynika to z założenia, że nie każdy musi mieć zainstalowany menadżer pakietów. Nawet Centrum Oprogramowania może być nieobecne w systemie --- to program, jak każdy inny, i może zostać usunięty.
+Graficzne narzędzia są wygodne, ale czasem trzeba sięgnąć po konsolę. Często na forach pomocy technicznej właśnie ten sposób jest przedstawiany w opisach metod rozwiązywania problemów. Łatwiej wpisać jedno polecenie w konsoli, niż opisywać, jak przedostać się przez gąszcz menu i przycisków. Wynika to z założenia, że nie każdy musi mieć zainstalowany menadżer pakietów. Nawet Centrum Oprogramowania może być nieobecne w systemie --- to program jak każdy inny i może zostać usunięty.
 W dalszych częściach tego Przewodnika kilkukrotnie przedstawiamy instalację paczek właśnie w ten sposób.
 
-Konsolowym menadżerem pakietów w systemie Ubuntu jest \textcolor{ubuntu_orange}{apt-get}. Ma on takie same możliwości, jak opisywany wcześniej Synaptic, z tym, że polecenia wydaje się klawiaturą, a nie myszą. Aby zainstalować pakiet z oprogramowaniem przy pomocy apt-get:
+Konsolowym menadżerem pakietów w systemie Ubuntu jest \textcolor{ubuntu_orange}{apt-get}. Ma on takie same możliwości jak opisywany wcześniej Synaptic, z tym, że polecenia wydaje się klawiaturą, a nie myszą. Aby zainstalować pakiet z oprogramowaniem przy pomocy apt-get:
 \begin{enumerate}
 \item Uruchom konsolę, wpisując w Dashu \textcolor{ubuntu_orange}{Terminal} lub wciskając kombinację klawiszy \keys{CTRL + Alt + t}.
 \item Wpisz:
@@ -115,7 +115,7 @@ To dużo tekstu, ale bardzo łatwo go zinterpretować:
 \begin{itemize}
 \item \textcolor{ubuntu_orange}{Czytanie list pakietów... Gotowe} --- apt-get przetworzył bazę danych pakietów i znalazł na liście program VLC.
 \item \textcolor{ubuntu_orange}{Budowanie drzewa zależności} --- apt-get sprawdził jakich innych pakietów potrzebuje VLC do działania.
-\item \textcolor{ubuntu_orange}{Zostaną zainstalowane następujące dodatkowe pakiety:} --- Lista pakietów, które muszą być zainstalowane razem z VLC, aby ten mógł działać.
+\item \textcolor{ubuntu_orange}{Zostaną zainstalowane następujące dodatkowe pakiety:} --- lista pakietów, które muszą być zainstalowane razem z programem VLC, aby mógł on działać.
 \item \textcolor{ubuntu_orange}{Sugerowane pakiety:} --- lista przydatnych pakietów, które nie zostaną teraz zainstalowane, ale mogą się kiedyś przydać.
 \item \textcolor{ubuntu_orange}{Polecane pakiety:} --- podobnie jak sugerowane pakiety, ale z większym naciskiem na przydatność. W tym wypadku apt-get zaproponował instalację biblioteki umożliwiającej odtwarzanie zaszyfrowanych płyt DVD. Ta paczka została omówiona w rozdziale \ref{ubuntu-restricted-extras}.
 \item \textcolor{ubuntu_orange}{Zostaną zainstalowane następujące NOWE pakiety:} --- lista wszystkich pakietów, które zostaną zainstalowane. Automatyczna instalacja sugerowanych i polecanych pakietów domyślnie jest wyłączona.
@@ -126,7 +126,7 @@ To dużo tekstu, ale bardzo łatwo go zinterpretować:
 \end{itemize}
 
 Apt-get pobierze teraz wszystkie paczki, sprawdzi ich spójność (sumy kontrole oraz podpisy cyfrowe), rozpakuje je w systemie plików zgodnie z instrukcjami zawartymi w paczce i skonfiguruje zainstalowane programy (np. poinformuje menadżer plików, że teraz filmy ma odtwarzać w VLC, a~nie w domyślnie zainstalowanym Totemie).
-
+\clearpage
 Inne opcje programu apt-get to:
 
 \begin{itemize}
@@ -185,20 +185,20 @@ Po takiej operacji raczej na pewno otrzymasz komunikat o ,,niespełnionych zale�
 sudo apt-get install -f
 \end{lstlisting}
 
-Polecenie \textcolor{ubuntu_orange}{install} z opcją \textcolor{ubuntu_orange}{-f} informuje apt-get, że ma sprawdzić stan paczek oraz zreperować (f, czyli fix) stan pakietów. Po tej operacji program zostanie prawidłowo zainstalowany i skonfigurowany, a~paczkę .deb można skasować.
+Polecenie \textcolor{ubuntu_orange}{install} z opcją \textcolor{ubuntu_orange}{-f} informuje apt-get, że ma sprawdzić stan paczek oraz zreperować (,,f'', czyli \textit{fix}) stan pakietów. Po tej operacji program zostanie prawidłowo zainstalowany i skonfigurowany, a~paczkę .deb można skasować.
 
 Aby graficznie zainstalować pobraną paczkę .deb, potrzebujesz odpowiedniego programu. Nazywa się on \textcolor{ubuntu_orange}{GDebi}. Znajdziesz go w Centrum Oprogramowania, Synapticu lub zainstalujesz z konsoli poleceniem:
 \begin{lstlisting}[language=bash]
 sudo apt-get install gdebi
 \end{lstlisting}
 
-Kiedy GDebi jest gotowe do użycia, kliknij prawym przyciskiem myszy na paczkę .deb, a następnie wybierz \menu{{Otwórz za pomocą}>{GDebi Package Installer}}. Teraz wystarczy kliknąć \textcolor{ubuntu_orange}{Install}, aby GDebi sprawdziło zależności i zainstalowało wszystko, co potrzebne.
+Kiedy GDebi jest gotowe do użycia, kliknij prawym przyciskiem myszy paczkę .deb, a następnie wybierz \menu{{Otwórz za pomocą}>{GDebi Package Installer}}. Teraz wystarczy kliknąć \textcolor{ubuntu_orange}{Install}, aby GDebi sprawdziło zależności i zainstalowało wszystko, co potrzebne.
 
 \subsubsection{Instalacja programów .bin}
-Niektórzy dostawcy oprogramowania (na szczęście nieliczni) udostępniają własne instalatory programów, na sposób znany z systemu Windows (pliki .exe i .msi). Na szczęście są to coraz rzadsze przypadki. Jednak gdybyś przypadkiem trafił na tak przestarzały sposób dystrybucji programu, to kliknij prawym przyciskiem myszy na pobranym programie i wybierz \menu{{Właściwości}>{Uprawienia}>{Wykonywanie}} i~zaznacz pole \textcolor{ubuntu_orange}{Zezwolenie na wykonywanie pliku jako programu}. Teraz kliknij dwukrotnie lewym przyciskiem myszy na pliku, aby go uruchomić.
+Niektórzy dostawcy oprogramowania (na szczęście nieliczni) udostępniają własne instalatory programów, na sposób znany z systemu Windows (pliki .exe i .msi). Na szczęście są to coraz rzadsze przypadki. Jednak gdybyś przypadkiem trafił na tak przestarzały sposób dystrybucji programu, to kliknij prawym przyciskiem myszy na pobranym programie, wybierz \menu{{Właściwości}>{Uprawienia}>{Wykonywanie}} i~zaznacz pole \textcolor{ubuntu_orange}{Zezwolenie na wykonywanie pliku jako programu}. Teraz kliknij dwukrotnie lewym przyciskiem myszy na pliku, aby go uruchomić.
 
 \subsubsection{Instalacja programów przez przeglądarkę internetową}
-Przeglądarka internetowa Firefox, wchodząca w skład standardowej instalacji Ubuntu, wyposażona jest w dodatek, umożliwiający instalację oprogramowania bezpośrednio ze strony internetowej poprzez protokół apt. Kliknięcie odpowiedniego linku otworzy okno \textcolor{ubuntu_orange}{Centrum Oprogramowania Ubuntu} na stronie danego programu.
+Przeglądarka internetowa Firefox, wchodząca w skład standardowej instalacji Ubuntu, wyposażona jest w dodatek umożliwiający instalację oprogramowania bezpośrednio ze strony internetowej poprzez protokół apt. Kliknięcie odpowiedniego linku otworzy okno \textcolor{ubuntu_orange}{Centrum Oprogramowania Ubuntu} na stronie danego programu.
 
 Jeżeli Firefox nie rozpoznaje protokołu apt, to wyświetli okno z prośbą o wybór aplikacji. Kliknij przycisk \textcolor{ubuntu_orange}{Wybierz\ldots}, a następnie wskaż plik \menu{{System plików}>{usr}>{bin}>{software-center}}. Pamiętaj, aby zaznaczyć pole \textcolor{ubuntu_orange}{Zapamiętaj wybór dla odnośników apt}.
 \clearpage

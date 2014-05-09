@@ -10,15 +10,15 @@ Alternatywnym sposobem wypróbowania Ubuntu bez instalowania go bezpośrednio na
 	\includegraphics[width=\linewidth]{images/virtualbox_wizard1.png}
 \end{wrapfigure}
 
-Jedną z najpopularniejszych maszyn wirtualnych jest VirtualBox. Otwórz stronę \href{https://www.virtualbox.org/wiki/Downloads}{virtualbox.org/download} i pobierz instalator VirtualBoksa dla swojego systemu. Zainstaluj pobrany plik i uruchom program VirtualBox. Podczas pierwszego uruchomienia program zapyta cię, czy pobrać i zainstalować dodatkowe rozszerzenia od Oracle. Zgódź się na to.
+Jedną z najpopularniejszych maszyn wirtualnych jest VirtualBox. Otwórz stronę \href{https://www.virtualbox.org/wiki/Downloads}{virtualbox.org/download} i pobierz instalator VirtualBoksa dla swojego systemu. Zainstaluj, a następnie uruchom program VirtualBox. Podczas pierwszego uruchomienia program zapyta cię, czy pobrać i zainstalować dodatkowe rozszerzenia od Oracle. Zgódź się na to.
 
 W oknie głównym programu VirtualBox kliknij przycisk \textcolor{ubuntu_orange}{New}, aby uruchomić kreator maszyny wirtualnej.
 
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Name} --- Nazwa maszyny wirtualnej. Może to być cokolwiek.
-\item \textcolor{ubuntu_orange}{Type} --- Typ systemu. Ustaw na \textcolor{ubuntu_orange}{Linux}.
-\item \textcolor{ubuntu_orange}{Version} --- Wersja systemu. Ustaw na \textcolor{ubuntu_orange}{Ubuntu (64 bit)}.\\
-Uwaga: Architektura wybranego systemu (32/64 bit) musi odpowiadać pobranemu obrazowi instalatora Ubuntu. Dodatkowo należy pamiętać, że w komputerze z 64-bitowym procesorem (najprawdopodobniej taki posiadasz, jeżeli twój komputer nie jest starszy, niż 6 lat) można zainstalować zarówno 64-, jak i 32-bitowy system-gościa, natomiast w komputerze z procesorem 32-bitowym --- jedynie 32-bitowy.
+\item \textcolor{ubuntu_orange}{Name} --- nazwa maszyny wirtualnej. Może to być cokolwiek.
+\item \textcolor{ubuntu_orange}{Type} --- typ systemu. Ustaw na \textcolor{ubuntu_orange}{Linux}.
+\item \textcolor{ubuntu_orange}{Version} --- wersja systemu. Ustaw na \textcolor{ubuntu_orange}{Ubuntu (64 bit)}.\\
+Uwaga: Architektura wybranego systemu (32/64 bit) musi odpowiadać pobranemu obrazowi instalatora Ubuntu. Dodatkowo należy pamiętać, że w komputerze z 64-bitowym procesorem (najprawdopodobniej taki posiadasz, jeżeli twój komputer nie jest starszy niż 6 lat) można zainstalować zarówno 64-, jak i 32-bitowy system-gościa, natomiast w komputerze z procesorem 32-bitowym --- jedynie 32-bitowy.
 \end{itemize}
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Next}, aby przejść dalej.
@@ -48,8 +48,8 @@ Kliknij przycisk \textcolor{ubuntu_orange}{Next}, aby przejść dalej.
 
 W kolejnym oknie wybierz pomiędzy dyskiem tworzonym dynamicznie, a dyskiem o stałym rozmiarze.
 \begin{itemize}
-\item \textcolor{ubuntu_orange}{Dynamically allocated} --- Taki wirtualny dysk twardy nie zajmuje całego przydzielonego miejsca, a jedynie tyle, ile wynosi suma rozmiaru plików na nim zapisanych. Nawet jeżeli stworzysz dysk o pojemności 100 gigabajtów, to po instalacji Ubuntu będzie on zajmował tylko trochę ponad 6 gigabajtów w systemie-gospodarzu. Wybierz tę opcję.
-\item \textcolor{ubuntu_orange}{Fixed size} --- Taki dysk twardy zawsze zajmuje tyle miejsca w systemie-gospodarzu, ile zostało zadeklarowane. Jeżeli stworzysz 100-gigabajtowy dysk wirtualny, to na twoim komputerze pojawi się 100-gigabajtowy plik z maszyną wirtualną. Tworzenie takiego dysku też trwa dłuższą chwilę, gdyż dużo danych musi zostać zapisanych na dysk.
+\item \textcolor{ubuntu_orange}{Dynamically allocated} --- taki wirtualny dysk twardy nie zajmuje całego przydzielonego miejsca, a jedynie tyle, ile wynosi suma rozmiaru plików na nim zapisanych. Nawet jeżeli stworzysz dysk o pojemności 100 gigabajtów, to po instalacji Ubuntu będzie on zajmował tylko trochę ponad 6 gigabajtów w systemie-gospodarzu. Wybierz tę opcję.
+\item \textcolor{ubuntu_orange}{Fixed size} --- taki dysk twardy zawsze zajmuje tyle miejsca w systemie-gospodarzu, ile zostało zadeklarowane. Jeżeli stworzysz 100-gigabajtowy dysk wirtualny, to na twoim komputerze pojawi się 100-gigabajtowy plik z maszyną wirtualną. Tworzenie takiego dysku też trwa dłuższą chwilę, gdyż dużo danych musi zostać zapisanych na dysk.
 \end{itemize}
 \begin{flushright}
 Kliknij przycisk \textcolor{ubuntu_orange}{Next}, aby przejść dalej.
@@ -72,4 +72,4 @@ Twoja maszyna wirtualna dla Ubuntu jest gotowa i można ją wybrać w głównym 
 
 Kiedy po zakończeniu instalacji zostaniesz poproszony o wyjęcie płyty instalatora z napędu, z paska menu maszyny wirtualnej wybierz \menu{{Devices}>{Cd/DVD Devices}>{Remove disk from virtual drive}}.
 
-Żeby móc się cieszyć pełnosprawną maszyną wirtualną, należy doinstalować w systemie-gościu \textcolor{ubuntu_orange}{Używanie x86 virtualization solution --- guest addition module source for dkms z virtualbox-guest-dkms (własnościowy)} zgodnie z instrukcją zawartą w \ref{pierwsze_uruchomienie_aktualizacja_instalacja}: ,,Instalacja dodatkowych sterowników''.
+Żeby móc się cieszyć pełnosprawną maszyną wirtualną, należy doinstalować w systemie-gościu \textcolor{ubuntu_orange}{Używanie x86 virtualization solution --- guest addition module source for dkms z virtualbox-guest-dkms (własnościowy)}, zgodnie z instrukcją zawartą w \ref{pierwsze_uruchomienie_aktualizacja_instalacja}: ,,Instalacja dodatkowych sterowników''.
