@@ -4,6 +4,10 @@ Przewodnik-Ubuntu-14.04-LTS-Trusty-Tahr
 Przewodnik po Ubuntu 14.04 LTS Trusty Tahr jest objęty licencją Creative Commons Uznanie autorstwa - Użycie niekomercyjne - Na tych samych warunkach 3.0 Polska.
 http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
 
+Wersja skompilowana:
+
+https://copy.com/cMVeNacPTi03
+
 Zależności do kompilacji:
 
 1. texmaker (pociągnie resztę zależności)
