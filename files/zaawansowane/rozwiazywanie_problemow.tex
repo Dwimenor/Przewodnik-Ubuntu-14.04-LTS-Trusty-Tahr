@@ -14,7 +14,7 @@ Przyczyny tego mogą być różne, jednak najczęściej jest to problem ze stero
 Jeżeli to nie pomaga, uruchom ponownie komputer, wejdź w menu GRUB-a i wybierz\\
 \menu{{Opcje zaawansowane dla systemu Ubuntu}>{Recovery Mode}}. Odczekaj, aż system się załaduje, i wybierz opcję \textcolor{ubuntu_orange}{failsafex}. System zostanie uruchomiony w bezpiecznym trybie graficznym. Wybierz \textcolor{ubuntu_orange}{Run in low-graphics mode for just one session}. Przejdź do sekcji \ref{sterowniki} ,,Sterowniki do kart graficznych'', aby dowiedzieć się więcej o sterownikach.
 
-Trzecią możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. W~menu GRUB-a zaznacz Ubuntu i wciśnij \keys{e}. Przejdź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przedostatnia linijka), skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciśnij \keys{CTRL + x}, aby uruchomić komputer z nowymi parametrami.
+Trzecią możliwością jest dopisanie opcji ,,nomodeset'' do parametrów uruchamiania Ubuntu. \linebreak W menu GRUB-a zaznacz Ubuntu i wciśnij \keys{e}. Przejdź do linijki zaczynającej się od \textcolor{ubuntu_orange}{linux}	(to będzie przedostatnia linijka), skasuj \$Vt\_handoff i na końcu dopisz \textcolor{ubuntu_orange}{nomodeset}. Wciśnij \keys{CTRL + x}, aby uruchomić komputer z nowymi parametrami.
 
 \subsubsection{Problemy z instalacją pakietów}
 Przerwany proces instalacji pakietów oprogramowania skutkuje niemożliwością dokonywania zmian w systemie. Menadżer pakietów w takiej sytuacji wykrywa, że pakiety zostały uszkodzone i nie pozwoli nic zrobić, póki nie zostaną naprawione. Najprostszym remedium jest uruchomienie konsoli \keys{CTRL + Alt + t} i wpisanie następujących poleceń:

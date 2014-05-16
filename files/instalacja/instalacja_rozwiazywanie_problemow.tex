@@ -1,5 +1,5 @@
 \subsubsection{Po wybraniu opcji ,,Wypróbuj Ubuntu bez instalacji'' lub ,,Instaluj Ubuntu'' mam tylko czarny ekran}
-Po pierwsze, nie spiesz się, wczytanie wszystkich danych z nośnika instalacyjnego trwa dłuższą chwilę. Jeżeli nic się nie dzieje dłużej, niż 2 -- 3 minuty, to zrestartuj komputer i uruchom instalator Ubuntu jeszcze raz. W przypadku instalatora BIOS (fioletowe tło) po wybraniu języka wcśnij \keys{F6} (inne opcje), zaznacz opcję ,,nomodeset'' klawiszem \keys{\returnwin}, wyjdź z menu klawiszem \keys{Esc} i uruchom instalator. Opcja ,,acpi=off'' też może być pomocna.
+Po pierwsze, nie spiesz się, wczytanie wszystkich danych z nośnika instalacyjnego trwa dłuższą chwilę. Jeżeli nic się nie dzieje dłużej, niż 2 -- 3 minuty, to zrestartuj komputer i uruchom instalator Ubuntu jeszcze raz. W przypadku instalatora BIOS (fioletowe tło) po wybraniu języka wciśnij \keys{F6} (inne opcje), zaznacz opcję ,,nomodeset'' klawiszem \keys{\returnwin}, wyjdź z menu klawiszem \keys{Esc} i uruchom instalator. Opcja ,,acpi=off'' też może być pomocna.
 
 \subsubsection{Instalacja została przerwana}
 Jeżeli instalacja została przerwana w trakcie kopiowania danych na dysk, to uruchom ponownie instalator i zainstaluj system od nowa.
@@ -19,7 +19,7 @@ W drugim przypadku przejdź do sekcji ,,Przywracanie GRUB-a''.
 Problemy z programem rozruchowym występują najczęściej:
 \begin{itemize}
 \item po instalacji systemu Windows obok Ubuntu --- Windows nadpisuje MBR (\textit{Master Boot Record)} dysku twardego i uniemożliwia dostęp do systemów linuksowych;
-\item po instalacji Ubuntu obok Windowsa, jeżeli ten był zahibernowany, miał włączoną opcję ,,Fast-Boot'' lub podobne;
+\item po instalacji Ubuntu obok Windowsa, jeżeli ten był zahibernowany, miał włączoną opcję \linebreak ,,Fast-Boot'' lub podobne;
 \item po zmianie układu partycji;
 \item po nieumiejętnych próbach edytowania GRUB-a lub zastąpienia go innym menadżerem rozruchowym.
 \end{itemize}
@@ -41,7 +41,7 @@ Ta metoda jest nieprzydatna, jeżeli masz zainstalowany tylko system Windows.
 
 Jeżeli nie masz możliwości zainstalowania paczek na nośniku instalacyjnym (np. ze względu na brak połączenia z internetem), to możesz spróbować przywrócić GRUB-a ręcznie. Uruchom instalator Ubuntu w trybie ,,Wypróbuj Ubuntu bez instalacji'' (\textit{Try Ubuntu without installing}), a następnie otwórz terminal \keys{CTRL + Alt + t}.
 
-Zidentyfikuj partycję, na której już jest zainstalowane Ubuntu (lub inny linux). Wykonaj:
+Zidentyfikuj partycję, na której już jest zainstalowane Ubuntu (lub inny Linux). Wykonaj:
 
 \begin{lstlisting}[language=bash]
 ls /dev |grep sd
