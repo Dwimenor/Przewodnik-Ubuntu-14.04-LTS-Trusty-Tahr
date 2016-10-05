@@ -6,7 +6,7 @@ http://creativecommons.org/licenses/by-nc-sa/3.0/pl/
 
 Wersja skompilowana:
 
-https://copy.com/cMVeNacPTi03
+http://ubuntu.pl/dokumenty/Przewodnik_Ubuntu_14.04_LTS_Trusty_Tahr.pdf
 
 Zależności do kompilacji:
 
